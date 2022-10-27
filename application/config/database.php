@@ -5,7 +5,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 
-$active_group = 'deploy';
+$active_group = 'default';
 $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'    => '',

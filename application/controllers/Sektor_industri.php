@@ -15,9 +15,9 @@ class Sektor_industri extends CI_Controller
     {
         $this->load->library('pagination');
         // library pagination
-        $config['base_url'] = 'http://localhost/sig_pku/sektor_industri/index';
+        $config['base_url'] = base_url("Sektor_industri/index/");
         $config['total_rows'] = $this->countAllData();
-        $config['per_page'] = 1;
+        $config['per_page'] = 10;
 
         // stylingPage
         $config['full_tag_open'] = '<nav><ul class="pagination">';
