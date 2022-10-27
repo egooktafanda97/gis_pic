@@ -1,0 +1,89 @@
+@import "../../../scss/mediaQuery.scss";
+
+.my-icon {
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	color: white;
+}
+
+.icon-dc {
+	background: #3bb2d0;
+}
+
+.root-map {
+	width: 100%;
+	height: 100%;
+
+	.map-container {
+		width: 100%;
+		height: 100%;
+
+		.mapboxgl-canvas-container {
+			cursor: default;
+		}
+
+		&.right-sidebar-active {
+			width: calc(100% - 350px);
+
+			@include for-size("tablet-landscape-up") {
+				width: calc(100% - 500px);
+			}
+		}
+	}
+
+	.btn-sidebar {
+		position: fixed;
+		left: 50px;
+		top: 50px;
+		background-color: #fff;
+		border: 0;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		width: 50px;
+		height: 50px;
+		border-radius: 10px;
+
+		&:active {
+			background-color: rgb(237, 237, 237);
+
+		}
+	}
+
+	.sidebar-map {
+		position: fixed;
+		left: -400px;
+		top: 0;
+		background-color: #fff;
+		min-width: 400px;
+		min-height: 100%;
+		transition: left ease 300ms;
+
+		&.active {
+			left: 0px;
+			transition: left ease 300ms;
+		}
+	}
+
+	.sidebar-map-right {
+		position: fixed;
+		right: -350px;
+		top: 0;
+		background-color: #F6FBF4;
+		min-width: 350px;
+		min-height: 100%;
+		transition: right ease 300ms;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+		padding: 5px;
+
+		@include for-size("tablet-landscape-up") {
+			width: 500px;
+		}
+
+		&.active {
+			right: 0px;
+			transition: right ease 300ms;
+		}
+	}
+}

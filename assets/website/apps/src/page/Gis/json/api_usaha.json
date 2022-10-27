@@ -1,0 +1,3602 @@
+[
+	{
+		"id": 1,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "RENDANG PAK OMBAK",
+		"alamat_usaha": "Jl.cipta karya, Gg. Lumba - Lumba kelurahan No.4, RT.05/RW.11, Tuah Karya, Kec. Tampan, Kota Pekanbaru",
+		"latitude": "0.45011918378927823",
+		"longitude": " 101.38987821222618",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 2,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "BAKOEL TJOKLAT",
+		"alamat_usaha": "Jl. Ikhlas I No.21, Simpang Tiga, Kec. Bukit Raya, Kota Pekanbaru",
+		"latitude": "0.4687275831052631",
+		"longitude": " 101.45658071037616",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 3,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "MELAYU CRACKERS",
+		"alamat_usaha": "Jl. Melati Indah Perumahan Resty Graha Lestari Blok I/5",
+		"latitude": "0.4890733483005521",
+		"longitude": " 101.39972506836412",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 4,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "UKM SITI HAJAR",
+		"alamat_usaha": "Jl. Bunga Indah No.5E, Tengkerang Sel., Kec. Bukit Raya, Kota Pekanbaru",
+		"latitude": "0.4891632107680749",
+		"longitude": " 101.46510909688337",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 5,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "UD. NEW FLYING SWALLOW",
+		"alamat_usaha": "JL. KARYA INDAH GG. KARYA INDAH 3, NO 46 F ,kecamatan Payung Sekaki kota pekanbaru",
+		"latitude": "0.5320264131121217",
+		"longitude": " 101.40679258182014",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 6,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "AURA BERKAH SINERGI",
+		"alamat_usaha": "jl. Singgalang II No 4, kecamatan tenayan raya, kota pekanbaru",
+		"latitude": "0.49060952628887516",
+		"longitude": " 101.50290294134025",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 7,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "AURA BERKAH SINERGI",
+		"alamat_usaha": "SINGGALANG II NO 4,kecamatan tenayan raya, kota pekanbaru",
+		"latitude": "0.490598797846346",
+		"longitude": " 101.50286002599806",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 8,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "SOUP TUNJANG MS",
+		"alamat_usaha": "Jl. Paus No. 32 C, kecamatan rumbai pesisir kota pekanbaru",
+		"latitude": "0.570425227719933",
+		"longitude": " 101.44331450366667",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 9,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "SOUP TUNJANG MS",
+		"alamat_usaha": "Jl. Rajawali No.43 RT.003 RW.004, kecamatan sukajadi kota pekanbaru",
+		"latitude": "0.5150798403218978",
+		"longitude": " 101.43349116848381",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 10,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "macaronice",
+		"alamat_usaha": "Perumahan Bumi Sentosa Blok B3C NO. 2 RT/RW 05/01 Jl. Rambutan V Gang Sumber Jaya, kecamatan marpoyan damai kota pekanbaru",
+		"latitude": "0.466476103582924",
+		"longitude": " 101.43251362449301",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 11,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "Tea tanic",
+		"alamat_usaha": "Jl. Kenanga 1 blok k no.35 kartama raya, kecamatan marpoyan damai kota pekanbaru",
+		"latitude": "0.4385160009165548",
+		"longitude": " 101.43612658846989",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 12,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "Abdil store",
+		"alamat_usaha": "Jl. Rowo Bening Perumahan Tiga Putri Blok A no 8 RT 004 RW 010 Kelurahan Sidomulyo Barat KEcamatan Tampan Pekanbaru 28294",
+		"latitude": "0.4342232749881419",
+		"longitude": " 101.41470153796966",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 13,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "RPK (Rumah Pangan Kita) PK Yanti Gusri",
+		"alamat_usaha": "Jln Nenas no 20 kec sukajadi kota pekanbaru",
+		"latitude": "0.51392505225662",
+		"longitude": " 101.44370155558053",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 14,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "Kacang Candra ",
+		"alamat_usaha": "Jl. M. Yatim kec senapelan kota pekanbaru",
+		"latitude": "0.5381590250564503",
+		"longitude": " 101.44403893900999",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 15,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "DAPUR RUMAH JALA",
+		"alamat_usaha": "Jl. Kalianda kec tenayan raya kota pekanbaru",
+		"latitude": "0.4928214977958058",
+		"longitude": " 101.47941572551625",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 16,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "TIGA DARA SNACK",
+		"alamat_usaha": "JL. TANGKUBAN PERAHU NO. 97 kec lima puluh kota pekanbaru",
+		"latitude": "0.5301829522861365",
+		"longitude": " 101.46568685435149",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 17,
+		"jenis_usaha_id": 1,
+		"nama_usaha": "Usaha tempe rumahan",
+		"alamat_usaha": "Jl lokomotif no 20 kec lima puluh kota pekanbaru",
+		"latitude": "0.5389938399496375",
+		"longitude": " 101.46011373900997",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 1,
+			"nama_jenis_usaha": "Industry Makanan",
+			"created_at": "2022-04-07T03:37:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-07T03:37:14.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 18,
+		"jenis_usaha_id": 2,
+		"nama_usaha": "Wild Sialang Honey ",
+		"alamat_usaha": "the local hive - jl. Kartinin no 31, kel sumahilang kec. Pekanbaru kota, kota pekanbaru",
+		"latitude": "0.5210426094380",
+		"longitude": " 101.44905162599",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 2,
+			"nama_jenis_usaha": "Pemungutan Hasil Hutan Bukan Kayu",
+			"created_at": "2022-04-12T01:55:42.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:55:42.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 19,
+		"jenis_usaha_id": 3,
+		"nama_usaha": "REFENA WATERPARK PEKANBARU",
+		"alamat_usaha": "Jl. Nelayan No.1, Sri Meranti, Kec. Rumbai, Kota Pekanbaru",
+		"latitude": "0.5507727230843776",
+		"longitude": " 101.41567229688333",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 3,
+			"nama_jenis_usaha": "Pariwisata",
+			"created_at": "2022-04-12T01:55:53.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:55:53.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 20,
+		"jenis_usaha_id": 3,
+		"nama_usaha": "RIA CATERING",
+		"alamat_usaha": "Kulim, Jl. Utama No.60, Rejosari, Kec. Tenayan Raya, Kota Pekanbaru",
+		"latitude": "0.5166808096175046",
+		"longitude": " 101.47459359688337",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 3,
+			"nama_jenis_usaha": "Pariwisata",
+			"created_at": "2022-04-12T01:55:53.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:55:53.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 21,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "EMAK CW",
+		"alamat_usaha": "Jalan Pesantren, Gg.Angrela, Tengkerang Tim., Kec. Tenayan Raya, Kota Pekanbaru",
+		"latitude": "0.49351268308447355",
+		"longitude": "101.48390533921194",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 22,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PISANG KIPAS KUANTAN 2",
+		"alamat_usaha": "Jalan Kuantan Raya Ruko No. 6F, Sekip, Kec. Lima Puluh, Kota Pekanbaru",
+		"latitude": "0.5354509891266066",
+		"longitude": " 101.46558188251781",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 23,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "RUMAH JAMUR NANDO",
+		"alamat_usaha": "H. Imam Munandar Ujung, Jl. Singkong No.3, Sail, Kec. Tenayan Raya, Kota Pekanbaru",
+		"latitude": "0.49679832515615047",
+		"longitude": " 101.50891828154052",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 24,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "SOTINDANG",
+		"alamat_usaha": "Jl. Lobak, Delima Kec.Tampan - Pekanbaru, Riau ",
+		"latitude": "0.47936075129244354",
+		"longitude": " 101.40794294198106",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 25,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Toko Rias Jaya Perabot",
+		"alamat_usaha": "Jl. HR. Soebrantas No. 86 KEC TAMPAN KOTA PEKANBARU",
+		"latitude": "0.46463125539933026",
+		"longitude": " 101.37028232414926",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 26,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "TOKO INDAH JAYA",
+		"alamat_usaha": "JL. T. TAMBUSAI NO. 508 CD kec marpoyan damai kota pekanbaru",
+		"latitude": "0.5039309961282509",
+		"longitude": " 101.43007690552778",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 27,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Ci frozen",
+		"alamat_usaha": "Jl dahlia Gg. Baitul muttaqin no 149 kec sukajadi kota pekanbaru",
+		"latitude": "0.5241184970438839",
+		"longitude": " 101.43116179716237",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 28,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "TOKO SYAKURO",
+		"alamat_usaha": "Jalan Merak Sakti No. 9 kec tampan kota pekanbaru",
+		"latitude": "0.47240795520316076",
+		"longitude": " 101.38909626832707",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 29,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Nathyo Kreatindo",
+		"alamat_usaha": "Jalan Purwodadi, No 6, Ruko Al Kharomah Panam, Kel. Sidomulyo Barat, Kec Tampan, Kota Pekanbaru 28294, Riau",
+		"latitude": "0.4604381527806015",
+		"longitude": " 101.40163606903779",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 30,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "CV. KIMO BANGKIT",
+		"alamat_usaha": "Jl. Rukun No. 1 kec bukitraya kota pekanbaru",
+		"latitude": "0.5061411406456947",
+		"longitude": " 101.46143719531355",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 31,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "CV. KIMO BANGKIT",
+		"alamat_usaha": "Jl, Rukun No. 01 kec bukit raya kota pekanbaru",
+		"latitude": "0.5061411406456947",
+		"longitude": " 101.46143719531355",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 32,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Pangkalan LPG 3 Kg Abdul Gapur",
+		"alamat_usaha": "JL CIPTA KARYA UJUNG PERUM GRAHA PALUTAN INDAH BLOK A5 NO 1 kec tampan kota pekanbaru",
+		"latitude": "0.4377742275295287",
+		"longitude": " 101.39840218182049",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 33,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Kedai H. Abdul",
+		"alamat_usaha": "Jl. Pramuka Ujung kec rumbai pesisir kota pekanbaru",
+		"latitude": "0.5761445805778376",
+		"longitude": " 101.46095583949118",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 34,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN GAS LPG 3 KG ABDUL HARRIS",
+		"alamat_usaha": "JL. DAHLIA UJUNG GG. HORAS NO. 15 kec payung sekaki kota pekanbaru",
+		"latitude": "0.5226054254727877",
+		"longitude": " 101.42973783867869",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 35,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Pangkalan Gas LPG 3 kg ABDUL JABAR",
+		"alamat_usaha": "Jl. Irkab No. 12 RT. 02 RW. 05",
+		"latitude": "0.47922388349058853",
+		"longitude": " 101.43518085250406",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 36,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN GAS LPG 3 KG KARIN MANDIRI",
+		"alamat_usaha": "Jl. Bhakti No. 44 RT/RW 005/013",
+		"latitude": "0.4795085265619813",
+		"longitude": " 101.42818978318695",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 37,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Pangkalan Gas LPG 3KG",
+		"alamat_usaha": "Jl. Kayumanis No12A",
+		"latitude": "0.536664938559086",
+		"longitude": " 101.42112629483324",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 38,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Pangkalan LPG 3 Kg Baim",
+		"alamat_usaha": "Jl. Hangtuah RT 2 RW 1",
+		"latitude": "0.5183480527610642",
+		"longitude": " 101.48387559668072",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 39,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN GAS LPG 3KG ABDUL RAHMAN ",
+		"alamat_usaha": "JL. SRI PALAS NO. 129 A ",
+		"latitude": "0.5991316798117702",
+		"longitude": " 101.39706501017444",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 40,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "ASIA JAYA STEEL",
+		"alamat_usaha": "JL. IMAM MUNANDAR",
+		"latitude": "0.49927476821757666",
+		"longitude": " 101.47887765435154",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 41,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "IDOLA PROFIL",
+		"alamat_usaha": "JL. TEROPONG NO. 14, RT.006/RW.010, KEL. SIDOMULYO BARAT",
+		"latitude": "0.4269308491856294",
+		"longitude": " 101.41709338636306",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 42,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Pangkalan LPG 3 Kg Gulama Gas",
+		"alamat_usaha": "Jl. Gulama No. 1",
+		"latitude": "0.49602341145738654",
+		"longitude": " 101.42668235250402",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 43,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Pangkalan Gas LPG 3 kg LIA GAS",
+		"alamat_usaha": "Jl. Beringin RT. 004 RW. 001",
+		"latitude": "0.4385795415999296",
+		"longitude": " 101.41475473901025",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 44,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "ZEA TOYS",
+		"alamat_usaha": "JL. TUANKU TAMBUSAI No. 14 Kel.Jadirejo, Kec. Sukajadi, Kota Pekanbaru, Prov. Riau",
+		"latitude": "0.5103572110227227",
+		"longitude": " 101.44877398318684",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 45,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "WEEDHE OPTICAL",
+		"alamat_usaha": "Jln paus no 74b",
+		"latitude": "0.5006943544640823",
+		"longitude": " 101.43897599668078",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 46,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Toko Luxfurnindo Gudang Perabot",
+		"alamat_usaha": "Jl. Soekarno Hatta",
+		"latitude": "0.4443788703562252",
+		"longitude": " 101.4196896543517",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 47,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "KOPERASI PRODUSEN AGRO NUSANTARA KARYA MANDIRI",
+		"alamat_usaha": "jl rawa indah no 48 pekanbaru ",
+		"latitude": "0.4803964834584807",
+		"longitude": " 101.4717194390102",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 48,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "TOKO ANUGERAH CAHAYA ABADI",
+		"alamat_usaha": "JL. PAUS NO. 2",
+		"latitude": "0.5090559427129574",
+		"longitude": " 101.43747086612763",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 49,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "TOKO CAHAYA BERKAH",
+		"alamat_usaha": "JL. ST. ALAMUDDINSYAH",
+		"latitude": "0.5387469668499937",
+		"longitude": " 101.44393272736352",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 50,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PEKAN REFRIGENERATION PARTS",
+		"alamat_usaha": "JL. TUANKU TAMBUSAI NO. 171",
+		"latitude": "0.5378436074251189",
+		"longitude": " 101.42381382474954",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 51,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "JAYA PLASTIK",
+		"alamat_usaha": "JL.HR.SUBRANTAS",
+		"latitude": "0.46714241909360477",
+		"longitude": " 101.38768965907802",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 52,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Imola car wash",
+		"alamat_usaha": "jl. Bintara no 7",
+		"latitude": "0.5299493387863307",
+		"longitude": " 101.44882312366852",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 53,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN LPG JUFRI",
+		"alamat_usaha": "JL. NELAYAN",
+		"latitude": "0.5476412366051031",
+		"longitude": " 101.42652738133923",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 54,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Pangkalan gas LPG 3 Kg Afriadi",
+		"alamat_usaha": "Jl. Pala V RT 005 RW 003  Kel. Sidomulyo Timur",
+		"latitude": "0.46007476947493686",
+		"longitude": " 101.42238948133948",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 55,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Toko Ikan Asin",
+		"alamat_usaha": "JL.H. IMAM MUNANDAR NO 77 C",
+		"latitude": "0.5068980845242511",
+		"longitude": " 101.46509711881951",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 56,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "APOTEK BAROKAH",
+		"alamat_usaha": "JL. PARIT INDAH NO. 35 D, KEL. TANGKERANG SELATAN",
+		"latitude": "0.4810967411498269",
+		"longitude": " 101.46382381017473",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 57,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN GAS LPG 3 KG AFRIYENDIE",
+		"alamat_usaha": "PERUM MELUR PERMAI BLOK O NO. 1",
+		"latitude": "0.45361468669913446",
+		"longitude": " 101.409125674955",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 58,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN LPG RAFLI",
+		"alamat_usaha": "Jl. Palas Mekar No. 3",
+		"latitude": "0.5783085624447136",
+		"longitude": " 101.40637775181948",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 59,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN GAS LPG 3KG AFRIZAL",
+		"alamat_usaha": "JL. SIAK II",
+		"latitude": "0.5474137500027482",
+		"longitude": " 101.40244126599777",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 60,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN LPG 3KG AFRIZAL,",
+		"alamat_usaha": "JL. NENAS NO. 92 B ,\"",
+		"latitude": "0.5090595132862609",
+		"longitude": " 101.44345973226312",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 61,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "UD. ABS",
+		"alamat_usaha": "JL.LINTAS TIMUR RT. 001 RW.010,\"",
+		"latitude": "0.4696795413709771",
+		"longitude": " 101.51453803901019",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 62,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PD.GALA JAYA",
+		"alamat_usaha": "JL.TANJUNG DATUK NO.42 A",
+		"latitude": "0.5372597101742801",
+		"longitude": " 101.44972169668068",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 63,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Toko Afrizal",
+		"alamat_usaha": "Jl. Imam Bonjol",
+		"latitude": "0.5289678699202328",
+		"longitude": " 101.44383810704097",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 64,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "RAYODEL",
+		"alamat_usaha": "JL T. Bey Perum Berkah Utama Regency no K. 3",
+		"latitude": "0.4560462416283659",
+		"longitude": " 101.47076125435166",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 65,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "INTI DIESEL SERVICE ",
+		"alamat_usaha": "Jalan Sidorukun No.15 C",
+		"latitude": "0.521556597108113",
+		"longitude": " 101.40594606784543",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 66,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "WIRA VULKANISIR",
+		"alamat_usaha": "Jl. Garuda Sakti KM.4",
+		"latitude": "0.4943120399453973",
+		"longitude": " 101.34984759668082",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 67,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Toko Calysta Jaya Abadi",
+		"alamat_usaha": "Jl. Durian No. 14 D",
+		"latitude": "0.5167866244230666",
+		"longitude": " 101.44232643901006",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 68,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "Medan 88 Honda",
+		"alamat_usaha": "JL.HR.Subrantas",
+		"latitude": "0.4648542844970458",
+		"longitude": " 101.38896735250411",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 69,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "PANGKALAN LPG 3 KG FAHRI",
+		"alamat_usaha": "JL. MADYA PURI",
+		"latitude": "0.5230012513011997",
+		"longitude": " 101.49274623900999",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 70,
+		"jenis_usaha_id": 4,
+		"nama_usaha": "ABIE PONSEL",
+		"alamat_usaha": "JL. NUANSA PERUM YESTI GRAHA BLOK E NO. 5",
+		"latitude": "0.4769218393945076",
+		"longitude": " 101.34477714674468",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 4,
+			"nama_jenis_usaha": "Perdagangan dan Reparasi",
+			"created_at": "2022-04-12T01:56:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 71,
+		"jenis_usaha_id": 5,
+		"nama_usaha": "RUMAH TENUN KAMPUNG BANDAR",
+		"alamat_usaha": "Jl. Perdagangan No.206, Kp. Bandar, Kec. Senapelan, Kota Pekanbaru",
+		"latitude": "0.5404956802128409",
+		"longitude": " 101.44138563921187",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 5,
+			"nama_jenis_usaha": "Industri Pertenunan (bukan pertenunan karung goni dan karung lainnya)",
+			"created_at": "2022-04-12T01:56:31.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:31.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 72,
+		"jenis_usaha_id": 5,
+		"nama_usaha": "RUMAH TENUN WAN FITRI",
+		"alamat_usaha": "Jl. Kayu Manis, Tampan, Kec. Payung Sekaki, Kota Pekanbaru",
+		"latitude": "0.5384046806973682",
+		"longitude": " 101.42112827783909",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 5,
+			"nama_jenis_usaha": "Industri Pertenunan (bukan pertenunan karung goni dan karung lainnya)",
+			"created_at": "2022-04-12T01:56:31.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:31.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 73,
+		"jenis_usaha_id": 5,
+		"nama_usaha": "TEKAT TIGA DARA",
+		"alamat_usaha": "jl adyaksa no 5. kel herjosari kec sukajadi kota pekanbaru",
+		"latitude": "0.48428371097526224",
+		"longitude": " 101.47659938318694",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 5,
+			"nama_jenis_usaha": "Industri Pertenunan (bukan pertenunan karung goni dan karung lainnya)",
+			"created_at": "2022-04-12T01:56:31.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:31.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 74,
+		"jenis_usaha_id": 5,
+		"nama_usaha": "TENUN CAHAYA KEMILAU",
+		"alamat_usaha": "Jl. Hangtuah Gg Nurul No 4 ",
+		"latitude": "0.5020601670853614",
+		"longitude": " 101.45398602016917",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 5,
+			"nama_jenis_usaha": "Industri Pertenunan (bukan pertenunan karung goni dan karung lainnya)",
+			"created_at": "2022-04-12T01:56:31.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:31.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 75,
+		"jenis_usaha_id": 5,
+		"nama_usaha": "WINDA SONGKET",
+		"alamat_usaha": "Jl. Inpres Gg. Iklas 1, Maharatu, Kec. Marpoyan Damai, Kota Pekanbaru",
+		"latitude": "0.4553946981061202",
+		"longitude": " 101.42870486619763",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 5,
+			"nama_jenis_usaha": "Industri Pertenunan (bukan pertenunan karung goni dan karung lainnya)",
+			"created_at": "2022-04-12T01:56:31.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:31.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 76,
+		"jenis_usaha_id": 6,
+		"nama_usaha": "AQUASCAPE (aqua deal pekanbaru)",
+		"alamat_usaha": "Jl. Angsa I Satu No.9, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru",
+		"latitude": "0.5082682015083955",
+		"longitude": " 101.43481325084791",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 6,
+			"nama_jenis_usaha": "Budidaya Ikan Air Tawar",
+			"created_at": "2022-04-12T01:56:50.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:56:50.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 77,
+		"jenis_usaha_id": 7,
+		"nama_usaha": "RATTAN HANDMADE",
+		"alamat_usaha": "Jl. Yos Sudarso No.159, Meranti Pandak, Kec. Rumbai Pesisir, Kota Pekanbaru",
+		"latitude": "0.552287479698968",
+		"longitude": " 101.43553303921196",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 7,
+			"nama_jenis_usaha": "Industri Furnitur",
+			"created_at": "2022-04-12T01:57:00.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:00.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 78,
+		"jenis_usaha_id": 8,
+		"nama_usaha": "JASA 8 SIPIL",
+		"alamat_usaha": "JALAN PERMATA NO. 03, payung sekaki kota pekanbaru",
+		"latitude": "0.5245559673533929",
+		"longitude": " 101.41707376784541",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 8,
+			"nama_jenis_usaha": "Konstruksi",
+			"created_at": "2022-04-12T01:57:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 79,
+		"jenis_usaha_id": 8,
+		"nama_usaha": "CV. JUMA PERSADA KRINA",
+		"alamat_usaha": "Jl. Beringin Perum Pemda Blok D 46, payung sekaki kota pekanbaru",
+		"latitude": "0.5127003162547991",
+		"longitude": " 101.36352771803598",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 8,
+			"nama_jenis_usaha": "Konstruksi",
+			"created_at": "2022-04-12T01:57:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 80,
+		"jenis_usaha_id": 8,
+		"nama_usaha": "PUTRA LAXMANA JAYA",
+		"alamat_usaha": "Jalan dahlia nomor 18 atau 63, sukajadi kota pekanbaru",
+		"latitude": "0.5244019266469893",
+		"longitude": " 101.43587153404022",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 8,
+			"nama_jenis_usaha": "Konstruksi",
+			"created_at": "2022-04-12T01:57:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 81,
+		"jenis_usaha_id": 8,
+		"nama_usaha": "INDOTECH CEMERLANG",
+		"alamat_usaha": "Jl. Riau Ujung No. 349, payung sekaki kota pekanbaru",
+		"latitude": "0.5351307251382977",
+		"longitude": " 101.40719028133925",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 8,
+			"nama_jenis_usaha": "Konstruksi",
+			"created_at": "2022-04-12T01:57:06.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:06.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 82,
+		"jenis_usaha_id": 9,
+		"nama_usaha": "MESRA OIL",
+		"alamat_usaha": "Jl. Usaha Sumbersari No. 35A RT 005 / RW 005_x000D_ kec lima puluh kota pekanbaru",
+		"latitude": "0.5426141383554363",
+		"longitude": " 101.46296966599778",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 9,
+			"nama_jenis_usaha": "Industri Kimia Dan Farmasi",
+			"created_at": "2022-04-12T01:57:11.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:11.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 83,
+		"jenis_usaha_id": 9,
+		"nama_usaha": "ALJUNDI Parfum",
+		"alamat_usaha": "Ruko garasi warna abu-abu, Jl. Serasi (Delima), Samping TK Alifa KIds 5 kec tampan kota pekanbaru",
+		"latitude": "0.4787574411955577",
+		"longitude": " 101.40408976599797",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 9,
+			"nama_jenis_usaha": "Industri Kimia Dan Farmasi",
+			"created_at": "2022-04-12T01:57:11.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:11.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 84,
+		"jenis_usaha_id": 9,
+		"nama_usaha": "NATURELOGICA",
+		"alamat_usaha": "JL. BUDI DAYA GG BUDI LESTARI, kec tampan kota pekanbaru",
+		"latitude": "0.4596890404323446",
+		"longitude": " 101.37147748318702",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 9,
+			"nama_jenis_usaha": "Industri Kimia Dan Farmasi",
+			"created_at": "2022-04-12T01:57:11.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:11.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 85,
+		"jenis_usaha_id": 9,
+		"nama_usaha": "Industri",
+		"alamat_usaha": "Jl.penerbangan, kec bukit raya kota pekanbaru",
+		"latitude": "0.42586727026902566",
+		"longitude": " 101.44297165250426",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 9,
+			"nama_jenis_usaha": "Industri Kimia Dan Farmasi",
+			"created_at": "2022-04-12T01:57:11.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:11.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 86,
+		"jenis_usaha_id": 9,
+		"nama_usaha": "Waroeng Djamu Kembar",
+		"alamat_usaha": "Jl. Muhajirin Ujung Perumahan permata teratai b6 RT/RW 001/026, tampan kota pekanbaru",
+		"latitude": "0.444828408808555",
+		"longitude": " 101.40773208511476",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 9,
+			"nama_jenis_usaha": "Industri Kimia Dan Farmasi",
+			"created_at": "2022-04-12T01:57:11.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:11.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 87,
+		"jenis_usaha_id": 14,
+		"nama_usaha": "PT KATAKABAR MEDIA PERDANA",
+		"alamat_usaha": "JALAN ARIFIN ACHMAD NOMOR 138B, marpoyan damai kota pekanbaru",
+		"latitude": "0.47867132658225037",
+		"longitude": " 101.43140849668082",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 14,
+			"nama_jenis_usaha": "Industri Kertas dan Percetakan",
+			"created_at": "2022-04-12T02:00:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T02:00:03.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 88,
+		"jenis_usaha_id": 14,
+		"nama_usaha": "CV. YUMNA",
+		"alamat_usaha": "JALAN CIPTA KARYA PERUM GRAHA WAHANA 1 BLOK H15, tampan kota pekanbaru",
+		"latitude": "0.4511773982498798",
+		"longitude": " 101.39134076784559",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 14,
+			"nama_jenis_usaha": "Industri Kertas dan Percetakan",
+			"created_at": "2022-04-12T02:00:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T02:00:03.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 89,
+		"jenis_usaha_id": 14,
+		"nama_usaha": "TUNAS SABLON RIAU",
+		"alamat_usaha": "Jl. Garuda Sakti KM 1, Gg. Sepakat, Perum Hati Mandiri Blok I No. 006 Pekanbaru, tampan kota pekanbaru",
+		"latitude": "0.4742306266891965",
+		"longitude": " 101.35585066784556",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 14,
+			"nama_jenis_usaha": "Industri Kertas dan Percetakan",
+			"created_at": "2022-04-12T02:00:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T02:00:03.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 90,
+		"jenis_usaha_id": 14,
+		"nama_usaha": "CV.BERDIKARI JAYA OFFSET",
+		"alamat_usaha": "JL Nenas No 80 RT.01 RW.06 KEL. KAMPUNG TENGAH KEC.SUKAJADI mota pekanbaru",
+		"latitude": "0.520445339103142",
+		"longitude": " 101.42669982366859",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 14,
+			"nama_jenis_usaha": "Industri Kertas dan Percetakan",
+			"created_at": "2022-04-12T02:00:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T02:00:03.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 91,
+		"jenis_usaha_id": 14,
+		"nama_usaha": "CHINTAMI",
+		"alamat_usaha": "JL. DAHLIA NO. 15 B, sukajadi kota pekanbaru",
+		"latitude": "0.5227053229266423",
+		"longitude": " 101.43944042366859",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 14,
+			"nama_jenis_usaha": "Industri Kertas dan Percetakan",
+			"created_at": "2022-04-12T02:00:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T02:00:03.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 92,
+		"jenis_usaha_id": 14,
+		"nama_usaha": "Mahligai Art",
+		"alamat_usaha": "Jl. KH. Ahmad Dahlan Herjosari Sukajadi",
+		"latitude": "0.5599000560224833",
+		"longitude": " 101.45760907836707",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 14,
+			"nama_jenis_usaha": "Industri Kertas dan Percetakan",
+			"created_at": "2022-04-12T02:00:03.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T02:00:03.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 93,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SEHAT SD NEGERI 70 PEKANBARU",
+		"alamat_usaha": "Jl. Jendral no 104",
+		"latitude": "0.5239189673756826",
+		"longitude": " 101.42342393901009",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 94,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "TUKANG GIGI NAZILA",
+		"alamat_usaha": "jln hangtuah ujung, gg sempurna",
+		"latitude": "0.49812478296372975",
+		"longitude": " 101.51146301017477",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 95,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SEHAT SD NEGERi 153 PEKANBARU",
+		"alamat_usaha": "Jl. Semangka no 17",
+		"latitude": "0.5145569715852909",
+		"longitude": " 101.44021628855104",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 96,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "TUKANG GIGI WAHYU",
+		"alamat_usaha": "jln cipta karya, gg hidayah II no 07",
+		"latitude": "0.4605249270131772",
+		"longitude": " 101.3941810408577",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 97,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "TUKANG GIGI AHMAD",
+		"alamat_usaha": "JL. MARKISA NO. 54",
+		"latitude": "0.5084248272754999",
+		"longitude": " 101.4410496234478",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 98,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "AJENG's RAJOET",
+		"alamat_usaha": "JALAN LEMBAH DAMAI Gang Suka Damai RT 002 RW 002",
+		"latitude": "0.5744752806334819",
+		"longitude": " 101.4460483678453",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 99,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "BANK SAMPAH  SKUBARI",
+		"alamat_usaha": "JL. PEPAYA NO.37",
+		"latitude": "0.5157963960590408",
+		"longitude": " 101.44457545250391",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 100,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KLINIK MITRA  SKUBARI",
+		"alamat_usaha": "JL. PEPAYA NO. 37",
+		"latitude": "0.5157320256520639",
+		"longitude": " 101.44457545250391",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 101,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "angkutan udara, pemotretan, survei, pemetaan",
+		"alamat_usaha": "Jalan Waringin II Nomor 6",
+		"latitude": "0.5097822826288821",
+		"longitude": " 101.421839752504",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 102,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Tukang Gigi Irsya",
+		"alamat_usaha": "Jl. Arjuna No. 20",
+		"latitude": "0.5151157108757546",
+		"longitude": " 101.42582811017468",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 103,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "AGROWISATA ",
+		"alamat_usaha": "JL. BUDI LUHUR ",
+		"latitude": "0.45417832716006423",
+		"longitude": " 101.50174241017483",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 104,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Pangkas Rambut Prima",
+		"alamat_usaha": "Jl. Darma Bakti No. 52, RT/RW. 005/006_x000D_Kel. Labuhbaru Barat, Kec. Payung Sekak",
+		"latitude": "0.5173742811985301",
+		"longitude": " 101.41241655250391",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 105,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Brother Laundry",
+		"alamat_usaha": "Jl. Harapan No.78a, Limbungan Baru, Kec. Rumbai Pesisir, Kota Pekanbaru, Riau 28265, Indonesia",
+		"latitude": "0.567495865789854",
+		"longitude": " 101.441467512022",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 106,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "YAYASAN LEMBAGA PUSAT KEGIATAN BELAJAR MASYARAKAT ( PKBM BAITUL FAJAR )",
+		"alamat_usaha": "JL. KAMPUNG BARU NO 02 RT 004 RW 005 SIALANG SAKTI TENAYAN RAYA",
+		"latitude": "0.4894193547641203",
+		"longitude": " 101.51565308133941",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 107,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Bunda Laundry",
+		"alamat_usaha": "Jl. Adisucipto, Depan SDN 42",
+		"latitude": "0.48754178698614997",
+		"longitude": " 101.49698409353766",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 108,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "ONTIME TRANSPORTASI ONLINE",
+		"alamat_usaha": "Jl. Pahlawan kerja GG. syuhada no.45 ",
+		"latitude": "0.5488124664849717",
+		"longitude": " 101.4463839696928",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 109,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SEHAT SD NEGERI 37 PEKANBARU",
+		"alamat_usaha": "JL. GARUDA SAKTI KM 1 NO 25",
+		"latitude": "0.47197761791396703",
+		"longitude": " 101.36589288482777",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 110,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "seni pajagan kaca",
+		"alamat_usaha": "JL. PALA 5 GANG ANGGREK",
+		"latitude": "0.46000636947704293",
+		"longitude": " 101.42314903901021",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 111,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Queen Laundry & Dry Cleaning",
+		"alamat_usaha": "Jl. Delima No. 157 A  Panam Pekanbaru",
+		"latitude": "0.4768941981606978",
+		"longitude": " 101.40647235250408",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 112,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "DECORNER PEKANBARU",
+		"alamat_usaha": "JL. LILY 1 NO. 74 RT. 005 / RW. 001",
+		"latitude": "0.5074110078448236",
+		"longitude": " 101.44786511768976",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 113,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KLINIK PRATAMA BUNDA MEDICAL CENTRE",
+		"alamat_usaha": "JL. PAUS NO. 32",
+		"latitude": "0.5693831374118887",
+		"longitude": " 101.44300033900987",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 114,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SEROJA SD 06 PEKANBARU",
+		"alamat_usaha": "JL. PEPAYA NO 53",
+		"latitude": "0.5142943064005807",
+		"longitude": " 101.4456035365592",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 115,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "PATAS LAUNDRY",
+		"alamat_usaha": "JL. Hangtuah Ujung No. 175",
+		"latitude": "0.5075937406168695",
+		"longitude": " 101.49685151017474",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 116,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KLINIK PRATAMA DR. ELZAGIARMI",
+		"alamat_usaha": "Jl. S. Parman No.6A_x000D_",
+		"latitude": "0.517779702727084",
+		"longitude": " 101.45829733778308",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 117,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Lord Bagus Business Consultant",
+		"alamat_usaha": "Jl. HR. Soebrantas No. 8 B",
+		"latitude": "0.464820097811201",
+		"longitude": " 101.36869648133951",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 118,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "MAHOLI BAN",
+		"alamat_usaha": "Jalan Belimbing ",
+		"latitude": "0.5047871690943083",
+		"longitude": " 101.44368262551616",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 119,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "kantin sehat sd negeri 68 pekanbaru",
+		"alamat_usaha": "jl. balam komp. sd negeri 68",
+		"latitude": "0.509198582645828",
+		"longitude": " 101.43536212551615",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 120,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "TOKO NADIA PRINTING",
+		"alamat_usaha": "Jalan Kuini. No. 03 Kelurahan Wonorejo, Kecamatan Marpoyan Damai_x000D_ Pekanbaru-Riau",
+		"latitude": "0.5086229667977004",
+		"longitude": " 101.44788263900999",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 121,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "CINE BOX",
+		"alamat_usaha": "Jl. Tuanku Tambusai Komplek  Mall Ska Block H. No. 118",
+		"latitude": "0.5013500213193997",
+		"longitude": " 101.41682360450633",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 122,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "SIAV",
+		"alamat_usaha": "JALAN AMBU - AMBU 2 NO. 3 C",
+		"latitude": "0.49980450499031315",
+		"longitude": " 101.43801916109855",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 123,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "CE 7",
+		"alamat_usaha": "Jl. Cempaka No. 94/96",
+		"latitude": "0.5327298736634939",
+		"longitude": " 101.43800225121869",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 124,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "MY REFLEXI",
+		"alamat_usaha": "Jl. T. Tambusai Komp. Puri Nangka Sari Blok E Rt. 001 / Rw. 008",
+		"latitude": "0.5001941250416607",
+		"longitude": " 101.42253816784542",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 125,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Klinik Pratama Bina Kasih 3",
+		"alamat_usaha": "Jl. H. Imam Munandar No. 61 G",
+		"latitude": "0.5010366071860501",
+		"longitude": " 101.4650464374904",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 126,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SABAR MENANTI SMP 18 PEKANBARU",
+		"alamat_usaha": "JL. Lili no 95",
+		"latitude": "0.5287006955871991",
+		"longitude": " 101.42794676599786",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 127,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Apotek Semoga Sehat",
+		"alamat_usaha": "Jl. Kulim No. 29",
+		"latitude": "0.5434274152817354",
+		"longitude": " 101.42429899954985",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 128,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "SALOON MAWAR & KOSMETIK",
+		"alamat_usaha": "JL.JAWA HANGTUAH",
+		"latitude": "0.48080924600085534",
+		"longitude": " 101.51158401361506",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 129,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "RUMAH CANTIK MUSLIMAH ALEYAH",
+		"alamat_usaha": "JL. GARUDA NO. 78 B",
+		"latitude": "0.5386304432794728",
+		"longitude": " 101.443680425553",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 130,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KIA FRESH LAUNDRY",
+		"alamat_usaha": "JL. GURAMI RAYA NO. 7",
+		"latitude": "0.5612377509899216",
+		"longitude": " 101.44183183900988",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 131,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Toko Obat dan Kosmetik Mela Farma",
+		"alamat_usaha": "Jl. Garuda Sakti KM 1",
+		"latitude": "0.47343233424814724",
+		"longitude": " 101.36625364996159",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 132,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "AGUNG WASH",
+		"alamat_usaha": "JL.HANGTUAH NO.125B",
+		"latitude": "0.5252215389446233",
+		"longitude": " 101.46567298133927",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 133,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "CV. MITRA SUKSES BERSAMA",
+		"alamat_usaha": "JL. RIAU UJUNG KOMP RIAU MAS BLOK B NO. 1-2",
+		"latitude": "0.5321340238332911",
+		"longitude": " 101.39779753900994",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 134,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Klinik Pratama Darel Medika",
+		"alamat_usaha": "Jl. Soekarno Hatta No. 8C",
+		"latitude": "0.4256311131976336",
+		"longitude": " 101.43511302551644",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 135,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SEROJA SD 6 PEKANBARU",
+		"alamat_usaha": "JL. PEPAYA NO 53",
+		"latitude": "0.5143719097261295",
+		"longitude": " 101.44556741017475",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 136,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "klinik pratama dr. Desti Marinda",
+		"alamat_usaha": "jln. sail no 05",
+		"latitude": "0.52503049572256",
+		"longitude": " 101.47898845250388",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 137,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "GLOBAL TEKNOMEDIKA",
+		"alamat_usaha": "PESANTREN",
+		"latitude": "0.49417996744707027",
+		"longitude": " 101.45863126784548",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 138,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "FAMILY LAUNDRY",
+		"alamat_usaha": "JL. Bukit Barisan Ruko Villa Bukit Mas No 02",
+		"latitude": "0.49086272538085596",
+		"longitude": " 101.48770433901005",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 139,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Yess Laundry",
+		"alamat_usaha": "Jl Amarta blok D-4 ",
+		"latitude": "0.4832224256539006",
+		"longitude": " 101.43654905804657",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 140,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "PKBM KAK SETO PEKANBARU",
+		"alamat_usaha": "JL.S.PARMAN NO 5 KEL. SUKA MAJU KEC. SAIL PEKANBARU RIAU",
+		"latitude": "0.5181319527696268",
+		"longitude": " 101.45911453901006",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 141,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SEHAT SD 20",
+		"alamat_usaha": "JL. KULIM NO 69 ",
+		"latitude": "0.5399828599854828",
+		"longitude": " 101.42878223011093",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 142,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "TUKANG GIGI BALQIS",
+		"alamat_usaha": "JL. SEI KAMPAR",
+		"latitude": "0.5355978655356165",
+		"longitude": " 101.4576183966807",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 143,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Mandiri Jaya Grafika",
+		"alamat_usaha": "Jl.cendrawsih no.106",
+		"latitude": "0.49970365348784906",
+		"longitude": " 101.4476589813394",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 144,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "LKP Pekanbaru Hospitality Institute",
+		"alamat_usaha": "Jl. Pangeran Hidayat No.97 A Pekanbaru",
+		"latitude": "0.5061473849730029",
+		"longitude": " 101.42965933011092",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 145,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "PT. LAUDAH REKAYASA KONSULTAN",
+		"alamat_usaha": "Jalan Nusa Indah No. 7B",
+		"latitude": "0.5335049535531227",
+		"longitude": " 101.44996781017466",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 146,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "UMY.RATU SALON KIDS AND MOM",
+		"alamat_usaha": "JL. JEND. SUDIRMAN NO. 18 D",
+		"latitude": "0.5011244681557655",
+		"longitude": " 101.45296136784549",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 147,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "LUNER",
+		"alamat_usaha": "JL GIDEON",
+		"latitude": "0.5180013483993361",
+		"longitude": " 101.39878764109405",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 148,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "klinik pratama lathifa",
+		"alamat_usaha": "jalan arifin acmad no 99 B",
+		"latitude": "0.48028821192065313",
+		"longitude": " 101.43504748133947",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 149,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "REKLAME",
+		"alamat_usaha": "Jl. Jendral Sudirman ",
+		"latitude": "0.498941858685942",
+		"longitude": " 101.45516929942805",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 150,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "NEW FRIEND SALON",
+		"alamat_usaha": "Jl. Delima, No. _x000D_",
+		"latitude": "0.4692244830962002",
+		"longitude": " 101.40478381017483",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 151,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "MANDIRI BRIPO",
+		"alamat_usaha": "JL KURNIA 4 B",
+		"latitude": "0.494301253693577",
+		"longitude": " 101.46930513901007",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 152,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Welding House",
+		"alamat_usaha": "JL.Limbungan Gg.Mandiri",
+		"latitude": "0.5680674657682192",
+		"longitude": " 101.45717248318665",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 153,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "klinik pratama saffanah medika",
+		"alamat_usaha": "jln. kapur senapelan",
+		"latitude": "0.5419091518052245",
+		"longitude": " 101.43187083900993",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 154,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "SOLUSI KOMPUTER",
+		"alamat_usaha": "JL.TANJUNG NO.99",
+		"latitude": "0.5380717803269396",
+		"longitude": " 101.45206855250389",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 155,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "FREYA CLINIC",
+		"alamat_usaha": "JL. HR. SOEBRANTAS NO. 06",
+		"latitude": "0.46532529131687234",
+		"longitude": " 101.4084206147695",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 156,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "FN BEAUTY SALON",
+		"alamat_usaha": "JL. ARIFIN AHMAD  NO. 131 ",
+		"latitude": "0.481861061147322",
+		"longitude": " 101.43991750737945",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 157,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Rumah Pintar Pku",
+		"alamat_usaha": "Jl. Gading no. 74",
+		"latitude": "0.42839601309918296",
+		"longitude": " 101.44403323901032",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 158,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Klinik Pratama Alya Medika",
+		"alamat_usaha": "Jl. Garuda Sakti KM. 2 ",
+		"latitude": "0.4797095826984593",
+		"longitude": " 101.3661664678455",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 159,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "FETTY SALON",
+		"alamat_usaha": "JL AL JIHAD 01",
+		"latitude": "0.4806538111209653",
+		"longitude": " 101.41308595250406",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 160,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Mandiri Prima",
+		"alamat_usaha": "JL. SWAKARYA NO 9A ",
+		"latitude": "0.4639427117778195",
+		"longitude": " 101.38076102551626",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 161,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Usaha Permainan Anak Anak/ Odong Odong",
+		"alamat_usaha": "Jl. Sentosa Perumahan Alifa Pekanbaru",
+		"latitude": "0.43162338445166304",
+		"longitude": " 101.42008991017498",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 162,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "KANTIN SEHAT SD NEGERI 13 PEKANBARU",
+		"alamat_usaha": "JL. CEMPAKA GG PEENG ",
+		"latitude": "0.5273079659303149",
+		"longitude": " 101.44136135435147",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 163,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Yostri Art Studio",
+		"alamat_usaha": "Jl. Kartama, maharatu, marpoyan damai, pekanbaru",
+		"latitude": "0.4470221518956996",
+		"longitude": " 101.44249343634652",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 164,
+		"jenis_usaha_id": 10,
+		"nama_usaha": "Rumah hijab rahma",
+		"alamat_usaha": "Perumahan Griya Mulya Insani blok B5",
+		"latitude": "0.47801468276333037",
+		"longitude": " 101.51682116784552",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 10,
+			"nama_jenis_usaha": "Jasa Lainnya",
+			"created_at": "2022-04-12T01:57:16.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:16.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 165,
+		"jenis_usaha_id": 11,
+		"nama_usaha": "PT. RIFLA AMANAH FATIHA",
+		"alamat_usaha": "KOMPLEK VILLA ROYAL TELADAN NOMOR 3_x000D_ PEKANBAR",
+		"latitude": "0.4811049541868334",
+		"longitude": " 101.36623003901018",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 11,
+			"nama_jenis_usaha": "Perumahan Kawasan Industri dan Perkantoran",
+			"created_at": "2022-04-12T01:57:28.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:28.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 166,
+		"jenis_usaha_id": 11,
+		"nama_usaha": "PERUMAHAN",
+		"alamat_usaha": "JL. CEMARA KIPAS",
+		"latitude": "0.47345328293682504",
+		"longitude": " 101.41301781017485",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 11,
+			"nama_jenis_usaha": "Perumahan Kawasan Industri dan Perkantoran",
+			"created_at": "2022-04-12T01:57:28.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:28.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 167,
+		"jenis_usaha_id": 11,
+		"nama_usaha": "Real Estat",
+		"alamat_usaha": "Jl. Sekuntum No. 110",
+		"latitude": "0.49956709763776147",
+		"longitude": " 101.50292856784536",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 11,
+			"nama_jenis_usaha": "Perumahan Kawasan Industri dan Perkantoran",
+			"created_at": "2022-04-12T01:57:28.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:28.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 168,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "LONTONG KACAU MALAM 88",
+		"alamat_usaha": "Jl.Soekarno-Hatta.No.457",
+		"latitude": "0.47484816901286203",
+		"longitude": " 101.41864621017484",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 169,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "JAJANAN KOONYANG",
+		"alamat_usaha": "Jalan Thamrin Samping hutan Kota",
+		"latitude": "0.5160818977724404",
+		"longitude": " 101.45636341601868",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 170,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "DeKupi",
+		"alamat_usaha": "Jl.Jenderal  gg.SD",
+		"latitude": "0.523496888208176",
+		"longitude": " 101.4239035531232",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 171,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Bakso Mas Eko",
+		"alamat_usaha": "Jl. Handayani RT002 RW011 ",
+		"latitude": "0.44729192731721595",
+		"longitude": " 101.42510681017488",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 172,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Bakmi Abu Salman",
+		"alamat_usaha": "Jl, Merak Sakti",
+		"latitude": "0.4650580553897383",
+		"longitude": " 101.38827656784557",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 173,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "IKHSAN ZAIM",
+		"alamat_usaha": "JALAN IKHLAS NO 32 C",
+		"latitude": "0.468747041388816",
+		"longitude": " 101.45640232551624",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 174,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Outlet Manalagi",
+		"alamat_usaha": "Dusun Darussalam RT 001 RW 002, sukajadi kota pekanbaru",
+		"latitude": "0.5108410825981003",
+		"longitude": " 101.43887582551613",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 175,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "KFC MERAH PUTIH",
+		"alamat_usaha": "JL. BUDI DAYA, tampan kota pekanbaru",
+		"latitude": "0.4600150249379839",
+		"longitude": " 101.37246090069124",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 176,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "TEKO KOPI",
+		"alamat_usaha": "JL. SOEBRANTAS NO. 172, tampan kota pekanbaru",
+		"latitude": "0.46398334147942194",
+		"longitude": " 101.41193673901023",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 177,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "BIG HOUSE CAFE PEKANBARU",
+		"alamat_usaha": "Jl. Sisingamangaraja No.166 kec lima puluh kota pekanbaru",
+		"latitude": "0.5282789969417762",
+		"longitude": " 101.45690681017469",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 178,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Es Rumput Laut,Es Teler dan Es Tebak A'A",
+		"alamat_usaha": "Jalan Kereta Api, marpoyan damai kota pekanbaru",
+		"latitude": "0.5009799691784295",
+		"longitude": " 101.43913826784548",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 179,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Alnajah Walbarika",
+		"alamat_usaha": "JL. SWADAYA 1 NO.134, tenayan raya kota pekanbaru",
+		"latitude": "0.5119528961973626",
+		"longitude": " 101.47711095435147",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 180,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Kedai Kopi Autentik KoPao",
+		"alamat_usaha": "Jl. Arifin Ahmad No. 8-9, marpoyan damai kota pekanbaru",
+		"latitude": "0.47534211611539734",
+		"longitude": " 101.41983141361507",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 181,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Kedai Kopi Autentik KoPao",
+		"alamat_usaha": "Komplek Pemuda City Walk, Jalan Pemuda Blok C No.21, payung sekaki kota pekanbaru",
+		"latitude": "0.5461521846525137",
+		"longitude": " 101.41655268180949",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 182,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "OPPA BBQ",
+		"alamat_usaha": "JL.SOEKARNO HATTA, payung sekaki kota pekanbaru",
+		"latitude": "0.5334299400706839",
+		"longitude": " 101.41981329668072",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 183,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "RESTORAN K-CUBE",
+		"alamat_usaha": "JL.SULTAN SYARIF QASIM NO. 91 , kec lima puluh kota pekanbaru",
+		"latitude": "0.5349340400380802",
+		"longitude": " 101.45392028133935",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 184,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Bakso Malang Cak An",
+		"alamat_usaha": "Jl. H. Agus Salim Gg. Irsyad pekanbaru kota",
+		"latitude": "0.5268535685946983",
+		"longitude": " 101.44448631017467",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 185,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Angkringan zam-zam",
+		"alamat_usaha": "JL. Imam Munandar, tenayan raya kota pekanbaru",
+		"latitude": "0.495117211484469",
+		"longitude": " 101.48641359668086",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 186,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "PUJASERA SIANG MALAM",
+		"alamat_usaha": "Jl. Riau no 152 A, senapelan kota pekanbaru",
+		"latitude": "0.5349588116690986",
+		"longitude": " 101.43072485250393",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 187,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "CMG STEAK & RESTO",
+		"alamat_usaha": "Jl. Hasan Basri pekanbaru kota",
+		"latitude": "0.5077522406135905",
+		"longitude": " 101.45162835435147",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 188,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "JANJI JIWA",
+		"alamat_usaha": "JL. RIAU NO. 98 C, senapelan kota pekanbaru",
+		"latitude": "0.5366112148667362",
+		"longitude": " 101.43512796713293",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 189,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "JANJI JIWA ",
+		"alamat_usaha": "JL. LETJEN S. PARMAN NO. 101, sail kota pekanbaru",
+		"latitude": "-6.186148947396843",
+		"longitude": " 106.79624079817432",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 190,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Geprek Mie Ayam Dewi",
+		"alamat_usaha": "Jl.Mekar Jaya No.03 Rt/Rw 001/013 kelurahan Rejosari kecamatan Tenayan Raya Pekanbaru Kota Provinsi Riau",
+		"latitude": "0.529353744211951",
+		"longitude": " 101.47721940250395",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 191,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Chocotrii",
+		"alamat_usaha": "Jalan Rajawali Kelurahan Kampung Melayu Kecamatan Sukajadi kota pekanbaru",
+		"latitude": "0.48150739129102227",
+		"longitude": " 101.3973810553491",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 192,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Mentari Jaya Abadi",
+		"alamat_usaha": "Jl. Hasyim Ashari No. 9 pekanbaru kota ",
+		"latitude": "0.5308004671335117",
+		"longitude": " 101.44649666784531",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 193,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "Warung soto",
+		"alamat_usaha": "Jl.ikan parang, rumbai kota pekanbaru",
+		"latitude": "0.5683267525247456",
+		"longitude": " 101.43049689483311",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 194,
+		"jenis_usaha_id": 12,
+		"nama_usaha": "KEDAI KOPI LARIS",
+		"alamat_usaha": "JL. KARET NO.26, senapelan kota pekanbaru",
+		"latitude": "0.48431699935776146",
+		"longitude": " 101.50507179088358",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 12,
+			"nama_jenis_usaha": "Hotel dan Restoran",
+			"created_at": "2022-04-12T01:57:35.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:35.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 195,
+		"jenis_usaha_id": 13,
+		"nama_usaha": "SABYAN OLSHOP",
+		"alamat_usaha": "Jl.duyung GG duyung III RT 004 RW 001 kel.tangkerang barat kec.marpoyan damai kota pekanbaru provinsi Riau",
+		"latitude": "0.5016795681371697",
+		"longitude": " 101.43226771017474",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 13,
+			"nama_jenis_usaha": "Industri Tekstil",
+			"created_at": "2022-04-12T01:57:52.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:52.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 196,
+		"jenis_usaha_id": 13,
+		"nama_usaha": "LT Tailor",
+		"alamat_usaha": "Jl. Muhajirin, Perum. Purna Griya Mas Blok D3 No. 27 , RT 002 RW 015 Kel. Sidomulyo Barat Kec. Tampan kota pekanbaru",
+		"latitude": "0.43664802755556326",
+		"longitude": " 101.41234105435173",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 13,
+			"nama_jenis_usaha": "Industri Tekstil",
+			"created_at": "2022-04-12T01:57:52.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:52.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 197,
+		"jenis_usaha_id": 13,
+		"nama_usaha": "Nur Fashion",
+		"alamat_usaha": "Jl.soponyono kec tenayan raya kota pekanbaru",
+		"latitude": "0.5110555825918622",
+		"longitude": " 101.49517198318681",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 13,
+			"nama_jenis_usaha": "Industri Tekstil",
+			"created_at": "2022-04-12T01:57:52.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:52.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 198,
+		"jenis_usaha_id": 13,
+		"nama_usaha": "MfashionID",
+		"alamat_usaha": "Jalan Suka Karya, Gang Apolo, tampan kota pekanbaru",
+		"latitude": "0.4556663464945984",
+		"longitude": " 101.38700545368349",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 13,
+			"nama_jenis_usaha": "Industri Tekstil",
+			"created_at": "2022-04-12T01:57:52.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:52.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 199,
+		"jenis_usaha_id": 13,
+		"nama_usaha": "Penjahit zura",
+		"alamat_usaha": "jln merak no 57, marpoyan damai kota pekanbaru",
+		"latitude": "0.4912390547161595",
+		"longitude": " 101.44994359668084",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 13,
+			"nama_jenis_usaha": "Industri Tekstil",
+			"created_at": "2022-04-12T01:57:52.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:52.000000Z",
+			"updated_by": null
+		}
+	},
+	{
+		"id": 200,
+		"jenis_usaha_id": 13,
+		"nama_usaha": "BATIK SEROJA ",
+		"alamat_usaha": "Jl. Datuk Setia Maharadja No. 12 F Blok B1 Parit Indah Pekanbaru",
+		"latitude": "0.481366055772352",
+		"longitude": " 101.45963736784549",
+		"pic_category_name": "Usaha",
+		"pic_category_id": "2",
+		"jenis_usaha": {
+			"id": 13,
+			"nama_jenis_usaha": "Industri Tekstil",
+			"created_at": "2022-04-12T01:57:52.000000Z",
+			"created_by": null,
+			"updated_at": "2022-04-12T01:57:52.000000Z",
+			"updated_by": null
+		}
+	}
+]
