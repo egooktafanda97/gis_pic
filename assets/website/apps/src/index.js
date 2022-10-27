@@ -14,7 +14,7 @@ const store = createStore(reducer);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<Provider store={store}>
-		<BrowserRouter basename="/sig_pku/website">
+		<BrowserRouter basename="/website">
 			<React.StrictMode>
 				<Routers />
 			</React.StrictMode>
