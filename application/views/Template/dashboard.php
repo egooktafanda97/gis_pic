@@ -13,13 +13,8 @@
 
     <!-- CSS Libraries -->
 
-    <link href="<?= base_url('assets/lib/'); ?>vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="<?= base_url('assets/lib/'); ?>vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.jqueryscript.net/demo/Bootstrap-4-Dropdown-Select-Plugin-jQuery/dist/css/bootstrap-select.css">
-    <link href="<?= base_url('assets/lib/'); ?>vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="<?= base_url('assets/lib/'); ?>vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="<?= base_url('assets/lib/'); ?>vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css" />
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= $assets ?>template/dist/assets/css/style.css">
     <link rel="stylesheet" href="<?= $assets ?>template/dist/assets/css/components.css">
@@ -74,21 +69,9 @@
 
     <!-- JS Libraies -->
     <!-- dataTable -->
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/jszip/dist/jszip.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="<?= base_url('assets/lib/'); ?>vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+
     <!-- Page Specific JS File -->
 
     <!-- Template JS File -->
@@ -98,6 +81,8 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
+
+    <script src="<?= base_url("assets/js/script.js") ?>"></script>
 
 
 

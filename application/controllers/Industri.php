@@ -17,7 +17,7 @@ class Industri extends CI_Controller
         // library pagination
         $config['total_rows'] = $this->countAllData();
         $config['per_page'] = 10;
-
+        $config['base_url'] = base_url("Industri/index/");
         // stylingPage
         $config['full_tag_open'] = '<nav><ul class="pagination">';
         $config['full_tag_close'] = '</ul></nav>';
@@ -69,6 +69,18 @@ class Industri extends CI_Controller
     {
         $this->db->order_by("id_industri", "DESC");
         $this->db->limit($limit, $start);
+        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
+        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
+        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
+        $result = $this->db->get_where("industri")->result_array();
+        return $result;
+    }
+    public function dataIndustri()
+    {
+        $this->db->order_by("id_industri", "DESC");
+        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
+        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
+        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
         $result = $this->db->get_where("industri")->result_array();
         return $result;
     }
@@ -100,26 +112,39 @@ class Industri extends CI_Controller
 
     public function created()
     {
-        $this->form_validation->set_rules('jenis_industri', ' jenis_industri', 'required');
-        $this->form_validation->set_rules('sub_industri', ' sub_industri', 'required');
+        $this->form_validation->set_rules('pic_industri_id', ' pic_industri_id', 'required');
+        $this->form_validation->set_rules('sektor_industri_id', ' sektor_industri_id', 'required');
+        $this->form_validation->set_rules('sub_sektor_industri_id', ' sub_sektor_industri_id', 'required');
         $this->form_validation->set_rules('nama_industri', ' nama_industri', 'required');
         $this->form_validation->set_rules('perizinan_industri', ' perizinan_industri', 'required');
         $this->form_validation->set_rules('besar_modal_industri', ' besar_modal_industri', 'required');
         $this->form_validation->set_rules('nama_pemilik_industri', ' nama_pemilik_industri', 'required');
         $this->form_validation->set_rules('telp_pemilik_industri', ' telp_pemilik_industri', 'required');
         $this->form_validation->set_rules('alamat_industri', ' alamat_industri', 'required');
-        $this->form_validation->set_rules('koordinat_industri', 'koordinat_industri ', 'required');
+        $this->form_validation->set_rules('latitude', ' latitude', 'required');
+        $this->form_validation->set_rules('longitude', ' longitude', 'required');
         if ($this->form_validation->run() == FALSE) {
-
             $this->session->set_flashdata('error', 'gagal ditambahkan');
             redirect('Industri');
         } else {
             try {
                 $post = $this->input->post();
+                // ////// fungsi upload gambar ///////
+                $uploaded = up("gambar", "assets/img/foto/");
+                if ($uploaded == false) {
+                    $uploaded = "default.jpg";
+                }
+
+                $icon_uploaded = up("icon_map", "assets/img/icon_map/");
+                if ($icon_uploaded == false) {
+                    $icon_uploaded = "default.jpg";
+                }
+                // ==========================================
                 $data  = [
                     "user_id" => auth()['user']['id'],
-                    "jenis_industri" => $post['jenis_industri'],
-                    "sub_industri" => $post['sub_industri'],
+                    "pic_industri_id" => $post['pic_industri_id'],
+                    "sektor_industri_id" => $post['pic_industri_id'],
+                    "sub_sektor_industri_id" => $post['sub_sektor_industri_id'],
                     "nama_industri" => $post['nama_industri'],
                     "perizinan_industri" => $post['perizinan_industri'],
                     "besar_modal_industri" => $post['besar_modal_industri'],
@@ -127,8 +152,14 @@ class Industri extends CI_Controller
                     "telp_pemilik_industri" => $post['telp_pemilik_industri'],
                     "deskripsi_industri" => $post['deskripsi_industri'],
                     "alamat_industri" => $post['alamat_industri'],
-                    "koordinat_industri" => $post['koordinat_industri'],
-                    "gambar" => $post['gambar'],
+                    "provinsi_id" => $post['provinsi_id'] ?? "",
+                    "kabupaten_id" => $post['kabupaten_id'] ?? "",
+                    "kecamatan_id" => $post['kecamatan_id'] ?? "",
+                    "kelurahan_id" => $post['kelurahan_id'] ?? "",
+                    "latitude" => $post['latitude'],
+                    "longitude" => $post['longitude'],
+                    "gambar" => $uploaded,
+                    "icon_map" =>  $icon_uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
@@ -167,15 +198,17 @@ class Industri extends CI_Controller
     public function update($id)
     {
 
-        $this->form_validation->set_rules('jenis_industri', ' jenis_industri', 'required');
-        $this->form_validation->set_rules('sub_industri', ' sub_industri', 'required');
+        $this->form_validation->set_rules('pic_industri_id', ' pic_industri_id', 'required');
+        $this->form_validation->set_rules('sektor_industri_id', ' sektor_industri_id', 'required');
+        $this->form_validation->set_rules('sub_sektor_industri_id', ' sub_sektor_industri_id', 'required');
         $this->form_validation->set_rules('nama_industri', ' nama_industri', 'required');
         $this->form_validation->set_rules('perizinan_industri', ' perizinan_industri', 'required');
         $this->form_validation->set_rules('besar_modal_industri', ' besar_modal_industri', 'required');
         $this->form_validation->set_rules('nama_pemilik_industri', ' nama_pemilik_industri', 'required');
         $this->form_validation->set_rules('telp_pemilik_industri', ' telp_pemilik_industri', 'required');
         $this->form_validation->set_rules('alamat_industri', ' alamat_industri', 'required');
-        $this->form_validation->set_rules('koordinat_industri', 'koordinat_industri ', 'required');
+        $this->form_validation->set_rules('latitude', ' latitude', 'required');
+        $this->form_validation->set_rules('longitude', ' longitude', 'required');
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('error', 'data tidak di ubah');
             redirect('Industri');
@@ -184,8 +217,9 @@ class Industri extends CI_Controller
                 $post = $this->input->post();
                 $data  = [
                     "user_id" => auth()['user']['id'],
-                    "jenis_industri" => $post['jenis_industri'],
-                    "sub_industri" => $post['sub_industri'],
+                    "pic_industri_id" => $post['pic_industri_id'],
+                    "sektor_industri_id" => $post['pic_industri_id'],
+                    "sub_sektor_industri_id" => $post['sub_sektor_industri_id'],
                     "nama_industri" => $post['nama_industri'],
                     "perizinan_industri" => $post['perizinan_industri'],
                     "besar_modal_industri" => $post['besar_modal_industri'],
@@ -193,9 +227,19 @@ class Industri extends CI_Controller
                     "telp_pemilik_industri" => $post['telp_pemilik_industri'],
                     "deskripsi_industri" => $post['deskripsi_industri'],
                     "alamat_industri" => $post['alamat_industri'],
-                    "koordinat_industri" => $post['koordinat_industri'],
+                    "provinsi_id" => $post['provinsi_id'] ?? "",
+                    "kabupaten_id" => $post['kabupaten_id'] ?? "",
+                    "kecamatan_id" => $post['kecamatan_id'] ?? "",
+                    "kelurahan_id" => $post['kelurahan_id'] ?? "",
+                    "latitude" => $post['latitude'],
+                    "longitude" => $post['longitude'],
+                    "icon_map" => "default.png",
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
+                $uploaded = up("gambar", "assets/img/foto/");
+                if ($uploaded != false) {
+                    $data += ["gambar" => $uploaded];
+                }
                 $this->db->where('id_industri', $id);
                 $save = $this->db->update('industri', $data);
                 if ($save) {
@@ -226,11 +270,6 @@ class Industri extends CI_Controller
     }
     public function getAllDataIndustri()
     {
-        $this->db->order_by("id_industri", "DESC");
-        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
-        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
-        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
-        $result = $this->db->get_where("industri")->result_array();
-        echo json_encode($result);
+        echo json_encode($this->dataIndustri());
     }
 }

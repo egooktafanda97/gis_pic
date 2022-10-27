@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Sub_sektor extends CI_Controller
 {
-    private $page = "Sub_sektor/";
+    private $page = "Industri/Sub_sektor/";
     public function __construct()
     {
         parent::__construct();
@@ -18,23 +18,23 @@ class Sub_sektor extends CI_Controller
         $config['base_url'] = 'http://localhost/sig_pku/Sub_sektor/index';
         $config['total_rows'] = $this->countAllData();
         $config['per_page'] = 10;
-    
+
         // stylingPage
-        $config['full_tag_open'] ='<nav><ul class="pagination">';
-        $config['full_tag_close'] ='</ul></nav>';
+        $config['full_tag_open'] = '<nav><ul class="pagination">';
+        $config['full_tag_close'] = '</ul></nav>';
 
         $config['first_link'] = 'First';
         $config['first_tag_open'] = '<li class="page-item">';
         $config['first_tag_close'] = '</li>';
-        
+
         $config['last_link'] = 'Last';
         $config['last_tag_open'] = '<li class="page-item">';
         $config['last_tag_close'] = '</li>';
-        
+
         $config['next_link'] = '&raquo';
         $config['next_tag_open'] = '<li class="page-item">';
         $config['next_tag_close'] = '</li>';
-        
+
         $config['prev_link'] = '&laquo';
         $config['prev_tag_open'] = '<li class="page-item">';
         $config['prev_tag_close'] = '</li>';
@@ -84,7 +84,7 @@ class Sub_sektor extends CI_Controller
             try {
                 $post = $this->input->post();
                 $data  = [
-                    "nama_subsektor_industri" => $post['nama_subsektor_industri'],       
+                    "nama_subsektor_industri" => $post['nama_subsektor_industri'],
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
                 ];

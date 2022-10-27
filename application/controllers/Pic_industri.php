@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Pic_industri extends CI_Controller
 {
-    private $page = "Pic_industri/";
+    private $page = "Industri/Pic_industri/";
     public function __construct()
     {
         parent::__construct();
@@ -18,24 +18,24 @@ class Pic_industri extends CI_Controller
         $config['base_url'] = 'http://localhost/sig_pku/Pic_industri/index';
         $config['total_rows'] = $this->countAllData();
         $config['per_page'] = 1;
-        
-    
+
+
         // stylingPage
-        $config['full_tag_open'] ='<nav><ul class="pagination">';
-        $config['full_tag_close'] ='</ul></nav>';
+        $config['full_tag_open'] = '<nav><ul class="pagination">';
+        $config['full_tag_close'] = '</ul></nav>';
 
         $config['first_link'] = 'First';
         $config['first_tag_open'] = '<li class="page-item">';
         $config['first_tag_close'] = '</li>';
-        
+
         $config['last_link'] = 'Last';
         $config['last_tag_open'] = '<li class="page-item">';
         $config['last_tag_close'] = '</li>';
-        
+
         $config['next_link'] = '&raquo';
         $config['next_tag_open'] = '<li class="page-item">';
         $config['next_tag_close'] = '</li>';
-        
+
         $config['prev_link'] = '&laquo';
         $config['prev_tag_open'] = '<li class="page-item">';
         $config['prev_tag_close'] = '</li>';
@@ -88,7 +88,7 @@ class Pic_industri extends CI_Controller
                 $data  = [
                     "pic_category_name" => $post['pic_category_name'],
                     "pic_industry_type_name" => $post['pic_industry_type_name'],
-                    
+
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
