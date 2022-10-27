@@ -227,6 +227,9 @@ class Industri extends CI_Controller
     public function getAllDataIndustri()
     {
         $this->db->order_by("id_industri", "DESC");
+        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
+        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
+        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
         $result = $this->db->get_where("industri")->result_array();
         echo json_encode($result);
     }

@@ -5,7 +5,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 
-$active_group = 'default';
+$active_group = 'deploy';
 $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'    => '',
@@ -32,9 +32,9 @@ $db['default'] = array(
 $db['deploy'] = array(
 	'dsn'    => '',
 	'hostname' => 'localhost',
-	'username' => 'u435687185_root_pic',
-	'password' => 'D]n&!dlh3L0',
-	'database' => 'u435687185_sig_pic',
+	'username' => 'u1807606_pic',
+	'password' => 'AMzqqSa;JA2?',
+	'database' => 'u1807606_pic',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
