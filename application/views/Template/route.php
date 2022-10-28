@@ -30,6 +30,14 @@
             </ul>
         </li>
 
-        <li><a class="nav-link" href="<?= base_url('Pendidikan'); ?>"><i class="fas fa-school"></i> <span>Pendidikan</span></a></li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-school"></i><span>Pendidikan</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('Pendidikan'); ?>"><i class="fas fa-school"></i> <span> Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('Jenjang_pendidikan'); ?>"><i class="fas fa-school"></i> <span> Jenjang</span></a></li>
+            </ul>
+        </li>
+
+
     </ul>
 </aside>

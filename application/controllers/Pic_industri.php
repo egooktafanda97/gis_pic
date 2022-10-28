@@ -15,9 +15,9 @@ class Pic_industri extends CI_Controller
     {
         $this->load->library('pagination');
         // library pagination
-        $config['base_url'] = 'http://localhost/sig_pku/Pic_industri/index';
+        $config['base_url'] = base_url("Pic_industri/index/");
         $config['total_rows'] = $this->countAllData();
-        $config['per_page'] = 1;
+        $config['per_page'] = 10;
 
 
         // stylingPage

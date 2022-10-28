@@ -23,7 +23,6 @@
 
 <?php endif ?>
 <!-- Hapuss -->
-
 <script>
   $(document).ready(function() {
     $("#example").DataTable({
@@ -45,7 +44,6 @@
     });
   });
 </script>
-
 <script>
   $(document).on("click", ".delete", function() {
     const id = $(this).data("id");
@@ -58,32 +56,27 @@
       })
       .then((willDelete) => {
         if (willDelete) {
-          window.location.href = "<?= base_url('pendidikan/deleted/'); ?>" + id
+          window.location.href = "<?= base_url('jenjang_pendidikan/deleted/'); ?>" + id
         }
       });
   })
   //  data
 
   $(document).on('click', '.edit', function() {
-    toggleModal();
     const dataid = $(this).data('id');
     async function getdata(id) {
-      const requestdata = await axios.get('<?= base_url('pendidikan/getById/') ?>' + id).catch((err) => {
+      const requestdata = await axios.get('<?= base_url('jenjang_pendidikan/getById/') ?>' + id).catch((err) => {
         console.log(err.response)
       });
       if (requestdata?.status ?? 400 == 200) {
 
         const data = requestdata.data;
-        $("#jenis_pendidikan").val(data?.jenis_pendidikan ?? "");
-        $("#jenjang_pendidikan_id").val(data?.jenjang_pendidikan_id ?? "");
-        $("#nama_pendidikan").val(data?.nama_pendidikan ?? "");
-        $("#perizinan_pendidikan").val(data?.perizinan_pendidikan ?? "");
-        $("#jumlah_tenaga_pendidik").val(data?.jumlah_tenaga_pendidik ?? "");
-        $("#nama_pimpinan").val(data?.nama_pimpinan ?? "");
-        $("#alamat_pendidikan").val(data?.alamat_pendidikan ?? "");
-        $("#latitude").val(data?.latitude ?? "");
-        $("#longitude").val(data?.longitude ?? "");
-        $("#formmodal").attr('action', '<?= base_url('pendidikan/update/') ?>' + id)
+        $("#nama_jenjang").val(data?.nama_jenjang ?? "");
+        $("#ketrangan").val(data.ketrangan);
+        $("#formmodal").attr('action', '<?= base_url('jenjang_pendidikan/update/') ?>' + id)
+
+
+
       };
 
     }
