@@ -21,9 +21,9 @@ export const DelayedFallback = ({ children, delay = 300 }) => {
 export default function Rooter() {
 	let history = useHistory();
 	useEffect(() => {
-		if (history?.location?.pathname == "/") {
-			history.push("/home");
-		}
+		// if (history?.location?.pathname == "/") {
+		// 	history.push("/home");
+		// }
 	}, [history?.location?.pathname]);
 	const [loading, setLoading] = useState(true);
 	return (
