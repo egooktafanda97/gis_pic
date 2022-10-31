@@ -21,6 +21,7 @@
     <!-- <link rel="manifest" href="assets/img/favicons/manifest.json" /> -->
     <!-- <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png" /> -->
     <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- ===============================================-->
     <!--    Stylesheets-->

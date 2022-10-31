@@ -82,7 +82,15 @@ class Industri extends CI_Controller
         $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
         $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
         $result = $this->db->get_where("industri")->result_array();
-        return $result;
+
+        $result = array_map(function ($result) {
+            return $result += ["category" => "Industri"];
+        }, $result);
+
+        return [
+            "result" => $result,
+            "package_data" => "Industri"
+        ];
     }
 
     public function getPicIndustri()

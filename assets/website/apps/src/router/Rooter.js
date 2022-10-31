@@ -3,6 +3,8 @@ import { HashRouter, Router, Route, Link, Switch } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
+import { AnimatePresence } from "framer-motion";
+
 /////page ////
 import Rute from "./root";
 export const DelayedFallback = ({ children, delay = 300 }) => {
@@ -25,20 +27,22 @@ export default function Rooter() {
 	}, [history?.location?.pathname]);
 	const [loading, setLoading] = useState(true);
 	return (
-		<Switch>
-			{Rute.map(({ path, Component }, I) => {
-				return (
-					<Route
-						key={I}
-						path={path}
-						render={(props) => (
-							<Suspense fallback={DelayedFallback}>
-								<Component {...props} />
-							</Suspense>
-						)}
-					></Route>
-				);
-			})}
-		</Switch>
+		<AnimatePresence exitBeforeEnter>
+			<Switch>
+				{Rute.map(({ path, Component }, I) => {
+					return (
+						<Route
+							key={I}
+							path={path}
+							render={(props) => (
+								<Suspense fallback={DelayedFallback}>
+									<Component {...props} />
+								</Suspense>
+							)}
+						></Route>
+					);
+				})}
+			</Switch>
+		</AnimatePresence>
 	);
 }

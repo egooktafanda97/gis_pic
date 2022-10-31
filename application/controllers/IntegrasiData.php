@@ -105,4 +105,9 @@ class IntegrasiData extends CI_Controller
         $data = Industri_model::all();
         echo json_encode($data);
     }
+    public function alamatGoogleMaps($lat, $lng)
+    {
+        $latlng = $lat . "," . $lng;
+        echo json_encode($this->mapApiAlamat($latlng));
+    }
 }

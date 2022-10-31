@@ -1,0 +1,95 @@
+#menuSidebarLeft {
+	padding: 15px;
+	margin-top: 85px;
+
+	h5 {
+		color: gray;
+		font-size: 1em;
+	}
+
+	.MenuContainer {
+		.ItemMenuContainer {
+			padding: 10px;
+			background: #e7e7e7;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			color: #212121;
+			flex-direction: column;
+			border-radius: 5px;
+			cursor: pointer;
+
+			&.dropDown {
+				height: auto;
+			}
+
+			.container-main-menu {
+				display: flex;
+				width: 100%;
+				align-items: center;
+
+				.IconMenuContainer {
+					width: 50px;
+
+					i {
+						margin: 0;
+					}
+				}
+
+				.LabelMenuContainer {
+					font-size: 1em;
+
+					label {
+						margin: 0;
+						padding: 0;
+						font-family: 'Roboto', sans-serif;
+						display: inline-block;
+						// font-weight: "500";
+					}
+				}
+			}
+
+			.child-main-menu {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				height: 0px;
+				overflow: hidden;
+				transition: all ease 500ms;
+				padding-left: 50px;
+
+				&.active {
+					padding-top: 15px;
+					transition: all ease 500ms;
+					height: auto;
+					overflow: auto;
+				}
+
+				.IconMenuContainer {
+					width: 50px;
+
+					i {
+						margin: 0;
+					}
+				}
+
+				.LabelMenuContainer {
+					font-size: 1em;
+
+					label {
+						margin: 0;
+						padding: 0;
+						font-family: 'Roboto', sans-serif;
+					}
+				}
+			}
+
+
+
+		}
+	}
+
+	hr {
+		color: gray;
+	}
+}

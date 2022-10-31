@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
+const webpack = require("webpack");
 
 module.exports = {
 	entry: path.join(__dirname, "src", "index.js"),
@@ -62,6 +64,12 @@ module.exports = {
 			favicon: "./public/favicon.ico",
 			filename: "index.html",
 			manifest: "./public/manifest.json",
+		}),
+		new Dotenv({
+			path: `./.env`,
+		}),
+		new webpack.ProvidePlugin({
+			axios: "axios",
 		}),
 	],
 	optimization: {
