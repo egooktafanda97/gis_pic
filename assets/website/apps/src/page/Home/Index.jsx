@@ -6,8 +6,16 @@ import Layout from "../../layout/layout";
 
 import Display_chart from "./function/_display_chart";
 
+import { FaMap } from "react-icons/fa";
+
+import useScreenType from "react-screentype-hook";
+
 export default function Index() {
 	let history = useHistory();
+	const screenType = useScreenType();
+	useEffect(() => {
+		console.log(screenType);
+	});
 	return (
 		<Layout>
 			<section id="home">
@@ -52,7 +60,15 @@ export default function Index() {
 					<div className="container-menu">
 						<div class="button second" onClick={() => history.push("/gis")}>
 							<div class="border"></div>
-							<h1>PETA</h1>
+							<h1>
+								{screenType.isMobile ? (
+									<FaMap />
+								) : (
+									<>
+										<FaMap /> PETA
+									</>
+								)}
+							</h1>
 						</div>
 						<div class="button second">
 							<div class="border"></div>

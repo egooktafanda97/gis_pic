@@ -15,7 +15,8 @@
 		"php": ">=5.3.7",
 		"dompdf/dompdf": "^0.8.5",
 		"illuminate/database": "5.0.28",
-		"illuminate/events": "5.0.28"
+		"illuminate/events": "5.0.28",
+		"vlucas/phpdotenv": "3.6"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"

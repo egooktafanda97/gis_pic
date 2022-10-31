@@ -50,13 +50,17 @@
 
 #home {
 	position: fixed;
-	overflow: auto;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	top: 0;
 	padding: 0 !important;
 	padding-top: 4rem !important;
+
+
+	.example::-webkit-scrollbar {
+		display: none;
+	}
 
 	.bg-holder {
 		background: -webkit-linear-gradient(right, rgba(36, 59, 85, 1), rgba(20, 30, 48, 1));

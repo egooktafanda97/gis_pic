@@ -1,6 +1,8 @@
 <?php
 date_default_timezone_set("Asia/Jakarta");
 require_once 'vendor/autoload.php';
+
+
 /**
  * CodeIgniter
  *
@@ -227,6 +229,8 @@ define('FCPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 
 // Name of the "system" directory
 define('SYSDIR', basename(BASEPATH));
+
+
 
 // The path to the "application" directory
 if (is_dir($application_folder)) {
