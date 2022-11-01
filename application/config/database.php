@@ -9,7 +9,7 @@ use Dotenv\Dotenv;
 $query_builder = TRUE;
 $env = json_decode(file_get_contents(FCPATH . '/bin/init//env.json'), true);
 
-$active_group = 'default';
+$active_group = 'deploy';
 
 $db['default'] = array(
 	'dsn'    => '',
