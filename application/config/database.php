@@ -7,16 +7,16 @@ use Illuminate\Container\Container;
 use Dotenv\Dotenv;
 
 $query_builder = TRUE;
-$env = json_decode(file_get_contents(FCPATH . '/env.json'), true);
+$env = json_decode(file_get_contents(FCPATH . '/bin/init//env.json'), true);
 
-$active_group = 'deploy';
+$active_group = 'default';
 
 $db['default'] = array(
 	'dsn'    => '',
-	'hostname' => $env['DB_HOSTNAME'],
-	'username' => 'root',
-	'password' => '',
-	'database' => 'pku_gis',
+	'hostname' => $env["DEVELOPMENT"]['DB_HOST'],
+	'username' => $env["DEVELOPMENT"]['DB_USERNAME'],
+	'password' => $env["DEVELOPMENT"]['DB_PASSWORD'],
+	'database' => $env["DEVELOPMENT"]['DB_DATABASE'],
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -35,10 +35,10 @@ $db['default'] = array(
 
 $db['deploy'] = array(
 	'dsn'    => '',
-	'hostname' => 'localhost',
-	'username' => 'u435687185_root_pic',
-	'password' => '=RZgQ[b2',
-	'database' => 'u435687185_sig_pic',
+	'hostname' => $env["PRODUC"]['DB_HOST'],
+	'username' => $env["PRODUC"]['DB_USERNAME'],
+	'password' => $env["PRODUC"]['DB_PASSWORD'],
+	'database' => $env["PRODUC"]['DB_DATABASE'],
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

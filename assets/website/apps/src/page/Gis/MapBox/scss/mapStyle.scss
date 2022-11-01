@@ -67,28 +67,41 @@
 		}
 	}
 
+	// left sidebar
+	$width : 350px;
+
+
+
 	.sidebar-map {
 		position: fixed;
-		left: -400px;
+		left: -$width;
 		top: 0;
 		background-color: #fff;
-		min-width: 400px;
+		min-width: $width;
 		min-height: 100%;
+		width: $width;
 		transition: left ease 300ms;
 		z-index: 99999;
 		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
+		@include for-size("phone-only") {
+			width: 100%;
+		}
 
 		.top-sid {
 			height: 80px;
-			width: 400px;
+			width: $width;
 			padding: 10px;
-
 			position: fixed;
 			z-index: 99999;
 			left: 0px;
 			top: 0px;
 
+			@include for-size("phone-only") {
+				width: 100%;
+				padding: 0px;
+				height: 60px;
+			}
 
 			.container-top-sid {
 				height: 100%;

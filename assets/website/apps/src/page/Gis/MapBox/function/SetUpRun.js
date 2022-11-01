@@ -6,7 +6,8 @@ import evn from "./Event";
 
 export function _InitLoadMap(
 	{ map, mapContainer, lat, lng, zoom },
-	{ circleFilter }
+	{ circleFilter },
+	callBack
 ) {
 	const layer = LayerSource(map);
 	const e = evn(map);
@@ -33,7 +34,10 @@ export function _InitLoadMap(
 					parseFloat(res?.latitude ?? 0),
 				],
 			});
-
+			callBack({
+				polygonPku: geoJsonPolygonPku,
+				geometri: geometri,
+			});
 			geometri.geoJson.features = [geometri.features[0]];
 			layer.CircleMarker(geometri.geoJson);
 			layer.IconMarker(

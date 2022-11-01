@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { buildingDataDetail } from "../function/function___map";
+import { buildingDataDetail } from "../function/ObjectFunction";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 

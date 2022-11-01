@@ -11,6 +11,12 @@ export default function Event(maps) {
 				map.getCanvas().style.cursor = "";
 			});
 		},
+		mapMode: (layerId, StyleLoad) => {
+			map.setStyle("mapbox://styles/mapbox/" + layerId);
+			map.on("style.load", async function () {
+				await StyleLoad(map);
+			});
+		},
 	};
 	return e;
 }

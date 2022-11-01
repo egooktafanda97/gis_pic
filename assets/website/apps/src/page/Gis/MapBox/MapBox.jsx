@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
+import { useHistory } from "react-router-dom";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -20,16 +21,17 @@ mapboxgl.accessToken = process.env.MAPS_MAPBOX_KEY;
 
 export default function MapBox(props) {
 	const mapContainer = useRef(null);
+	let history = useHistory();
 	const map = useRef(null);
 	const getRedux = useSelector((state) => state);
 	const dispatch = useDispatch();
-
 	const [lng, setLng] = useState(101.4451276040001);
 	const [lat, setLat] = useState(0.532236798000042);
 	const [zoom, setZoom] = useState(11);
 	const [sidebar, setSidebar] = useState(false);
 	const [RightSidebar, setRightSidebar] = useState(false);
 	const [dataSelect, setDataSelect] = useState({});
+	const [CollBackInit, setCollBackInit] = useState({});
 	useEffect(() => {
 		if (getRedux) {
 			if (map.current) return;
@@ -54,6 +56,9 @@ export default function MapBox(props) {
 					circleFilter: package_data_active.map((i) => {
 						return i.name;
 					}),
+				},
+				(obj) => {
+					setCollBackInit(obj);
 				}
 			);
 			EventMapBox();
@@ -168,7 +173,13 @@ export default function MapBox(props) {
 								flexDirection: "row",
 							}}
 						>
-							<div className="text-center" style={{ width: "50px" }}>
+							<div
+								className="text-center"
+								style={{ width: "50px" }}
+								onClick={() => {
+									history.push("/home");
+								}}
+							>
 								<AiOutlineArrowLeft size={25} />
 							</div>
 							<h5 style={{ margin: "0" }}>GIS</h5>
@@ -182,7 +193,11 @@ export default function MapBox(props) {
 					</div>
 				</div>
 				<div className="content-left-sidebar">
-					<LeftSidebarComponent swithing={swithing} />
+					<LeftSidebarComponent
+						swithing={swithing}
+						map={map}
+						InitData={CollBackInit}
+					/>
 				</div>
 			</div>
 			{Object.keys(dataSelect) != 0 && (

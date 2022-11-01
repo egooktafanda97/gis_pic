@@ -129,7 +129,7 @@ export function LayerSource(maps) {
 					type: "fill-extrusion",
 					minzoom: 15,
 					layer: {
-						visibility: "visible",
+						visibility: "none",
 					},
 					paint: {
 						"fill-extrusion-color": "#aaa",

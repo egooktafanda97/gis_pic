@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import Rute from "./root";
 export const DelayedFallback = ({ children, delay = 300 }) => {
 	const [show, setShow] = useState(false);
+
 	useEffect(() => {
 		let timeout = setTimeout(() => setShow(true), delay);
 		return () => {
@@ -21,6 +22,7 @@ export const DelayedFallback = ({ children, delay = 300 }) => {
 export default function Rooter() {
 	let history = useHistory();
 	useEffect(() => {
+		console.log(MODE, CONFIG, API);
 		if (history?.location?.pathname == "/") {
 			history.push("/home");
 		}

@@ -74,10 +74,10 @@ export default function Index() {
 							<div class="border"></div>
 							<h1>MASTER DATA</h1>
 						</div>
-						<div class="button second">
+						{/* <div class="button second">
 							<div class="border"></div>
 							<h1>STATISTIK</h1>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</section>

@@ -6,8 +6,10 @@ import $ from "jquery";
 
 import { addOrRemove } from "../function/fx";
 const ItemMenuPicCheck = (props) => {
+	const { swithing } = props;
 	const getRedux = useSelector((state) => state);
 	const dispatch = useDispatch();
+	const [trigger, setTrigger] = useState(false);
 	useEffect(() => {
 		dispatch({
 			type: "SEKTOR_ACTIVE",
@@ -23,7 +25,7 @@ const ItemMenuPicCheck = (props) => {
 			type: "SEKTOR_ACTIVE",
 			payload: new_arr,
 		});
-		props.swithing(new_arr);
+		swithing(new_arr);
 	};
 
 	return (
@@ -31,7 +33,7 @@ const ItemMenuPicCheck = (props) => {
 			<div
 				className="container-main-menu"
 				onClick={() => {
-					$(".child-main-menu").toggleClass("active");
+					setTrigger(!trigger);
 				}}
 			>
 				<div className="IconMenuContainer dropDown">
@@ -41,7 +43,7 @@ const ItemMenuPicCheck = (props) => {
 					<label htmlFor="">PIC</label>
 				</div>
 			</div>
-			<div className="child-main-menu">
+			<div className={`child-main-menu ${trigger && "active"}`}>
 				{package_data_active.map((itm, key) => (
 					<div className="componentCheck LabelMenuContainer" key={key}>
 						<div>

@@ -19,7 +19,6 @@ export default function Index() {
 	};
 	useEffect(() => {
 		getDataAPi();
-		console.log(window.base_url);
 	}, []);
 	return (
 		<div className="container-map">

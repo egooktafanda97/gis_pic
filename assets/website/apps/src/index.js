@@ -13,7 +13,7 @@ const store = createStore(reducer);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<Provider store={store}>
-		<BrowserRouter basename={process.env.PREFIX_PATH}>
+		<BrowserRouter basename={CONFIG?.PREFIX_PATH}>
 			<React.StrictMode>
 				<Routers />
 			</React.StrictMode>
