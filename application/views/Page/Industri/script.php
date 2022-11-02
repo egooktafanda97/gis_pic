@@ -74,7 +74,6 @@
       if (requestdata?.status ?? 400 == 200) {
 
         const data = requestdata.data;
-        $("#jenis_industri").val(data?.jenis_industri ?? "");
         $("#pic_industri_id").val(data?.pic_industri_id ?? "");
         $("#sektor_industri_id").val(data?.sektor_industri_id ?? "");
         $("#sub_sektor_industri_id").val(data?.sub_sektor_industri_id ?? "");
@@ -93,4 +92,5 @@
     }
     getdata(dataid)
   })
+
 </script>

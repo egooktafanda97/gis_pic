@@ -22,8 +22,9 @@
                                 <tr>
                                     <th>#</th>
                                     <th scope=" col">No</th>
-                                    <th scope="col">Jenis Industri</th>
-                                    <th scope="col">Sub Industri</th>
+                                    <th scope="col">Pic Industri</th>
+                                    <th scope="col">Sektor Industri</th>
+                                    <th scope="col">Sub Sektor</th>
                                     <th scope="col">Nama Industri</th>
                                     <th scope="col">Perizinan</th>
                                     <th scope="col">Besar Modal</th>
@@ -31,8 +32,6 @@
                                     <th scope="col">No Hp Pemilik</th>
                                     <th scope="col">Deskripsi Industri</th>
                                     <th scope="col">Alamat Industri</th>
-                                    <th scope="col">Web Industri</th>
-                                    <th scope="col">Kordinat</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Icon</th>
                                     <th scope="col">Aksi</th>
@@ -42,8 +41,9 @@
                                 <tr>
                                     <th>#</th>
                                     <th scope=" col">No</th>
-                                    <th scope="col">Jenis Industri</th>
-                                    <th scope="col">Sub Industri</th>
+                                    <th scope="col">Pic Industri</th>
+                                    <th scope="col">Sektor Industri</th>
+                                    <th scope="col">Sub Sektor</th>
                                     <th scope="col">Nama Industri</th>
                                     <th scope="col">Perizinan</th>
                                     <th scope="col">Besar Modal</th>
@@ -51,8 +51,6 @@
                                     <th scope="col">No Hp Pemilik</th>
                                     <th scope="col">Deskripsi Industri</th>
                                     <th scope="col">Alamat Industri</th>
-                                    <th scope="col">Web Industri</th>
-                                    <th scope="col">Kordinat</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Icon</th>
                                     <th scope="col">Aksi</th>
@@ -65,8 +63,9 @@
                                     <tr>
                                         <td></td>
                                         <td><?= $no++ ?></td>
-                                        <td><?= $val['jenis_industri'] ?? "" ?></td>
-                                        <td><?= $val['sub_industri'] ?? "" ?></td>
+                                        <td><?= $val['pic_category_name'] ?? "" ?></td>
+                                        <td><?= $val['nama_sektor_utama_industri'] ?? "" ?></td>
+                                        <td><?= $val['nama_subsektor_industri'] ?? "" ?></td>
                                         <td><?= $val['nama_industri'] ?? "" ?></td>
                                         <td><?= $val['perizinan_industri'] ?? "" ?></td>
                                         <td><?= $val['besar_modal_industri'] ?? "" ?></td>
@@ -74,10 +73,8 @@
                                         <td><?= $val['telp_pemilik_industri'] ?? "" ?></td>
                                         <td><?= $val['deskripsi_industri'] ?? "" ?></td>
                                         <td><?= $val['alamat_industri'] ?? "" ?></td>
-                                        <td><?= $val['alamat_web'] ?? "" ?></td>
-                                        <td><?= $val['koordinat_industri'] ?? "" ?></td>
                                         <td><?= $val['gambar'] ?? "" ?></td>
-                                        <td><?= $val['icon'] ?? "" ?></td>
+                                        <td><?= $val['icon_map'] ?? "" ?></td>
                                         <td>
                                             <a href="<?= base_url('industri/detail/') . $val['id_industri']; ?>" class="btn btn-success btn-sm"><i class="fa fa-list"></i></a>
                                             <button type="button" data-id="<?= $val['id_industri']; ?>" class="btn btn-primary btn-sm trigger edit">
@@ -177,20 +174,14 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Alamat Website</label>
-                                <input type="text" class="form-control form-control-sm" name="alamat_web" id="alamat_web" placeholder="Alamat Web">
+                                <label for="">Alamat</label>
+                                <textarea class="form-control form-control-sm" id="alamat_industri" name="alamat_industri" rows="3" placeholder="Alamat Industri"></textarea>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Deskripsi</label>
                                 <textarea class="form-control form-control-sm" id="deskripsi_industri" name="deskripsi_industri" rows="3" placeholder="Deskripsi"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Alamat</label>
-                                <textarea class="form-control form-control-sm" id="alamat_industri" name="alamat_industri" rows="3" placeholder="Alamat Industri"></textarea>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -218,7 +209,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Icon Map (.png)</label>
-                                <input type="file" class="form-control form-control-sm" name="gambar" id="gambar" placeholder="Gambar">
+                                <input type="file" class="form-control form-control-sm" name="icon_map" id="icon_map" placeholder="Icon">
                             </div>
                         </div>
                         <div class="col-md-12">
