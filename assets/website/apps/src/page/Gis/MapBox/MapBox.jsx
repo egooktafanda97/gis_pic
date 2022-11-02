@@ -90,8 +90,20 @@ export default function MapBox(props) {
 						sid_right: true,
 					},
 				});
-
 				window.setTimeout(() => map.current.resize(), 500);
+
+				const coordinates = e.features[0].geometry.coordinates.slice();
+				const description = e.features[0].properties;
+
+				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+				}
+				console.log(">>", description);
+
+				new mapboxgl.Popup()
+					.setLngLat(coordinates)
+					.setHTML(JSON.parse(description?.data ?? "[]")?.nama_industri)
+					.addTo(map.current);
 			}
 		});
 		let lastZoom = map.current.getZoom();
@@ -120,19 +132,6 @@ export default function MapBox(props) {
 	useEffect(() => {
 		map.current.resize();
 	}, [getRedux]);
-
-	function getUniqueFeatures(features, comparatorProperty) {
-		const uniqueIds = new Set();
-		const uniqueFeatures = [];
-		for (const feature of features) {
-			const id = feature.properties[comparatorProperty];
-			if (!uniqueIds.has(id)) {
-				uniqueIds.add(id);
-				uniqueFeatures.push(feature);
-			}
-		}
-		return uniqueFeatures;
-	}
 
 	const swithing = (val) => {
 		console.log(val);

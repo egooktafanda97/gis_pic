@@ -41,6 +41,10 @@ export function buildingDataDetail(data) {
 			value: `${data?.alamat_industri ?? "-"}`,
 		},
 		{
+			label: ("Kordinat" ?? "")?.toUpperCase() ?? "",
+			value: `${data?.latitude ?? "-"},${data?.longitude ?? "-"}`,
+		},
+		{
 			label: "Telepon "?.toUpperCase() ?? "",
 			value: `${data?.telp_pemilik_industri ?? ""}`,
 		},

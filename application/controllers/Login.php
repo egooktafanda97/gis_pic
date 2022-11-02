@@ -13,6 +13,7 @@ class Login extends CI_Controller
 
     public function index()
     {
+
         $this->load->view('auth/login');
     }
     public function auth()
@@ -35,5 +36,10 @@ class Login extends CI_Controller
         } else {
             echo json_encode(['status' => 'error', "result" => "username", "msg" => "Username tidak ditemukan"]);
         }
+    }
+    public function logout()
+    {
+        session_destroy();
+        redirect("login");
     }
 }

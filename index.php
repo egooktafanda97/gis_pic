@@ -230,6 +230,9 @@ define('FCPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 // Name of the "system" directory
 define('SYSDIR', basename(BASEPATH));
 
+// Name of the "system" directory
+define('ROOT', __DIR__ . "/");
+
 
 
 // The path to the "application" directory

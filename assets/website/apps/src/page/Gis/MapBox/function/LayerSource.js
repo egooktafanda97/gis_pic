@@ -35,7 +35,6 @@ export function LayerSource(maps) {
 			});
 		},
 		CircleMarker: (geoJson) => {
-			console.log(">", geoJson);
 			map.addSource("marker_data", {
 				type: "geojson",
 				data: geoJson,

@@ -34,10 +34,12 @@ export function _InitLoadMap(
 					parseFloat(res?.latitude ?? 0),
 				],
 			});
+
 			callBack({
 				polygonPku: geoJsonPolygonPku,
 				geometri: geometri,
 			});
+
 			geometri.geoJson.features = [geometri.features[0]];
 			layer.CircleMarker(geometri.geoJson);
 			layer.IconMarker(

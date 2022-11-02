@@ -81,6 +81,7 @@
         $("#jumlah_tenaga_pendidik").val(data?.jumlah_tenaga_pendidik ?? "");
         $("#nama_pimpinan").val(data?.nama_pimpinan ?? "");
         $("#alamat_pendidikan").val(data?.alamat_pendidikan ?? "");
+        $("#website_pendidikan").val(data?.website_pendidikan ?? "");
         $("#latitude").val(data?.latitude ?? "");
         $("#longitude").val(data?.longitude ?? "");
         $("#formmodal").attr('action', '<?= base_url('pendidikan/update/') ?>' + id)
