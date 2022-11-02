@@ -78,10 +78,14 @@ export default function MapBox(props) {
 					zoom: Z,
 				});
 			} else {
-				const dataClick = e?.features[0]?.properties?.data ?? "[]";
-				const minData = JSON.parse(dataClick);
-				minData.dataSektor = e?.features[0]?.properties?.ethnicity ?? "";
-				setDataSelect(minData);
+				const dataClick = e?.features[0]?.properties ?? "[]";
+				const minData = JSON.parse(dataClick.data);
+				const result = JSON.parse(dataClick.items);
+				result.dataSektor = e?.features[0]?.properties?.ethnicity ?? "";
+				setDataSelect({
+					detail: minData,
+					result: result,
+				});
 
 				dispatch({
 					type: "SIDEBAR",
@@ -98,11 +102,16 @@ export default function MapBox(props) {
 				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 				}
-				console.log(">>", description);
 
 				new mapboxgl.Popup()
 					.setLngLat(coordinates)
-					.setHTML(JSON.parse(description?.data ?? "[]")?.nama_industri)
+					.setHTML(
+						/*html*/ `
+					<strong style="font-size:.8em; margin:3px;">
+						${JSON.parse(description?.items ?? "[]")?.header?.nama}
+					</strong>
+					`
+					)
 					.addTo(map.current);
 			}
 		});

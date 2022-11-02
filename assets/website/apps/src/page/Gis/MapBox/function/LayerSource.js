@@ -34,7 +34,18 @@ export function LayerSource(maps) {
 				},
 			});
 		},
-		CircleMarker: (geoJson) => {
+		CircleMarker: (geoJson, config) => {
+			const arr = ["match", ["get", "ethnicity"]];
+			if (config.length > 0) {
+				config.map((rr, i) => {
+					if (rr.config_key == "circle-color") {
+						arr.push(rr.table_config);
+						arr.push(rr.config_value);
+					}
+				});
+			}
+			arr.push("#000");
+
 			map.addSource("marker_data", {
 				type: "geojson",
 				data: geoJson,
@@ -73,38 +84,39 @@ export function LayerSource(maps) {
 					"circle-stroke-color": "#595655",
 					"circle-stroke-opacity": 0.5,
 					"circle-radius": mode_circle_radius_config.mode_2,
-					"circle-color": [
-						"match",
-						["get", "ethnicity"],
-						"White",
-						"#fbb03b",
-						"Black",
-						"#223b53",
-						"Industri",
-						"#e55e5e",
-						"Asian",
-						"#3bb2d0",
-						/* other */ "#ccc",
-					],
+					"circle-color": arr,
 				},
 			});
 		},
-		IconMarker: (geoJson, iconUrl) => {
-			map.loadImage(iconUrl, (error, image) => {
-				if (error) throw error;
-				map.addImage("custom-marker", image);
+		IconMarker: (geoJson, config) => {
+			if (config.length > 0) {
 				map.addSource("pointer-marker", {
 					type: "geojson",
 					data: geoJson,
 				});
-				// Add a symbol layer
+				const marker_id = ["match", ["get", "ethnicity"]];
+				config.map((its, i) => {
+					if (its.config_key == "icon") {
+						marker_id.push(its.table_config);
+						marker_id.push(`marker-${its.table_config}`);
+					}
+				});
+				marker_id.push("-");
+				config.map((itm, i) => {
+					if (itm.config_key == "icon") {
+						map.loadImage(BASE_URL + itm.config_value, (error, image) => {
+							if (error) throw error;
+							map.addImage(`marker-${itm.table_config}`, image);
+						});
+					}
+				});
 				map.addLayer({
-					id: "points",
+					id: `points`,
 					type: "symbol",
 					source: "pointer-marker",
 					layout: {
 						visibility: "none",
-						"icon-image": "custom-marker",
+						"icon-image": marker_id,
 						"icon-size": {
 							base: 1.75,
 							stops: [[14, 0.5]],
@@ -116,7 +128,7 @@ export function LayerSource(maps) {
 						"text-anchor": "top",
 					},
 				});
-			});
+			}
 		},
 		_3DModelLayer: (labelLayerId, id) => {
 			map.addLayer(

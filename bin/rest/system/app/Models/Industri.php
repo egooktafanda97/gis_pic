@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Setting;
 
 class Industri extends Model
 {
     protected $table = 'industri';
     protected $primaryKey = 'id_industri';
     public $timestamps = true;
-    protected $appends = ['setting'];
+    protected $appends = ['setting', 'ethnicity', "header"];
     protected $fillable = [
         "user_id",
         "pic_industri_id",
@@ -47,6 +48,17 @@ class Industri extends Model
     }
     public function getSettingAttribute()
     {
-        return "industri";
+        return Setting::where("table_config", $this->table)->get();
+    }
+    public function getEthnicityAttribute()
+    {
+        return $this->table;
+    }
+    public function getHeaderAttribute()
+    {
+        return [
+            "nama"  => $this->getAttribute("nama_industri"),
+            "jenis" => $this->table
+        ];
     }
 }

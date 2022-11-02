@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
+const fx = require("./src/function/__fx");
 
 const config = require("../../../bin/init/env.json");
 
@@ -78,8 +79,11 @@ module.exports = (env) => {
 			}),
 			new webpack.DefinePlugin({
 				CONFIG: JSON.stringify(conf?.WEBSITE),
-				API: JSON.stringify(conf?.SERVER_URL),
+				BASE_URL: JSON.stringify(conf?.BASE_URL),
+				BASE_API_PUBLIC: JSON.stringify(conf?.BASE_API_PUBLIC),
+				API: JSON.stringify(conf?.BASE_API),
 				MODE: env,
+				fx: fx,
 			}),
 			new webpack.ProvidePlugin({
 				axios: "axios",

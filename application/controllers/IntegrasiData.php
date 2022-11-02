@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class IntegrasiData extends My_controller
+class IntegrasiData extends CI_Controller
 {
     public function __construct()
     {

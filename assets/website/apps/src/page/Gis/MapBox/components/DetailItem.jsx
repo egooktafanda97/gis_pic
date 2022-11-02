@@ -12,14 +12,14 @@ export default function DetailItem(props) {
 	const [ItemDetail, setItemDetail] = useState([]);
 
 	useEffect(() => {
-		if (props.data != undefined && props.data != "") {
-			console.log(props.data);
+		if (!fx?.empty(props.data) && props.data != undefined && props.data != "") {
+			const { detail, result } = props.data;
 			fetchDataAlamatGoogle(
-				`${props?.data?.latitude}`,
-				`${props?.data?.longitude}`
+				`${parseFloat(result?.latitude.replace(/\s/g, ""))}`,
+				`${parseFloat(result?.longitude.replace(/\s/g, ""))}`
 			);
-			setData(props.data);
-			setItemDetail(buildingDataDetail(props?.data ?? {}));
+			setData(result);
+			setItemDetail(detail ?? {});
 		}
 	}, [props.data]);
 
@@ -98,8 +98,8 @@ export default function DetailItem(props) {
 							alt=""
 						/>
 					</div>
-					<h5 className="mt-2">{data?.nama_industri ?? ""}</h5>
-					<small>{data?.pic_industry_type_name ?? ""}</small>
+					<h5 className="mt-2">{data?.header?.nama?.toUpperCase() ?? ""}</h5>
+					<small>{data?.header?.jenis?.toUpperCase() ?? ""}</small>
 					<div className="mt-2 address">
 						{address.administrative_area_level_1 != undefined && (
 							<small>
@@ -143,9 +143,9 @@ export default function DetailItem(props) {
 									}}
 								>
 									<div>
-										<strong>{_?.label ?? ""}</strong>
+										<strong>{_?.label?.toUpperCase() ?? ""}</strong>
 									</div>
-									<span>{_?.value ?? ""}</span>
+									<span>{_?.value ?? "-"}</span>
 								</div>
 							</div>
 						</div>

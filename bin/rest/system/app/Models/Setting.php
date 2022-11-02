@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     use HasFactory;
-    protected $table = 'pendidikan';
+    protected $table = 'setting';
     protected $primaryKey = 'id_config';
     protected $fillable = [
         "id_config",

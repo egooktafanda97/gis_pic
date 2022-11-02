@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,7 +31,12 @@ Route::group([
     'prefix' => 'main',
 
 ], function ($router) {
-    Route::get('/main-data/{slug?}', [\App\Http\Controllers\MasterData::class, "data_main"]);
+    Route::get('/main-data/{slug?}', [
+        \App\Http\Controllers\MasterData::class, "data_main"
+    ]);
+    Route::get('/geojson/{slug?}', [
+        \App\Http\Controllers\MasterData::class, "geojson"
+    ]);
 });
 
 Route::group([
