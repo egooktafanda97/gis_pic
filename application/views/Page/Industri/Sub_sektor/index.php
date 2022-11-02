@@ -1,14 +1,11 @@
 <section class="section">
-    <div class="mt-1 text-white mb-4">
-        <strong>Data Sub Sektor</strong>
-    </div>
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
 
                 <div class="card-header">
                     <div class="flex-space-between w-100">
-                        <h5>Tabel Sub Sektor</h5>
+                        <strong>Sub Sektor</strong>
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#m-crud"><i class="fa fa-plus"></i> Tambah Data</button>
                     </div>
 

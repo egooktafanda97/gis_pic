@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pendidikan extends CI_Controller
+class Pendidikan extends My_controller
 {
     private $page = "Pendidikan/";
     public function __construct()
@@ -84,7 +84,7 @@ class Pendidikan extends CI_Controller
         return $result;
     }
 
-       public function countAllData()
+    public function countAllData()
     {
         return $this->db->get_where("pendidikan")->num_rows();
     }
@@ -135,7 +135,6 @@ class Pendidikan extends CI_Controller
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
                     "gambar" => $uploaded,
-                    "icon_map" =>  $icon_uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
@@ -158,7 +157,7 @@ class Pendidikan extends CI_Controller
     public function deleted($id_pendidikan)
     {
         $this->db->where('id_pendidikan', $id_pendidikan);
-        $this->db->delete('[pendidikan]');
+        $this->db->delete('pendidikan');
 
         $this->session->set_flashdata('success', 'data berhasil dihapus');
         redirect('pendidikan');
@@ -185,7 +184,7 @@ class Pendidikan extends CI_Controller
         $this->form_validation->set_rules('latitude', ' latitude', 'required');
         $this->form_validation->set_rules('longitude', ' longitude', 'required');
         if ($this->form_validation->run() == FALSE) {
-            $this->session->set_flashdata('error', 'data tidak di ubah');
+            $this->session->set_flashdata('error', 'data tidak valid, gagal diubah');
             redirect('pendidikan');
         } else {
             try {
@@ -206,7 +205,6 @@ class Pendidikan extends CI_Controller
                     "kelurahan_id" => $post['kelurahan_id'] ?? "",
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
-                    "icon_map" => "default.png",
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
                 $uploaded = up("gambar", "assets/img/foto/");

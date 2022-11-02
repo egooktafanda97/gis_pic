@@ -10,11 +10,10 @@ import { createStore } from "redux";
 import reducer from "./redux/index";
 
 const store = createStore(reducer);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<Provider store={store}>
-		<BrowserRouter basename="/website">
+		<BrowserRouter basename={CONFIG?.PREFIX_PATH}>
 			<React.StrictMode>
 				<Routers />
 			</React.StrictMode>

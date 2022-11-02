@@ -1,39 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import "./css/style.scss";
 import Layout from "../../layout/layout";
+
+import Display_chart from "./function/_display_chart";
+
+import { FaMap } from "react-icons/fa";
+
+import useScreenType from "react-screentype-hook";
+
 export default function Index() {
+	let history = useHistory();
+	const screenType = useScreenType();
+	useEffect(() => {
+		console.log(screenType);
+	});
 	return (
 		<Layout>
 			<section id="home">
-				<div
-					className="bg-holder"
-					style={{
-						backgroundImage: `url("${window.web_public}assets/img/gallery/hero.png")`,
-						backgroundPosition: "center",
-						backgroundSize: "cover",
-					}}
-				>
+				<div className="bg-holder">
 					<div></div>
 				</div>
 				<div className="container">
 					<div className="row align-items-center min-vh-50 min-vh-sm-75">
 						<div className="col-md-5 col-lg-6 order-0 order-md-1">
-							<img
+							{/* <img
 								className="w-100"
-								src={`${window.web_public}img/b.png`}
+								src={`${window.web_public}img/pku.png`}
 								alt="..."
-							/>
+							/> */}
+							<Display_chart />
 						</div>
 						<div className="col-md-7 col-lg-6 text-md-start text-center">
-							<h1 className="text-light fs-md-5 fs-lg-6">
+							<h1 className="text-light fs-md-5 fs-lg-6 home-title">
 								PEKANBARU INVESTMENT CENTER
 							</h1>
 							<p className="text-light">MENGAPA BERINVERSTASI DI PEKANBARU</p>
-							<a className="btn btn-primary" href="#" role="button">
-								INVESTMENT
-							</a>
+							{/* <div class="button second bg-active">
+								<div class="border"></div>
+								<h1>INVESTMENT</h1>
+							</div> */}
 						</div>
 					</div>
+
 					<div className="bg-overlay"></div>
 					<video
 						className="fullscreen-video"
@@ -47,6 +57,28 @@ export default function Index() {
 						/>
 						Your browser does not support the video tag.
 					</video>
+					<div className="container-menu">
+						<div class="button second" onClick={() => history.push("/gis")}>
+							<div class="border"></div>
+							<h1>
+								{screenType.isMobile ? (
+									<FaMap />
+								) : (
+									<>
+										<FaMap /> PETA
+									</>
+								)}
+							</h1>
+						</div>
+						<div class="button second">
+							<div class="border"></div>
+							<h1>MASTER DATA</h1>
+						</div>
+						{/* <div class="button second">
+							<div class="border"></div>
+							<h1>STATISTIK</h1>
+						</div> */}
+					</div>
 				</div>
 			</section>
 			{/* <section className="pt-8">

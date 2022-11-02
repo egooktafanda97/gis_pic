@@ -127,7 +127,7 @@
                 const form_data = new FormData();
                 form_data.append('username', username);
                 form_data.append('password', password);
-                axios.post('<?= base_url("Login/auth") ?>', form_data)
+                axios.post('<?= base_api("auth/login") ?>', form_data)
                     .then(function(res) {
                         if (res.data.status == 'error') {
                             if (res.data.result == 'username') {
@@ -137,9 +137,9 @@
                                 $('#msg-password').html(res.data.msg);
                             }
                         } else {
-                            localStorage.setItem('auth', JSON.stringify(res.data.result));
+                            localStorage.setItem('auth', JSON.stringify(res.data));
                             setTimeout(function() {
-                                window.location.href = '<?= base_url("Home") ?>';
+                                window.location.href = '<?= base_url("Core/index/") ?>' + encodeURIComponent(JSON.stringify(res.data));
                             }, 1000);
                         }
                     }).catch(function(err) {

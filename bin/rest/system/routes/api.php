@@ -1,11 +1,6 @@
 <?php
-
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\{
-    IndustriController
-};
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +11,12 @@ use App\Http\Controllers\{
 | routes are loaded by the RouteServiceProvider within a group which
 | is assigned the "api" middleware group. Enjoy building your API!
 |
-*/
+ */
 
 // AUTH =============================================================
 Route::group([
     'middleware' => 'api',
-    'prefix' => 'auth'
+    'prefix' => 'auth',
 
 ], function ($router) {
     Route::post('/login', [AuthController::class, 'login']);
@@ -32,8 +27,18 @@ Route::group([
 
 Route::group([
     'middleware' => 'api',
-    'prefix' => 'industri'
+    'prefix' => 'main',
 
 ], function ($router) {
-    Route::get('/dataIndustri', [IndustriController::class, "getdataIndustri"]);
+    Route::get('/main-data/{slug?}', [\App\Http\Controllers\MasterData::class, "data_main"]);
+});
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'industri',
+
+], function ($router) {
+    Route::get('/dataIndustri', [
+        \App\Http\Controllers\MasterData::class, "getdataIndustri",
+    ]);
 });

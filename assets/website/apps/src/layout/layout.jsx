@@ -16,7 +16,7 @@ export default function layout(props) {
 							alt="..."
 						/>
 					</a>
-					<button
+					{/* <button
 						className="navbar-toggler"
 						type="button"
 						data-bs-toggle="collapse"
@@ -47,7 +47,7 @@ export default function layout(props) {
 								</Link>
 							</li>
 						</ul>
-					</div>
+					</div> */}
 				</div>
 			</nav>
 			{props.children}
