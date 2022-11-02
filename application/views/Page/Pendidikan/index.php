@@ -1,14 +1,11 @@
 <section class="section">
-    <div class="mt-1 text-white mb-4">
-        <strong>Pendidikan</strong>
-    </div>
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
 
                 <div class="card-header">
                     <div class="flex-space-between w-100">
-                        <h5>Tabel Pendidikan</h5>
+                        <strong>Master Data Pendidikan</strong>
                         <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#m-crud"><i class="fa fa-plus"></i> Tambah Data</button> -->
                         <button class="btn btn-info trigger"><i class="fa fa-plus"></i> Tambah Data</button>
                     </div>
@@ -31,7 +28,6 @@
                                     <th scope="col">Alamat Pendidikan</th>
                                     <th scope="col">Web Pendidikan</th>
                                     <th scope="col">Gambar</th>
-                                    <th scope="col">Icon</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -48,7 +44,6 @@
                                     <th scope="col">Alamat Pendidikan</th>
                                     <th scope="col">Web Pendidikan</th>
                                     <th scope="col">Gambar</th>
-                                    <th scope="col">Icon</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </tfoot>
@@ -68,7 +63,6 @@
                                         <td><?= $val['alamat_pendidikan'] ?? "" ?></td>
                                         <td><?= $val['website_pendidikan'] ?? "" ?></td>
                                         <td><?= $val['gambar'] ?? "" ?></td>
-                                        <td><?= $val['icon_map'] ?? "" ?></td>
                                         <td>
                                             <a href="<?= base_url('pendidikan/detail/') . $val['id_pendidikan']; ?>" class="btn btn-success btn-sm"><i class="fa fa-list"></i></a>
                                             <button type="button" data-id="<?= $val['id_pendidikan']; ?>" class="btn btn-primary btn-sm trigger edit">
@@ -180,12 +174,6 @@
                             <div class="form-group">
                                 <label for="">Gambar</label>
                                 <input type="file" class="form-control form-control-sm" name="gambar" id="gambar" placeholder="Gambar">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Icon Map (.png)</label>
-                                <input type="file" class="form-control form-control-sm" name="icon_map" id="icon_map" placeholder="Icon">
                             </div>
                         </div>
                         <div class="col-md-12">

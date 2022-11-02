@@ -18,7 +18,8 @@
 	"scripts": {
 		"start": "webpack serve --mode=development",
 		"watch": "npm-watch",
-		"build": "webpack --config webpack.config.js --mode=development",
+		"build": "webpack --env dev --config webpack.config.js --mode=development",
+		"production": "webpack --env prod --config webpack.config.js --mode=production",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
@@ -34,9 +35,12 @@
 		"axios": "^1.1.3",
 		"babel-loader": "^8.2.5",
 		"babel-preset-es2015": "^6.24.1",
+		"chart.js": "2.5.0",
 		"css-loader": "^6.2.0",
 		"file-loader": "^6.2.0",
+		"framer-motion": "^7.6.2",
 		"html-webpack-plugin": "^5.5.0",
+		"install": "^0.13.0",
 		"jquery": "^3.6.0",
 		"json-loader": "^0.5.7",
 		"leaflet": "^1.9.2",
@@ -48,13 +52,19 @@
 		"popper.js": "^1.16.1",
 		"postcss": "^8.4.12",
 		"react": "^18.2.0",
+		"react-component-analyzer": "^1.0.53",
+		"react-device-detect": "^2.2.2",
 		"react-dom": "^18.2.0",
+		"react-icons": "^4.6.0",
+		"react-inject-env": "^2.1.0",
 		"react-leaflet": "^4.1.0",
 		"react-map-gl": "^7.0.19",
 		"react-redux": "^8.0.4",
 		"react-router": "^6.0.2",
 		"react-router-dom": "^5.2.0",
+		"react-screentype-hook": "^1.0.18",
 		"react-scripts": "5.0.1",
+		"react-tabs": "^5.1.0",
 		"react-top-loading-bar": "^2.3.1",
 		"redux": "^4.2.0",
 		"sass-loader": "^12.1.0",
@@ -83,5 +93,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"dotenv-webpack": "^8.0.1"
 	}
 }

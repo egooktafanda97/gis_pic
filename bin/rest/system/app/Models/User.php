@@ -20,18 +20,14 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        "kode_desa",
-        'username',
+        "account_type",
         'email',
-        'phone',
+        'username',
         'password',
-        'default_password',
+        'screet',
         'role',
-        'table_join',
-        "prangkat_desa",
-        'status_account',
-        'sumber_join',
-        'gambar',
+        'relation',
+        // 'gambar',
     ];
 
     /**

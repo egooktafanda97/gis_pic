@@ -1,0 +1,11 @@
+{
+    "prettier.bracketSameLine": true,
+    "prettier.jsxSingleQuote": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.formatOnSave": true
+    },
+}
