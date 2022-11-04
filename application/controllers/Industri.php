@@ -151,7 +151,7 @@ class Industri extends My_controller
                 $data  = [
                     "user_id" => auth()['user']['id'],
                     "pic_industri_id" => $post['pic_industri_id'],
-                    "sektor_industri_id" => $post['pic_industri_id'],
+                    "sektor_industri_id" => $post['sektor_industri_id'],
                     "sub_sektor_industri_id" => $post['sub_sektor_industri_id'],
                     "nama_industri" => $post['nama_industri'],
                     "perizinan_industri" => $post['perizinan_industri'],
@@ -226,7 +226,7 @@ class Industri extends My_controller
                 $data  = [
                     "user_id" => auth()['user']['id'],
                     "pic_industri_id" => $post['pic_industri_id'],
-                    "sektor_industri_id" => $post['pic_industri_id'],
+                    "sektor_industri_id" => $post['sektor_industri_id'],
                     "sub_sektor_industri_id" => $post['sub_sektor_industri_id'],
                     "nama_industri" => $post['nama_industri'],
                     "perizinan_industri" => $post['perizinan_industri'],
@@ -276,8 +276,19 @@ class Industri extends My_controller
         );
         $this->load->view('Router/route', $data);
     }
-    public function getAllDataIndustri()
+    public function maps($id_industri)
     {
-        echo json_encode($this->dataIndustri());
+
+        $dataId =  $this->db->get_where('industri', ['id_industri' => $id_industri])->row_array();
+        $data = array(
+            'title' => "Detail Data",
+            'page' => $this->page . "maps",
+            'script' => $this->page . "script",
+            'val' => $dataId
+        );
+        $this->load->view('Router/route', $data);
     }
+
+        
+     
 }

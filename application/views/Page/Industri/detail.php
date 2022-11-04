@@ -16,55 +16,60 @@
 
                             <table class="table table-bordered">
                                 <tbody>
-                                    
-                                        <tr>
-                                            <th>Jenis Industri</th>
-                                            <th><?= $val['jenis_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Sub Industri</th>
-                                            <th><?= $val['sub_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Nama Industri</th>
-                                            <th><?= $val['nama_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Perizinan</th>
-                                            <th><?= $val['perizinan_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Besar Modal Industri</th>
-                                            <th><?= $val['besar_modal_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Nama Pemilik Industri</th>
-                                            <th><?= $val['nama_pemilik_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>No Hp Pemilik</th>
-                                            <th><?= $val['telp_pemilik_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Deskripsi</th>
-                                            <th><?= $text['deskripsi_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Alamat Pemilik</th>
-                                            <th><?= $val['alamat_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Alamat Web</th>
-                                            <th><?= $val['alamat_web'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Kordinat</th>
-                                            <th><?= $val['koordinat_industri'] ?? "" ?></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Gambar</th>
-                                            <th><?= $val['gambar'] ?? "" ?></th>
-                                        </tr>
+
+                                    <tr>
+                                        <th>Jenis Industri</th>
+                                        <th><?= $val['jenis_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Sub Industri</th>
+                                        <th><?= $val['sub_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Industri</th>
+                                        <th><?= $val['nama_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Perizinan</th>
+                                        <th><?= $val['perizinan_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Besar Modal Industri</th>
+                                        <th><?= $val['besar_modal_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Nama Pemilik Industri</th>
+                                        <th><?= $val['nama_pemilik_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>No Hp Pemilik</th>
+                                        <th><?= $val['telp_pemilik_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Deskripsi</th>
+                                        <th><?= $text['deskripsi_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Alamat Pemilik</th>
+                                        <th><?= $val['alamat_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Alamat Web</th>
+                                        <th><?= $val['alamat_web'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kordinat</th>
+                                        <th><?= $val['koordinat_industri'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Gambar</th>
+                                        <th><?= $val['gambar'] ?? "" ?></th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <a href="<?= base_url('industri/maps/') . $val['id_industri']; ?>" class="btn btn-success">Maps</i></a>
+                                        </th>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
