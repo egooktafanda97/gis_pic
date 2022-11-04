@@ -50,5 +50,26 @@
                 <li><a class="nav-link" href="<?= base_url('Kelas_penginapan'); ?>"><i class="fa fa-circle"></i> <span>Kelas Penginapan</span></a></li>
             </ul>
         </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hospital"></i><span>Fasilitas Kesehatan</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('Fasilitas_kesehatan'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('jenis_fasilitas_kesehatan'); ?>"><i class="fa fa-circle"></i> <span>Jenis Fasilitas</span></a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hospital"></i><span>Pariwisata</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('jenis_pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Jenis Pariwisata</span></a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-columns"></i><span>Bank</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('bank'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('jenis_bank'); ?>"><i class="fa fa-circle"></i> <span>Jenis Bank</span></a></li>
+            </ul>
+        </li>
     </ul>
 </aside>
