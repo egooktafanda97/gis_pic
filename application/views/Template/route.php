@@ -37,9 +37,39 @@
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fa fa-cog"></i><span>Pengaturan</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="<?= base_url('Setting'); ?>"><i class="fa fa-circle"></i> <span>Pengaturan Map</span></a></li>
+                    <li><a class="nav-link" href="<?= base_url('Setting'); ?>"><i class="fa fa-circle"></i><span>Pengaturan Map</span></a></li>
                 </ul>
             </li>
         <?php endif ?>
+        <li><a class="nav-link" href="<?= base_url('Tempat_ibadah'); ?>"><i class="fa fa-home"></i> <span>Tempat Ibadah</span></a></li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hotel"></i><span>Penginapan</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('Penginapan'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('Jenis_penginapan'); ?>"><i class="fa fa-circle"></i> <span>Jenis Penginapan</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('Kelas_penginapan'); ?>"><i class="fa fa-circle"></i> <span>Kelas Penginapan</span></a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hospital"></i><span>Fasilitas Kesehatan</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('Fasilitas_kesehatan'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('jenis_fasilitas_kesehatan'); ?>"><i class="fa fa-circle"></i> <span>Jenis Fasilitas</span></a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hospital"></i><span>Pariwisata</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('jenis_pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Jenis Pariwisata</span></a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-columns"></i><span>Bank</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= base_url('bank'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link" href="<?= base_url('jenis_bank'); ?>"><i class="fa fa-circle"></i> <span>Jenis Bank</span></a></li>
+            </ul>
+        </li>
     </ul>
 </aside>

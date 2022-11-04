@@ -87,7 +87,7 @@
 
 <!-- [ sample-page ] end -->
 <div class="costum-modal">
-    <div class="costum-modal-content ovY-auto">
+    <div class="costum-modal-content mb-auto">
         <div class="card mb-0 p-3">
             <div class="card-head ">
                 <span class="costum-close-button">&times;</span>
@@ -114,7 +114,6 @@
                                 <select class="form-control form-control-sm" id="jenis_pendidikan" name="jenis_pendidikan" require>
                                     <option>NEGERI</option>
                                     <option>SWASTA</option>
-
                                 </select>
                             </div>
                         </div>
