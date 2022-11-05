@@ -83,8 +83,8 @@
         $("#alamat_penginapan").val(data?.alamat_penginapan ?? "");
         $("#no_telp").val(data?.no_telp ?? "");
         $("#alamat_web").val(data?.alamat_web ?? "");
-        $("#laritude").val(data?.laritude ?? "");
-        $("#logitude").val(data?.logitude ?? "");
+        $("#latitude").val(data?.laritude ?? "");
+        $("#longitude").val(data?.logitude ?? "");
         $("#formmodal").attr('action', '<?= base_url('penginapan/update/') ?>' + id)
       };
 

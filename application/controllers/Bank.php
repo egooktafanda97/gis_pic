@@ -82,6 +82,14 @@ class Bank extends My_controller
             "package_data" => "bank"
         ];
     }
+    public function dataBankById($id)
+    {
+        $this->db->join("jenis_bank", "jenis_bank.id_jenis_bank = bank.jenis_bank_id");
+        $this->db->where("bank.id_bank", $id);
+        $result = $this->db->get_where("bank")->row_array();
+
+        return $result;
+    }
     public function getJenis()
     {
         $this->db->order_by("id_jenis_bank", "DESC");
@@ -212,11 +220,14 @@ class Bank extends My_controller
     {
 
         $dataId =  $this->db->get_where('bank', ['id_bank' => $id_bank])->row_array();
+        $getSetting = $this->db->get_where("setting", ["table_config" => 'bank', "config_key" => "icon"])->row_array();
         $data = array(
             'title' => "Detail Data",
-            'page' => $this->page . "detail",
-            'script' => $this->page . "script",
-            'val' => $dataId
+            'page' => $this->page . "detail/index",
+            "style" => $this->page . "detail/style",
+            'script' => $this->page . "detail/script",
+            'val' => $this->dataBankById($id_bank),
+            "setting" => $getSetting
         );
         $this->load->view('Router/route', $data);
     }

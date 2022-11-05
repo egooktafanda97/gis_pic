@@ -59,7 +59,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hospital"></i><span>Pariwisata</span></a>
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-mountain"></i><span>Pariwisata</span></a>
             <ul class="dropdown-menu">
                 <li><a class="nav-link Pariwisata" href="<?= base_url('Pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
                 <li><a class="nav-link Jenis_pariwisata" href="<?= base_url('Jenis_pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Jenis Pariwisata</span></a></li>
@@ -70,6 +70,13 @@
             <ul class="dropdown-menu">
                 <li><a class="nav-link Bank" href="<?= base_url('Bank'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
                 <li><a class="nav-link Jenis_bank" href="<?= base_url('Jenis_bank'); ?>"><i class="fa fa-circle"></i> <span>Jenis Bank</span></a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-gas-pump"></i><span>Spbu</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link Bank" href="<?= base_url('Spbu'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link Jenis_bank" href="<?= base_url('Jenis_spbu'); ?>"><i class="fa fa-circle"></i> <span>Jenis Spbu</span></a></li>
             </ul>
         </li>
     </ul>
