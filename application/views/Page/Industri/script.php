@@ -92,5 +92,4 @@
     }
     getdata(dataid)
   })
-
 </script>

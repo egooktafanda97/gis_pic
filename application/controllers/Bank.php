@@ -10,7 +10,6 @@ class Bank extends My_controller
         parent::__construct();
         $this->load->library('form_validation');
     }
-
     public function index()
     {
         $this->load->library('pagination');
@@ -60,7 +59,6 @@ class Bank extends My_controller
         ];
         $this->load->view('Router/route', $data);
     }
-
     public function getAllData($limit, $start)
     {
         $this->db->order_by("id_bank", "DESC");
@@ -84,20 +82,16 @@ class Bank extends My_controller
             "package_data" => "bank"
         ];
     }
-
-
     public function getJenis()
     {
         $this->db->order_by("id_jenis_bank", "DESC");
         $result = $this->db->get_where("jenis_bank")->result_array();
         return $result;
     }
-
     public function countAllData()
     {
         return $this->db->get_where("bank")->num_rows();
     }
-
     public function created()
     {
         $this->form_validation->set_rules('jenis_bank_id', 'jenis_bank_id', 'required');
@@ -150,7 +144,6 @@ class Bank extends My_controller
             }
         }
     }
-
     public function deleted($id_bank)
     {
         $this->db->where('id_bank ', $id_bank);
@@ -159,7 +152,6 @@ class Bank extends My_controller
         $this->session->set_flashdata('success', 'data berhasil dihapus');
         redirect('bank');
     }
-
     public function getById($id_bank)
     {
 
@@ -216,7 +208,6 @@ class Bank extends My_controller
             }
         }
     }
-
     public function detail($id_bank)
     {
 

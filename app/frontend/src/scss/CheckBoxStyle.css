@@ -1,0 +1,427 @@
+.componentCheck {
+  /* checkbox effect #1 */
+  /* checkbox effect #2 */
+  /* checkbox effect #3 */
+  /* checkbox effect #4 */
+  /* checkbox effect #5 */
+  /* checkbox effect #6 */
+}
+
+.componentCheck label {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.componentCheck .checkbox-effect:not(:checked),
+.componentCheck .checkbox-effect:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.componentCheck .checkbox-effect-1:not(:checked) + label:before,
+.componentCheck .checkbox-effect-1:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5a5a5a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.componentCheck .checkbox-effect-1:not(:checked) + label:after,
+.componentCheck .checkbox-effect-1:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  color: #fff;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.componentCheck .checkbox-effect-1:not(:checked) + label:after {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.componentCheck .checkbox-effect-1:checked + label:before {
+  background-color: #1B998B;
+  border-color: #1B998B;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.componentCheck .checkbox-effect-1:checked + label:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.componentCheck .checkbox-effect-2:not(:checked) + label:before,
+.componentCheck .checkbox-effect-2:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #5a5a5a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  margin-right: 20px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.componentCheck .checkbox-effect-2:not(:checked) + label:after,
+.componentCheck .checkbox-effect-2:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  color: #00711b;
+}
+
+.componentCheck .checkbox-effect-2:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.componentCheck .checkbox-effect-2:checked + label:before {
+  opacity: 0;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.componentCheck .checkbox-effect-2:checked + label:after {
+  opacity: 1;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.componentCheck .checkbox-effect-3 + label {
+  overflow: hidden;
+}
+
+.componentCheck .checkbox-effect-3:not(:checked) + label:before,
+.componentCheck .checkbox-effect-3:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5a5a5a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.componentCheck .checkbox-effect-3:not(:checked) + label:after,
+.componentCheck .checkbox-effect-3:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  color: #FD5200;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0, 1.31, 1, 1);
+          transition-timing-function: cubic-bezier(0, 1.31, 1, 1);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.componentCheck .checkbox-effect-3:not(:checked) + label:after {
+  left: -52px;
+}
+
+.componentCheck .checkbox-effect-3:checked + label:after {
+  left: 3px;
+}
+
+.componentCheck .checkbox-effect-4:not(:checked) + label:before,
+.componentCheck .checkbox-effect-4:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5a5a5a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  margin-right: 20px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.componentCheck .checkbox-effect-4:not(:checked) + label:after,
+.componentCheck .checkbox-effect-4:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  color: #72195A;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  opacity: 0;
+}
+
+.componentCheck .checkbox-effect-4:not(:checked) + label:after {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.componentCheck .checkbox-effect-4:checked + label:before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.componentCheck .checkbox-effect-4:checked + label:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.57, 1.9, 0, 1.52);
+          transition-timing-function: cubic-bezier(0.57, 1.9, 0, 1.52);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.componentCheck .checkbox-effect-5:not(:checked) + label:before,
+.componentCheck .checkbox-effect-5:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #5a5a5a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  margin-right: 20px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.componentCheck .checkbox-effect-5:not(:checked) + label:after,
+.componentCheck .checkbox-effect-5:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  color: #fff;
+}
+
+.componentCheck .checkbox-effect-5:not(:checked) + label:after {
+  opacity: 0;
+}
+
+.componentCheck .checkbox-effect-5:checked + label:before {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background-color: #275DAD;
+  border-color: #275DAD;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.57, 1.9, 0, 1.52);
+          transition-timing-function: cubic-bezier(0.57, 1.9, 0, 1.52);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.componentCheck .checkbox-effect-5:checked + label:after {
+  opacity: 1;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.componentCheck .checkbox-effect-6:not(:checked) + label:before,
+.componentCheck .checkbox-effect-6:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5a5a5a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.componentCheck .checkbox-effect-6:not(:checked) + label:after,
+.componentCheck .checkbox-effect-6:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  color: #C42021;
+  text-shadow: 0px -1px 0px #fff;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.componentCheck .checkbox-effect-6:not(:checked) + label:after {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+}
+
+.componentCheck .checkbox-effect-6:checked + label:after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+/*# sourceMappingURL=CheckBoxStyle.css.map */

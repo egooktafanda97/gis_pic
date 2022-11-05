@@ -24,6 +24,17 @@ $(".costum-model-close").click(function () {
 for (var i = 0, len = triggers.length; i < len; i++) {
 	triggers[i].addEventListener("click", toggleModal);
 }
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
-batal.addEventListener("click", batalFunc);
+closeButton?.addEventListener("click", toggleModal);
+// window.addEventListener("click", windowOnClick);
+// batal.addEventListener("click", batalFunc);
+
+var pathname = window.location.pathname;
+var url = window.location.href;
+var origin = window.location.origin;
+
+(function () {
+	$("." + window.segment)
+		.parents()
+		.addClass("active");
+	// console.log($("." + window.segment).parents());
+})();

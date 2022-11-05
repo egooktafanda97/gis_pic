@@ -1,12 +1,12 @@
 <?php
 function api_url()
 {
-    return base_url("bin/rest/api/");
+    return base_url("app/api/");
 }
 
 function base_api($url = null)
 {
-    return base_url("bin/rest/api/" . $url);
+    return base_url("app/api/" . $url);
 }
 
 function auth()

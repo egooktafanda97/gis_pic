@@ -29,8 +29,6 @@
                                     <th scope="col">No Hp Pemilik</th>
                                     <th scope="col">Deskripsi Industri</th>
                                     <th scope="col">Alamat Industri</th>
-                                    <th scope="col">Gambar</th>
-                                    <th scope="col">Icon</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -48,8 +46,6 @@
                                     <th scope="col">No Hp Pemilik</th>
                                     <th scope="col">Deskripsi Industri</th>
                                     <th scope="col">Alamat Industri</th>
-                                    <th scope="col">Gambar</th>
-                                    <th scope="col">Icon</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </tfoot>
@@ -70,8 +66,6 @@
                                         <td><?= $val['telp_pemilik_industri'] ?? "" ?></td>
                                         <td><?= $val['deskripsi_industri'] ?? "" ?></td>
                                         <td><?= $val['alamat_industri'] ?? "" ?></td>
-                                        <td><?= $val['gambar'] ?? "" ?></td>
-                                        <td><?= $val['icon_map'] ?? "" ?></td>
                                         <td>
                                             <a href="<?= base_url('industri/detail/') . $val['id_industri']; ?>" class="btn btn-success btn-sm"><i class="fa fa-list"></i></a>
                                             <button type="button" data-id="<?= $val['id_industri']; ?>" class="btn btn-primary btn-sm trigger edit">

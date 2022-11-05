@@ -30,7 +30,10 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-94034622-3');
+        window.base_url = "<?= base_url() ?>"
+        window.segment = "<?= $this->uri->segment(1) ?>"
     </script>
+    <?php !empty($style) ? $this->load->view('/Page/' . $style) : "" ?>
     <!-- /END GA -->
 </head>
 
@@ -88,7 +91,7 @@
 
     <!-- ------------------------------------ -->
 
-    <?php $this->load->view('/Page/' . $script); ?>
+    <?php !empty($script) ? $this->load->view('/Page/' . $script) : "" ?>
 
 </body>
 

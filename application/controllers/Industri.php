@@ -93,6 +93,17 @@ class Industri extends My_controller
         ];
     }
 
+    public function dataIndustriById($id)
+    {
+        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
+        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
+        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
+        $this->db->where("industri.id_industri", $id);
+        $result = $this->db->get_where("industri")->row_array();
+
+        return $result;
+    }
+
     public function getPicIndustri()
     {
         $this->db->order_by("id_pic_industri", "DESC");
@@ -268,11 +279,14 @@ class Industri extends My_controller
     {
 
         $dataId =  $this->db->get_where('industri', ['id_industri' => $id_industri])->row_array();
+        $getSetting = $this->db->get_where("setting", ["table_config" => 'industri', "config_key" => "icon"])->row_array();
         $data = array(
             'title' => "Detail Data",
-            'page' => $this->page . "detail",
-            'script' => $this->page . "script",
-            'val' => $dataId
+            'page' => $this->page . "detail/index",
+            "style" => $this->page . "detail/style",
+            'script' => $this->page . "detail/script",
+            'val' => $this->dataIndustriById($id_industri),
+            "setting" => $getSetting
         );
         $this->load->view('Router/route', $data);
     }
@@ -288,7 +302,4 @@ class Industri extends My_controller
         );
         $this->load->view('Router/route', $data);
     }
-
-        
-     
 }
