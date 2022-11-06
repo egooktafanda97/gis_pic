@@ -5,7 +5,10 @@
 
                 <div class="card-header">
                     <div class="flex-space-between w-100">
-                        <strong>Master Industri</strong>
+                        <div>
+                            <strong>Master Industri</strong>
+                            <button class="btn btn-primary btn-sm"><i class="fa fa-bar-chart"></i> Grafik</button>
+                        </div>
                         <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#m-crud"><i class="fa fa-plus"></i> Tambah Data</button> -->
                         <button class="btn btn-info trigger"><i class="fa fa-plus"></i> Tambah Data</button>
                     </div>
