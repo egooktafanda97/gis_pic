@@ -22,7 +22,6 @@ export const DelayedFallback = ({ children, delay = 300 }) => {
 export default function Rooter() {
 	let history = useHistory();
 	useEffect(() => {
-		console.log(MODE, CONFIG, API);
 		if (history?.location?.pathname == "/") {
 			history.push("/home");
 		}
