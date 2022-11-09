@@ -95,6 +95,8 @@
 		]
 	},
 	"devDependencies": {
-		"dotenv-webpack": "^8.0.1"
+		"dotenv-webpack": "^8.0.1",
+		"npm-run-notify": "^0.1.0",
+		"webpack-notifier": "^1.15.0"
 	}
 }

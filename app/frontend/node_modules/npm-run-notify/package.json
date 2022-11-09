@@ -1,0 +1,27 @@
+{
+  "name": "npm-run-notify",
+  "version": "0.1.0",
+  "description": "Send OS X notifications from NPM scripts",
+  "main": "bin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "npm-run-notify": "./bin.js"
+  },
+  "keywords": [
+    "npm",
+    "notification",
+    "notifications",
+    "run",
+    "script",
+    "notifier",
+    "terminal"
+  ],
+  "author": "Trevor Fountain <trevor@texasexpat.net> (http://texasexpat.net)",
+  "license": "MIT",
+  "dependencies": {
+    "terminal-notifier": "^0.1.2",
+    "yargs": "^6.3.0"
+  }
+}

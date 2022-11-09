@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
+var WebpackNotifierPlugin = require("webpack-notifier");
 const fx = require("./src/function/__fx");
 
 const config = require("../config/env.json");
@@ -67,6 +68,7 @@ module.exports = (env) => {
 			],
 		},
 		plugins: [
+			new WebpackNotifierPlugin(),
 			new HtmlWebpackPlugin({
 				template: path.join(__dirname, "public", "index.html"),
 				template: path.resolve(__dirname, "public", "index.html"),

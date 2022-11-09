@@ -22,6 +22,7 @@ export function _InitLoadMap(
 			callBack({
 				polygonPku: geoJsonPolygonPku,
 				geometri: geometri,
+				config: config,
 			});
 
 			const featureGeo = geometri?.features;

@@ -6,34 +6,28 @@ import Event from "../function/Event";
 import { LayerSource } from "../function/LayerSource";
 import geoJsonPolygonPku from "../../json/pekanbaru.json";
 
-const ItemMenuPicCheck = (props) => {
+const ItemMenuMode = (props) => {
 	const { map, swithing, InitData } = props;
 	const [trigger, setTrigger] = useState(false);
 	useEffect(() => {
-		if (!map.current || InitData?.geometri?.geoJson == undefined) return;
+		if (!map.current || InitData?.geometri == undefined) return;
+		// map.current?.removeSource("maine");
 		$("[name='map_mode']").change(function () {
-			const MainData = InitData?.geometri;
+			// map.current?.removeSource("maine");
+			const MainData = InitData;
 			const e = Event(map.current);
-			e.mapMode($(this).attr("id"), async (maps) => {
+			e.mapMode($(this).attr("id"), (maps) => {
 				const layer = LayerSource(maps);
 				layer.PolygonPku(InitData?.polygonPku);
-				layer.CircleMarker(MainData?.geoJson);
-				layer.IconMarker(
-					MainData?.geoJson,
-					`${window.web_public}img/marker/markers_industri.png`
-				);
+				if (MainData?.geometri == undefined) return;
+				layer.CircleMarker(MainData?.geometri, MainData?.config);
+				layer.IconMarker(MainData?.geometri, MainData?.config);
+				if (!map?.current?.getLayer("__3dMode")) {
+					layer._3DModelLayer(layer.LabelMode(), "__3dMode");
+				}
 
-				layer._3DModelLayer(layer.LabelMode(), "__3dMode");
 				e.mouseenter(["circle", "points"]);
 				e.mouseleave(["circle", "points"]);
-
-				map.setFilter("circle", [
-					"match",
-					["get", "ethnicity"],
-					circleFilter,
-					true,
-					false,
-				]);
 			});
 		});
 	}, [map, InitData]);
@@ -99,4 +93,4 @@ const ItemMenuPicCheck = (props) => {
 	);
 };
 
-export default ItemMenuPicCheck;
+export default ItemMenuMode;
