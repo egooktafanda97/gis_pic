@@ -13,10 +13,10 @@ $active_group = 'default';
 
 $db['default'] = array(
 	'dsn'    => '',
-	'hostname' => $env["DEVELOPMENT"]['DB_HOST'],
-	'username' => $env["DEVELOPMENT"]['DB_USERNAME'],
-	'password' => $env["DEVELOPMENT"]['DB_PASSWORD'],
-	'database' => $env["DEVELOPMENT"]['DB_DATABASE'],
+	'hostname' => $env[$env["MODE"]]['DB_HOST'],
+	'username' => $env[$env["MODE"]]['DB_USERNAME'],
+	'password' => $env[$env["MODE"]]['DB_PASSWORD'],
+	'database' => $env[$env["MODE"]]['DB_DATABASE'],
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
