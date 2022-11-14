@@ -1,5 +1,5 @@
 <?php
-class My_controller extends CI_Controller
+class My_Controller extends CI_Controller
 {
     function __construct()
     {

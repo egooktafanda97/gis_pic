@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Jenis_spbu extends My_controller
+class Jenis_spbu extends My_Controller
 {
     private $page = "spbu/Jenis_spbu/";
     public function __construct()

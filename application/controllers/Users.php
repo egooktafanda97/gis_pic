@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Users extends My_controller
+class Users extends My_Controller
 {
     private $page = "User/";
     public function __construct()

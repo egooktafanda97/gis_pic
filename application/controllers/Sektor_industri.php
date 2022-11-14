@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Sektor_industri extends My_controller
+class Sektor_industri extends My_Controller
 {
     private $page = "Industri/Sektor_industri/";
     public function __construct()
