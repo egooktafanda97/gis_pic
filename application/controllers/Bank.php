@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Bank extends My_Controller
+class Bank extends CI_Controller
 {
     private $page = "Bank/";
     public function __construct()

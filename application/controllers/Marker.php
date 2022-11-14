@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Marker extends My_Controller
+class Marker extends CI_Controller
 {
     private $page = "Marker/";
     public function __construct()
