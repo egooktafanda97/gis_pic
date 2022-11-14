@@ -7,7 +7,7 @@ use Illuminate\Container\Container;
 use Dotenv\Dotenv;
 
 $query_builder = TRUE;
-$env = json_decode(file_get_contents(FCPATH . '/bin/init//env.json'), true);
+$env = json_decode(file_get_contents(FCPATH . '/app/config/env.json'), true);
 
 $active_group = 'default';
 

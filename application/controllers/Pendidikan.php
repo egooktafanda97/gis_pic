@@ -77,6 +77,15 @@ class Pendidikan extends My_controller
         return $result;
     }
 
+    public function dataPendidikanById($id)
+    {
+        $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id = pendidikan.jenjang_pendidikan_id");
+        $this->db->where("pendidikan.id_pendidikan", $id);
+        $result = $this->db->get_where("pendidikan")->row_array();
+
+        return $result;
+    }
+
     public function getJenjangData()
     {
         $this->db->order_by("jenjang_pendidikan_id", "DESC");
@@ -231,11 +240,14 @@ class Pendidikan extends My_controller
     {
 
         $dataId =  $this->db->get_where('pendidikan', ['id_pendidikan' => $id_pendidikan])->row_array();
+        $getSetting = $this->db->get_where("setting", ["table_config" => 'pendidikan', "config_key" => "icon"])->row_array();
         $data = array(
             'title' => "Detail Data",
-            'page' => $this->page . "detail",
-            'script' => $this->page . "script",
-            'val' => $dataId
+            'page' => $this->page . "detail/index",
+            "style" => $this->page . "detail/style",
+            'script' => $this->page . "detail/script",
+            'val' => $this->dataPendidikanById($id_pendidikan),
+            "setting" => $getSetting
         );
         $this->load->view('Router/route', $data);
     }

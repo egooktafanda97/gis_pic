@@ -88,6 +88,15 @@ class Penginapan extends My_controller
             "package_data" => "penginapan"
         ];
     }
+    public function dataPenginapanById($id)
+    {
+        $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id");
+        $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id");
+        $this->db->where("penginapan.id_penginapan", $id);
+        $result = $this->db->get_where("penginapan")->row_array();
+
+        return $result;
+    }
 
     public function getJenis()
     {
@@ -119,8 +128,8 @@ class Penginapan extends My_controller
         $this->form_validation->set_rules('alamat_penginapan', 'alamat_penginapan', 'required');
         $this->form_validation->set_rules('no_telp', 'no_telp', 'required');
         $this->form_validation->set_rules('alamat_web', 'alamat_web', 'required');
-        $this->form_validation->set_rules('laritude', 'laritude', 'required');
-        $this->form_validation->set_rules('logitude', 'logitude', 'required');
+        $this->form_validation->set_rules('latitude', 't', 'required');
+        $this->form_validation->set_rules('longitude', 'longitude', 'required');
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('error', 'gagal ditambahkan');
             redirect('penginapan');
@@ -143,8 +152,8 @@ class Penginapan extends My_controller
                     "alamat_penginapan" => $post['alamat_penginapan'],
                     "no_telp" => $post['no_telp'],
                     "alamat_web" => $post['alamat_web'],
-                    "laritude" => $post['laritude'],
-                    "logitude" => $post['logitude'],
+                    "latitude" => $post['latitude'],
+                    "longitude" => $post['longitude'],
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -193,8 +202,8 @@ class Penginapan extends My_controller
         $this->form_validation->set_rules('alamat_penginapan', ' alamat_penginapan', 'required');
         $this->form_validation->set_rules('no_telp', ' no_telp', 'required');
         $this->form_validation->set_rules('alamat_web', ' alamat_web', 'required');
-        $this->form_validation->set_rules('laritude', ' laritude', 'required');
-        $this->form_validation->set_rules('logitude', ' logitude', 'required');
+        $this->form_validation->set_rules('latitude', ' latitude', 'required');
+        $this->form_validation->set_rules('longitude', ' longitude', 'required');
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('error', 'data tidak di ubah');
             redirect('penginapan');
@@ -211,8 +220,8 @@ class Penginapan extends My_controller
                     "alamat_penginapan" => $post['alamat_penginapan'],
                     "no_telp" => $post['no_telp'],
                     "alamat_web" => $post['alamat_web'],
-                    "laritude" => $post['laritude'],
-                    "logitude" => $post['logitude'],
+                    "latitude" => $post['latitude'],
+                    "longitude" => $post['longitude'],
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
                 $uploaded = up("gambar", "assets/img/foto/");
@@ -239,11 +248,14 @@ class Penginapan extends My_controller
     {
 
         $dataId =  $this->db->get_where('penginapan', ['id_penginapan' => $id_penginapan])->row_array();
+        $getSetting = $this->db->get_where("setting", ["table_config" => 'penginapan', "config_key" => "icon"])->row_array();
         $data = array(
             'title' => "Detail Data",
-            'page' => $this->page . "detail",
-            'script' => $this->page . "script",
-            'val' => $dataId
+            'page' => $this->page . "detail/index",
+            "style" => $this->page . "detail/style",
+            'script' => $this->page . "detail/script",
+            'val' => $this->dataPenginapanById($id_penginapan),
+            "setting" => $getSetting
         );
         $this->load->view('Router/route', $data);
     }

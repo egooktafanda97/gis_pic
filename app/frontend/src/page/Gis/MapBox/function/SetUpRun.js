@@ -1,5 +1,5 @@
 import geoJsonPolygonPku from "../../json/pekanbaru.json";
-import { model__getData } from "../model/main_model";
+import { model__getData, model__getDatapekanbaru } from "../model/main_model";
 import { LayerSource } from "./LayerSource";
 import { func__generateGeoJsonMarker } from "./fx";
 import evn from "./Event";
@@ -14,8 +14,10 @@ export function _InitLoadMap(
 	// --------------------------------------------------------------------
 	layer.Rotation();
 	map.on("load", async () => {
+		model__getDatapekanbaru();
 		layer.PolygonPku(geoJsonPolygonPku);
 		const GeoJsonData = await model__getData();
+
 		if (GeoJsonData?.data) {
 			const geometri = GeoJsonData?.data?.geoJson;
 			const config = GeoJsonData?.data?.setting;
@@ -42,17 +44,6 @@ export function _InitLoadMap(
 					window.clearInterval(timer);
 				}
 			}, 10);
-			// layer._3DModelLayer(layer.LabelMode(), "__3dMode");
-			// e.mouseenter(["circle", "points"]);
-			// e.mouseleave(["circle", "points"]);
-
-			// map.setFilter("circle", [
-			// 	"match",
-			// 	["get", "ethnicity"],
-			// 	circleFilter,
-			// 	true,
-			// 	false,
-			// ]);
 		}
 	});
 }

@@ -43,6 +43,7 @@
         <?php endif ?> -->
 
         <li><a class="nav-link Tempat_ibadah" href="<?= base_url('Tempat_ibadah'); ?>"><i class="fa fa-home"></i> <span>Tempat Ibadah</span></a></li>
+
         <li class="dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-hotel"></i><span>Penginapan</span></a>
             <ul class="dropdown-menu">
@@ -59,7 +60,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hospital"></i><span>Pariwisata</span></a>
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-mountain"></i><span>Pariwisata</span></a>
             <ul class="dropdown-menu">
                 <li><a class="nav-link Pariwisata" href="<?= base_url('Pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
                 <li><a class="nav-link Jenis_pariwisata" href="<?= base_url('Jenis_pariwisata'); ?>"><i class="fa fa-circle"></i> <span>Jenis Pariwisata</span></a></li>
@@ -72,5 +73,19 @@
                 <li><a class="nav-link Jenis_bank" href="<?= base_url('Jenis_bank'); ?>"><i class="fa fa-circle"></i> <span>Jenis Bank</span></a></li>
             </ul>
         </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-gas-pump"></i><span>Spbu</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link Bank" href="<?= base_url('Spbu'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link Jenis_bank" href="<?= base_url('Jenis_spbu'); ?>"><i class="fa fa-circle"></i> <span>Jenis Spbu</span></a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fa fa-globe"></i><span>Info Grafis</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link Bank Info_grafis" href="<?= base_url('Info_grafis'); ?>"><i class="fa fa-globe"></i> <span>Data Info</span></a></li>
+            </ul>
+        </li>
+        <li><a class="nav-link Marker" href="<?= base_url('Marker'); ?>"><i class="fa fa-home"></i> <span>Seting Marker</span></a></li>
     </ul>
 </aside>

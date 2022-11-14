@@ -13,7 +13,7 @@ class ApiPariwisata extends CI_Controller
     public function index()
     {
     }
-    public function loadDataFasilitasKesehatan()
+    public function loadDataPariwisata()
     {
         $get =  Pariwisata_model::all();
         echo json_encode($get);

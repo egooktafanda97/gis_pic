@@ -9,6 +9,7 @@ export function LayerSource(maps) {
 			map.addSource("maine", {
 				type: "geojson",
 				data: geoJson,
+				generateId: true,
 			});
 
 			// Add a new layer to visualize the polygon.
@@ -18,17 +19,32 @@ export function LayerSource(maps) {
 				source: "maine", // reference the data source
 				layout: {},
 				paint: {
-					"fill-color": "#34a8eb",
-					"fill-opacity": 0.1,
+					"fill-outline-color": "#484896",
+					"fill-color": "#6e599f",
+					"fill-opacity": 0.75,
 				},
+				filter: ["in", "class", ""],
 			});
+			map.addLayer(
+				{
+					id: "counties",
+					type: "fill",
+					source: "maine",
+					paint: {
+						"fill-outline-color": "rgba(0,0,0,0.1)",
+						"fill-color": "rgba(0,0,0,0.1)",
+					},
+				},
+				"settlement-label"
+			);
+
 			map.addLayer({
 				id: "outline",
 				type: "line",
 				source: "maine",
 				layout: {},
 				paint: {
-					"line-color": "#000",
+					"line-color": "trasparent",
 					"line-width": 1,
 					"line-dasharray": [2, 1],
 				},

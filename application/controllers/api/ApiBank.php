@@ -13,7 +13,7 @@ class ApiBank extends CI_Controller
     public function index()
     {
     }
-    public function loadDataFasilitasKesehatan()
+    public function loadDataBank()
     {
         $get =  Bank_model::all();
         echo json_encode($get);

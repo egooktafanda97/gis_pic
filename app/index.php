@@ -16,7 +16,7 @@ define('LARAVEL_START', microtime(true));
 |
  */
 
-if (file_exists($maintenance = __DIR__ . '/api/system/storage/framework/maintenance.php')) {
+if (file_exists($maintenance = __DIR__ . '/backend/storage/framework/maintenance.php')) {
     require $maintenance;
 }
 
@@ -31,7 +31,7 @@ if (file_exists($maintenance = __DIR__ . '/api/system/storage/framework/maintena
 |
  */
 
-require __DIR__ . '/api/system/vendor/autoload.php';
+require __DIR__ . '/backend/vendor/autoload.php';
 
 // set .env file
 require __DIR__ . '/env_updates.php';
@@ -47,7 +47,7 @@ require __DIR__ . '/env_updates.php';
 |
  */
 
-$app = require_once __DIR__ . '/api/system/bootstrap/app.php';
+$app = require_once __DIR__ . '/backend/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 

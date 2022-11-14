@@ -7,7 +7,7 @@ function updateEnv($data = array())
 
     $pattern = '/([^\=]*)\=[^\n]*/';
 
-    $envFile = './api/system/.env';
+    $envFile = './backend/.env';
     $lines = file($envFile);
     $newLines = [];
     foreach ($lines as $line) {

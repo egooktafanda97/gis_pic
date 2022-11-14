@@ -85,6 +85,15 @@ class Pariwisata extends My_controller
         ];
     }
 
+    public function dataPariwisataById($id)
+    {
+        $this->db->join("jenis_pariwisata", "jenis_pariwisata.id_jenis_pariwisata = pariwisata.jenis_pariwisata_id");
+        $this->db->where("pariwisata.id_pariwisata", $id);
+        $result = $this->db->get_where("pariwisata")->row_array();
+
+        return $result;
+    }
+
 
     public function getJenis()
     {
@@ -229,11 +238,14 @@ class Pariwisata extends My_controller
     {
 
         $dataId =  $this->db->get_where('pariwisata', ['id_pariwisata' => $id_pariwisata])->row_array();
+        $getSetting = $this->db->get_where("setting", ["table_config" => 'pariwisata', "config_key" => "icon"])->row_array();
         $data = array(
             'title' => "Detail Data",
-            'page' => $this->page . "detail",
-            'script' => $this->page . "script",
-            'val' => $dataId
+            'page' => $this->page . "detail/index",
+            "style" => $this->page . "detail/style",
+            'script' => $this->page . "detail/script",
+            'val' => $this->dataPariwisataById($id_pariwisata),
+            "setting" => $getSetting
         );
         $this->load->view('Router/route', $data);
     }

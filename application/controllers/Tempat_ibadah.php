@@ -67,6 +67,13 @@ class Tempat_ibadah extends My_controller
         $result = $this->db->get_where("tempat_ibadah")->result_array();
         return $result;
     }
+    public function dataTempatIbadahById($id)
+    {
+        $this->db->where("tempat_ibadah.id_tempat_ibadah", $id);
+        $result = $this->db->get_where("tempat_ibadah")->row_array();
+
+        return $result;
+    }
 
     public function countAllData()
     {
@@ -201,12 +208,18 @@ class Tempat_ibadah extends My_controller
     {
 
         $dataId =  $this->db->get_where('tempat_ibadah', ['id_tempat_ibadah' => $id_tempat_ibadah])->row_array();
+        $getSetting = $this->db->get_where("setting", ["table_config" => 'tempat_ibadah', "config_key" => "icon"])->row_array();
         $data = array(
             'title' => "Detail Data",
-            'page' => $this->page . "detail",
-            'script' => $this->page . "script",
-            'val' => $dataId
+            'page' => $this->page . "detail/index",
+            "style" => $this->page . "detail/style",
+            'script' => $this->page . "detail/script",
+            'val' => $this->dataTempatIbadahById($id_tempat_ibadah),
+            "setting" => $getSetting
         );
+
+
+
         $this->load->view('Router/route', $data);
     }
 }

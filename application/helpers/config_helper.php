@@ -1,7 +1,7 @@
 <?php
-function api_url()
+function api_url($url = null)
 {
-    return base_url("app/api/");
+    return base_url("app/api/" . $url);
 }
 
 function base_api($url = null)
@@ -23,4 +23,9 @@ function table_active()
         "industri",
         "pendidikan"
     ];
+}
+
+function dump($data)
+{
+    echo json_encode($data);
 }

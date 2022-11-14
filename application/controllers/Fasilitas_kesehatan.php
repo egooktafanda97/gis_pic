@@ -85,6 +85,15 @@ class Fasilitas_kesehatan extends My_controller
         ];
     }
 
+    public function dataFasilitasKesehatanById($id)
+    {
+        $this->db->join("jenis_fasilitas_kesehatan", "jenis_fasilitas_kesehatan.id_jenis_fasilitas = fasilitas_kesehatan.jenis_fasilitas_id");
+        $this->db->where("fasilitas_kesehatan.id_fasilitas_kesehatan", $id);
+        $result = $this->db->get_where("fasilitas_kesehatan")->row_array();
+
+        return $result;
+    }
+
 
     public function getJenis()
     {
@@ -229,15 +238,19 @@ class Fasilitas_kesehatan extends My_controller
         }
     }
 
+
     public function detail($id_fasilitas_kesehatan)
     {
 
         $dataId =  $this->db->get_where('fasilitas_kesehatan', ['id_fasilitas_kesehatan' => $id_fasilitas_kesehatan])->row_array();
+        $getSetting = $this->db->get_where("setting", ["table_config" => 'fasilitas_kesehatan', "config_key" => "icon"])->row_array();
         $data = array(
             'title' => "Detail Data",
-            'page' => $this->page . "detail",
-            'script' => $this->page . "script",
-            'val' => $dataId
+            'page' => $this->page . "detail/index",
+            "style" => $this->page . "detail/style",
+            'script' => $this->page . "detail/script",
+            'val' => $this->dataFasilitasKesehatanById($id_fasilitas_kesehatan),
+            "setting" => $getSetting
         );
         $this->load->view('Router/route', $data);
     }

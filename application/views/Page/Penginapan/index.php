@@ -169,13 +169,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="">latitude</label>
-                                        <input type="text" class="form-control form-control-sm" name="laritude" id="laritude" placeholder="Kordinat" require>
+                                        <input type="text" class="form-control form-control-sm" name="latitude" id="latitude" placeholder="Kordinat" require>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="">langitude</label>
-                                        <input type="text" class="form-control form-control-sm" name="logitude" id="logitude" placeholder="Kordinat" require>
+                                        <input type="text" class="form-control form-control-sm" name="longitude" id="longitude" placeholder="Kordinat" require>
                                     </div>
                                 </div>
                             </div>

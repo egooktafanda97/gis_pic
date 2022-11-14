@@ -6,12 +6,14 @@ import "./css/style.scss";
 import "../../scss/style.scss";
 
 import MapBox from "./MapBox/MapBox";
+import MapBoxV2 from "./MapBox/MpBoxv2";
 import Leadletmap from "./LeafletJs/Leadletmap";
 
 export default function Index() {
 	return (
 		<div className="container-map">
-			<MapBox />
+			<MapBoxV2 />
+			{/* <MapBox /> */}
 			{/* <Leadletmap /> */}
 		</div>
 	);
