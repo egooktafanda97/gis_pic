@@ -127,11 +127,17 @@
 				transition: all ease 200ms;
 				padding-left: 50px;
 
+				&.right-modal-child {
+					background-color: #fff;
+					border-radius: 5px;
+				}
+
 				&.active {
 					padding-top: 15px;
 					transition: all ease 200ms;
 					height: auto;
 					overflow: auto;
+					margin-top: 20px;
 				}
 
 				.component-box {
