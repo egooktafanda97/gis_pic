@@ -23,7 +23,12 @@ export default function ItemMenuInfoGraph(props) {
 					<label htmlFor="">{name}</label>
 				</div>
 			</div>
-			<div className={`child-main-menu ${trigger && "active"}`}>
+			<div
+				className={`child-main-menu right-modal-child ${trigger && "active"}`}
+				style={{
+					paddingLeft: "20px",
+				}}
+			>
 				{item?.map((x, i) => (
 					<div className="componentCheck LabelMenuContainer">
 						<div className="mb-1 detail-value-item">
@@ -35,13 +40,6 @@ export default function ItemMenuInfoGraph(props) {
 									width: "100%",
 								}}
 							>
-								<div
-									style={{
-										width: "30px",
-									}}
-								>
-									<i className="fa fa-list-alt"></i>
-								</div>
 								<div
 									style={{
 										width: "calc(100% - 30px)",
