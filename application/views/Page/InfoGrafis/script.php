@@ -58,7 +58,7 @@
             })
             .then((willDelete) => {
                 if (willDelete) {
-                    window.location.href = "<?= base_url('pariwisata/deleted/'); ?>" + id
+                    window.location.href = "<?= base_url('Info_grafis/deleted/'); ?>" + id
                 }
             });
     })
@@ -68,24 +68,20 @@
         toggleModal();
         const dataid = $(this).data('id');
         async function getdata(id) {
-            const requestdata = await axios.get('<?= base_url('pariwisata/getById/') ?>' + id).catch((err) => {
+            const requestdata = await axios.get('<?= base_url('Info_grafis/getById/') ?>' + id).catch((err) => {
                 console.log(err.response)
             });
             if (requestdata?.status ?? 400 == 200) {
 
                 const data = requestdata.data;
-                $("#jenis_pariwisata_id").val(data?.jenis_pariwisata_id ?? "");
-                $("#kepemilikan").val(data?.kepemilikan ?? "");
-                $("#nama_tempat_pariwisata").val(data?.nama_tempat_pariwisata ?? "");
-                $("#alamat_tempat_pariwisata").val(data?.alamat_tempat_pariwisata ?? "");
-                $("#perizinan").val(data?.perizinan ?? "");
-                $("#jumlah_pengunjung_rata").val(data?.jumlah_pengunjung_rata ?? "");
-                $("#nama_pemilik").val(data?.nama_pemilik ?? "");
-                $("#no_telp").val(data?.no_telp ?? "");
-                $("#alamat_website").val(data?.alamat_website ?? "");
-                $("#latitude").val(data?.latitude ?? "");
-                $("#longitude").val(data?.longitude ?? "");
-                $("#formmodal").attr('action', '<?= base_url('pariwisata/update/') ?>' + id)
+                $("#kode_kecamatan").val(data?.kode_kecamatan ?? "");
+                $("#tahun").val(data?.tahun ?? "");
+                $("#tanggal").val(data?.tanggal ?? "");
+                $("#faktor").val(data?.faktor ?? "");
+                $("#sub_faktor").val(data?.sub_faktor ?? "");
+                $("#nama").val(data?.nama ?? "");
+                $("#keterangan").val(data?.keterangan ?? "");
+                $("#formmodal").attr('action', '<?= base_url('Info_grafis/update/') ?>' + id)
             };
 
         }

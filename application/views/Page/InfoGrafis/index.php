@@ -18,8 +18,8 @@
                                     <th scope="col">Kecamatan</th>
                                     <th scope="col">Faktor</th>
                                     <th scope="col">Sub Faktor</th>
+                                    <th scope="col">Nama</th>
                                     <th scope="col">Keterangan</th>
-                                    <th scope="col">Value</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -29,8 +29,8 @@
                                     <th scope="col">Kecamatan</th>
                                     <th scope="col">Faktor</th>
                                     <th scope="col">Sub Faktor</th>
+                                    <th scope="col">Nama</th>
                                     <th scope="col">Keterangan</th>
-                                    <th scope="col">Value</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </tfoot>
@@ -45,7 +45,12 @@
                                         <td><?= $value['sub_faktor'] ?? "" ?></td>
                                         <td><?= $value['nama'] ?? "" ?></td>
                                         <td><?= $value['keterangan'] ?? "" ?></td>
-                                        <td>Aksi</td>
+                                        <td>
+                                            <button type="button" data-id="<?= $value['id']; ?>" class="btn btn-primary btn-sm edit" data-toggle="modal" data-target="#m-crud">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-danger btn-sm delete" data-id="<?= $value['id']; ?>"><i class="fa fa-trash"></i></button>
+                                        </td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>
@@ -125,14 +130,14 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">key</label>
-                                <input type="text" class="form-control form-control-sm" name="nama" id="nama" placeholder="">
+                                <label for="">Nama</label>
+                                <input type="text" class="form-control form-control-sm" name="nama" id="nama" placeholder="Nama">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">value</label>
-                                <input type="text" class="form-control form-control-sm" name="keterangan" id="keterangan" placeholder="">
+                                <label for="">Keteranagan</label>
+                                <input type="text" class="form-control form-control-sm" name="keterangan" id="keterangan" placeholder=" Keterangan">
                             </div>
                         </div>
                     </div>
