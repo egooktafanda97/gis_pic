@@ -51,12 +51,14 @@ class Pendidikan extends CI_Controller
 
         $all_data = $this->getAllData($config['per_page'], $data['start']);
         $jenjang_data = $this->getJenjangData();
+        $marker_data = $this->getMarker();
         $data = [
             "title" => "Pendidikan",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
             "result" =>  $all_data,
             "jenjang" => $jenjang_data,
+            "mark" => $marker_data,
         ];
         $this->load->view('Router/route', $data);
     }
@@ -73,6 +75,7 @@ class Pendidikan extends CI_Controller
     {
         $this->db->order_by("id_pendidikan", "DESC");
         $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id  = pendidikan.jenjang_pendidikan_id ");
+        $this->db->join("marker_set", "marker_set.id_marker  = pendidikan.marker_id ");
         $result = $this->db->get_where("pendidikan")->result_array();
         return $result;
     }
@@ -80,6 +83,7 @@ class Pendidikan extends CI_Controller
     public function dataPendidikanById($id)
     {
         $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id = pendidikan.jenjang_pendidikan_id");
+        $this->db->join("marker_set", "marker_set.id_marker  = pendidikan.marker_id ");
         $this->db->where("pendidikan.id_pendidikan", $id);
         $result = $this->db->get_where("pendidikan")->row_array();
 
@@ -90,6 +94,12 @@ class Pendidikan extends CI_Controller
     {
         $this->db->order_by("jenjang_pendidikan_id", "DESC");
         $result = $this->db->get_where("jenjang_pendidikan")->result_array();
+        return $result;
+    }
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
         return $result;
     }
 
@@ -122,7 +132,7 @@ class Pendidikan extends CI_Controller
                     $uploaded = "default.jpg";
                 }
 
-                $icon_uploaded = up("icon_map", "assets/img/icon_map/");
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
                 if ($icon_uploaded == false) {
                     $icon_uploaded = "default.jpg";
                 }
@@ -143,6 +153,7 @@ class Pendidikan extends CI_Controller
                     "kelurahan_id" => $post['kelurahan_id'] ?? "",
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" => $uploaded,
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -219,6 +230,10 @@ class Pendidikan extends CI_Controller
                 $uploaded = up("gambar", "assets/img/foto/");
                 if ($uploaded != false) {
                     $data += ["gambar" => $uploaded];
+                }
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
+                if ($icon_uploaded != false) {
+                    $data += ["marker_id" => $icon_uploaded];
                 }
                 $this->db->where('id_pendidikan', $id);
                 $save = $this->db->update('pendidikan', $data);

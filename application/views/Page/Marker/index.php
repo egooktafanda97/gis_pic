@@ -37,10 +37,10 @@
 										<td><?= $val['name'] ?? "" ?></td>
 										<td><?= $val['marker'] ?? "" ?></td>
 										<td>
-											<button type="button" data-id="<?= $val['id_config']; ?>" class="btn btn-primary btn-sm edit" data-toggle="modal" data-target="#m-crud">
+											<button type="button" data-id="<?= $val['id_marker']; ?>" class="btn btn-primary btn-sm edit" data-toggle="modal" data-target="#m-crud">
 												<i class="fa fa-edit"></i>
 											</button>
-											<button class="btn btn-danger btn-sm delete" data-id="<?= $val['id_config']; ?>"><i class="fa fa-trash"></i></button>
+											<button class="btn btn-danger btn-sm delete" data-id="<?= $val['id_marker']; ?>"><i class="fa fa-trash"></i></button>
 										</td>
 									</tr>
 								<?php endforeach ?>

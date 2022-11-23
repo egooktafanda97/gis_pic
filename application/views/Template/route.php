@@ -87,5 +87,8 @@
             </ul>
         </li>
         <li><a class="nav-link Marker" href="<?= base_url('Marker'); ?>"><i class="fa fa-home"></i> <span>Seting Marker</span></a></li>
+        <li><a class="nav-link Tempat_ibadah" href="<?= base_url('Kecamatan'); ?>"><i class="fa fa-city"></i> <span>Kecamatan</span></a></li>
+        <li><a class="nav-link Tempat_ibadah" href="<?= base_url('UserRole'); ?>"><i class="fa fa-user"></i> <span>User</span></a></li>
+
     </ul>
 </aside>

@@ -50,12 +50,14 @@ class Bank extends CI_Controller
 
         $all_data = $this->getAllData($config['per_page'], $data['start']);
         $jenis_data = $this->getJenis();
+        $marker_data = $this->getMarker();
         $data = [
             "title" => "Bank",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
             "result" =>  $all_data,
             "jenis" => $jenis_data,
+            "mark" => $marker_data,
         ];
         $this->load->view('Router/route', $data);
     }
@@ -71,6 +73,7 @@ class Bank extends CI_Controller
     {
         $this->db->order_by("id_bank ", "DESC");
         $this->db->join("jenis_bank", "jenis_bank.id_jenis_bank = bank.jenis_bank_id");
+        $this->db->join("marker_set", "marker_set.id_marker = bank.marker_id");
         $result = $this->db->get_where("bank")->result_array();
 
         $result = array_map(function ($result) {
@@ -85,6 +88,7 @@ class Bank extends CI_Controller
     public function dataBankById($id)
     {
         $this->db->join("jenis_bank", "jenis_bank.id_jenis_bank = bank.jenis_bank_id");
+        $this->db->join("marker_set", "marker_set.id_marker = bank.marker_id");
         $this->db->where("bank.id_bank", $id);
         $result = $this->db->get_where("bank")->row_array();
 
@@ -94,6 +98,12 @@ class Bank extends CI_Controller
     {
         $this->db->order_by("id_jenis_bank", "DESC");
         $result = $this->db->get_where("jenis_bank")->result_array();
+        return $result;
+    }
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
         return $result;
     }
     public function countAllData()
@@ -122,6 +132,10 @@ class Bank extends CI_Controller
                 if ($uploaded == false) {
                     $uploaded = "default.jpg";
                 }
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
+                if ($icon_uploaded == false) {
+                    $icon_uploaded = "default.jpg";
+                }
                 // ==========================================
                 $data  = [
                     "jenis_bank_id" => $post['jenis_bank_id'],
@@ -133,6 +147,7 @@ class Bank extends CI_Controller
                     "alamat_website" => $post['alamat_website'],
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" => $icon_uploaded,
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -200,6 +215,10 @@ class Bank extends CI_Controller
                 $uploaded = up("gambar", "assets/img/foto/");
                 if ($uploaded != false) {
                     $data += ["gambar" => $uploaded];
+                }
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
+                if ($icon_uploaded != false) {
+                    $data += ["marker_id" => $icon_uploaded];
                 }
                 $this->db->where('id_bank', $id);
                 $save = $this->db->update('bank', $data);

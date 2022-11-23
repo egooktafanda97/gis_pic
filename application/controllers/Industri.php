@@ -53,6 +53,7 @@ class Industri extends CI_Controller
         $pic_data = $this->getPicIndustri();
         $sub_data = $this->getSubIndustri();
         $sektor_data = $this->getSektorIndustri();
+        $marker_data = $this->getMarker();
         $data = [
             "title" => "Industri",
             "page" => $this->page . "index",
@@ -60,6 +61,7 @@ class Industri extends CI_Controller
             "result" =>  $all_data,
             "pic" => $pic_data,
             "sub" => $sub_data,
+            "mark" => $marker_data,
             "sektor" => $sektor_data
         ];
         $this->load->view('Router/route', $data);
@@ -80,6 +82,7 @@ class Industri extends CI_Controller
         $this->db->order_by("id_industri", "DESC");
         $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
         $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
+        $this->db->join("marker_set", "marker_set.id_marker = industri.marker_id");
         $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
         $result = $this->db->get_where("industri")->result_array();
 
@@ -97,6 +100,7 @@ class Industri extends CI_Controller
     {
         $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
         $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
+        $this->db->join("marker_set", "marker_set.id_marker = industri.marker_id");
         $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
         $this->db->where("industri.id_industri", $id);
         $result = $this->db->get_where("industri")->row_array();
@@ -122,6 +126,12 @@ class Industri extends CI_Controller
     {
         $this->db->order_by("id_sektor_industri", "DESC");
         $result = $this->db->get_where("sektor_industri")->result_array();
+        return $result;
+    }
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
         return $result;
     }
     public function countAllData()
@@ -154,7 +164,7 @@ class Industri extends CI_Controller
                     $uploaded = "default.jpg";
                 }
 
-                $icon_uploaded = up("icon_map", "assets/img/icon_map/");
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
                 if ($icon_uploaded == false) {
                     $icon_uploaded = "default.jpg";
                 }
@@ -177,8 +187,8 @@ class Industri extends CI_Controller
                     "kelurahan_id" => $post['kelurahan_id'] ?? "",
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" =>  $icon_uploaded,
                     "gambar" => $uploaded,
-                    "icon_map" =>  $icon_uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
@@ -252,12 +262,15 @@ class Industri extends CI_Controller
                     "kelurahan_id" => $post['kelurahan_id'] ?? "",
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
-                    "icon_map" => "default.png",
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
                 $uploaded = up("gambar", "assets/img/foto/");
                 if ($uploaded != false) {
                     $data += ["gambar" => $uploaded];
+                }
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
+                if ($icon_uploaded != false) {
+                    $data += ["marker_id" => $icon_uploaded];
                 }
                 $this->db->where('id_industri', $id);
                 $save = $this->db->update('industri', $data);

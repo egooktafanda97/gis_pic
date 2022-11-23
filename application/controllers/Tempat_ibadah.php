@@ -51,11 +51,14 @@ class Tempat_ibadah extends CI_Controller
         $data['start'] = $this->uri->segment(3);
 
         $all_data = $this->getAllData($config['per_page'], $data['start']);
+        $marker_data = $this->getMarker();
+
         $data = [
             "title" => "Tempat Ibadah",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
-            "result" =>  $all_data
+            "result" =>  $all_data,
+            "mark" => $marker_data
         ];
         $this->load->view('Router/route', $data);
     }
@@ -70,8 +73,16 @@ class Tempat_ibadah extends CI_Controller
     public function dataTempatIbadahById($id)
     {
         $this->db->where("tempat_ibadah.id_tempat_ibadah", $id);
+        $this->db->join("marker_set", "marker_set.id_marker  = tempat_ibadah.marker_id ");
         $result = $this->db->get_where("tempat_ibadah")->row_array();
 
+        return $result;
+    }
+
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
         return $result;
     }
 
@@ -103,6 +114,10 @@ class Tempat_ibadah extends CI_Controller
                 if ($uploaded == false) {
                     $uploaded = "default.jpg";
                 }
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
+                if ($icon_uploaded == false) {
+                    $icon_uploaded = "default.jpg";
+                }
                 // ==========================================
                 $data  = [
                     "jenis_tempat_ibadah" => $post['jenis_tempat_ibadah'],
@@ -115,6 +130,7 @@ class Tempat_ibadah extends CI_Controller
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
                     "alamat_website" => $post['alamat_website'],
+                    "marker_id" => $icon_uploaded,
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -187,6 +203,10 @@ class Tempat_ibadah extends CI_Controller
                 $uploaded = up("gambar", "assets/img/foto/");
                 if ($uploaded != false) {
                     $data += ["gambar" => $uploaded];
+                }
+                $icon_uploaded = up("marker_id", "assets/img/icon_map/");
+                if ($icon_uploaded != false) {
+                    $data += ["marker_id" => $icon_uploaded];
                 }
                 $this->db->where('id_tempat_ibadah', $id);
                 $save = $this->db->update('tempat_ibadah', $data);
