@@ -7,13 +7,9 @@
     </div>
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
-        <!-- <li class="dropdown">
+        <li class="dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-            <ul class="dropdown-menu">
-                <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-            </ul>
-        </li> -->
+        </li>
         <li class="dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-industry"></i><span>Industri</span></a>
             <ul class="dropdown-menu">
@@ -76,16 +72,16 @@
         <li class="dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-gas-pump"></i><span>Spbu</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link Bank" href="<?= base_url('Spbu'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
-                <li><a class="nav-link Jenis_bank" href="<?= base_url('Jenis_spbu'); ?>"><i class="fa fa-circle"></i> <span>Jenis Spbu</span></a></li>
+                <li><a class="nav-link Spbu" href="<?= base_url('Spbu'); ?>"><i class="fa fa-circle"></i> <span>Master</span></a></li>
+                <li><a class="nav-link Jenis_spbu" href="<?= base_url('Jenis_spbu'); ?>"><i class="fa fa-circle"></i> <span>Jenis Spbu</span></a></li>
             </ul>
         </li>
         <li class="dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fa fa-globe"></i><span>Info Grafis</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link Bank Info_grafis" href="<?= base_url('Info_grafis'); ?>"><i class="fa fa-globe"></i> <span>Data Info</span></a></li>
+                <li><a class="nav-link Info_grafis" href="<?= base_url('Info_grafis'); ?>"><i class="fa fa-globe"></i> <span>Data Info</span></a></li>
             </ul>
         </li>
-        <li><a class="nav-link Marker" href="<?= base_url('Marker'); ?>"><i class="fa fa-home"></i> <span>Seting Marker</span></a></li>
+        <li><a class="nav-link Marker" href="<?= base_url('Marker'); ?>"><i class="fa fa-cog"></i> <span>Seting Marker</span></a></li>
     </ul>
 </aside>

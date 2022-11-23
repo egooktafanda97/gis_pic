@@ -88,14 +88,40 @@ export default function MpBoxv2() {
 		map.current.on("click", "counties", (e) => {
 			const feature = e.features[0];
 			setKodeKec(feature.properties.class);
-			dispatch({
-				type: "SIDEBAR",
-				payload: {
-					sid: "right",
-					sid_right: true,
-				},
-			});
-			setItemSideRight(<InfoGrafis kode={feature.properties.class} />);
+			// dispatch({
+			// 	type: "SIDEBAR",
+			// 	payload: {
+			// 		sid: "right",
+			// 		sid_right: true,
+			// 	},
+			// });
+			// setItemSideRight(<InfoGrafis kode={feature.properties.class} />);
+			// var popups = new mapboxgl.Popup();
+			console.log(e.clickOnLayer);
+			popups
+				.setLngLat(e.lngLat)
+				.setHTML(
+					/*html*/ `
+			<div class="box-popup">
+				<div class="box-container-popup">
+					<div class="header-popup">
+						<strong>Kecamatan</strong>
+						<i class="fa fa-times"></i>
+					</div>
+					<hr />
+					<div class="items-popup">
+						<span>key</span>
+						<span>value</span>
+					</div>
+					<div class="items-popup">
+						<span>key</span>
+						<span>value</span>
+					</div>
+				</div>
+			</div>
+			`
+				)
+				.addTo(map.current);
 		});
 		map.current.on("mouseleave", "counties", function () {
 			map.current.getCanvas().style.cursor = "";
@@ -121,6 +147,7 @@ export default function MpBoxv2() {
 
 	const EventMapBox = () => {
 		map.current.on("click", ["circle", "points"], (e) => {
+			popups.remove();
 			const zoom_var = map.current.getZoom();
 			let Z = 15;
 
@@ -191,7 +218,7 @@ export default function MpBoxv2() {
 				if (currentZoom < 14.8) {
 					map.current.setLayoutProperty("circle", "visibility", "visible");
 					map.current.setLayoutProperty("points", "visibility", "none");
-					map.current.setPaintProperty("maine", "fill-opacity", 0.1);
+					map.current.setPaintProperty("maine", "fill-opacity", 0.75);
 				}
 			}
 			lastZoom = currentZoom;

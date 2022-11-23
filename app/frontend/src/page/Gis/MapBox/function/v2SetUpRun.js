@@ -15,18 +15,17 @@ export function _InitLoadMap(
 	// --------------------------------------------------------------------
 	layer.Rotation();
 	map.on("load", async () => {
-		model__getDatapekanbaru((res) => {
-			layer.PolygonPku(res?.data);
-		});
-
 		const GeoJsonData = await model__getData();
 		if (GeoJsonData?.data) {
 			const geometri = GeoJsonData?.data?.geoJson;
 			const config = GeoJsonData?.data?.setting;
-			callBack({
-				polygonPku: geoJsonPolygonPku,
-				geometri: geometri,
-				config: config,
+			model__getDatapekanbaru((res) => {
+				layer.PolygonPku(res?.data);
+				callBack({
+					polygonPku: res?.data,
+					geometri: geometri,
+					config: config,
+				});
 			});
 
 			const featureGeo = geometri?.features;

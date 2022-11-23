@@ -24,6 +24,9 @@ class MasterData extends Controller
                 $concat = array_merge([
                     "industri" => $this->dataIndustri(),
                     "pendidikan" => $this->dataPendidikan(),
+                    "bank" => [],
+                    "penginapan" => [],
+                    "tampat_ibadah" => []
                 ]);
 
                 return response()->json($this->BuidFormatGeoJson($concat));
