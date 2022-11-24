@@ -51,12 +51,14 @@ class Pariwisata extends CI_Controller
 
         $all_data = $this->getAllData($config['per_page'], $data['start']);
         $jenis_data = $this->getJenis();
+        $marker_data = $this->getMarker();
         $data = [
             "title" => "Pariwisata",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
             "result" =>  $all_data,
             "jenis" => $jenis_data,
+            "mark" => $marker_data,
         ];
         $this->load->view('Router/route', $data);
     }
@@ -73,6 +75,7 @@ class Pariwisata extends CI_Controller
     {
         $this->db->order_by("id_pariwisata ", "DESC");
         $this->db->join("jenis_pariwisata", "jenis_pariwisata.id_jenis_pariwisata = pariwisata.jenis_pariwisata_id");
+        $this->db->join("marker_set", "marker_set.id_marker = pariwisata.marker_id");
         $result = $this->db->get_where("pariwisata")->result_array();
 
         $result = array_map(function ($result) {
@@ -88,6 +91,7 @@ class Pariwisata extends CI_Controller
     public function dataPariwisataById($id)
     {
         $this->db->join("jenis_pariwisata", "jenis_pariwisata.id_jenis_pariwisata = pariwisata.jenis_pariwisata_id");
+        $this->db->join("marker_set", "marker_set.id_marker = pariwisata.marker_id");
         $this->db->where("pariwisata.id_pariwisata", $id);
         $result = $this->db->get_where("pariwisata")->row_array();
 
@@ -99,6 +103,12 @@ class Pariwisata extends CI_Controller
     {
         $this->db->order_by("id_jenis_pariwisata", "DESC");
         $result = $this->db->get_where("jenis_pariwisata")->result_array();
+        return $result;
+    }
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
         return $result;
     }
 
@@ -144,6 +154,7 @@ class Pariwisata extends CI_Controller
                     "alamat_website" => $post['alamat_website'],
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" => $post['marker_id'],
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -212,6 +223,7 @@ class Pariwisata extends CI_Controller
                     "alamat_website" => $post['alamat_website'],
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" => $post['marker_id'],
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
                 $uploaded = up("gambar", "assets/img/foto/");

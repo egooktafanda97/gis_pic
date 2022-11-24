@@ -13,15 +13,12 @@
                 <!-- <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div> -->
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-title">Logged in 5 min ago</div>
+                <div class="dropdown-title">ADMIN</div>
                 <a href="features-profile.html" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
-                <a href="features-activities.html" class="dropdown-item has-icon">
-                    <i class="fas fa-bolt"></i> Activities
-                </a>
-                <a href="<?= base_url('Setting'); ?>" class=" dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Settings
+                <a href="<?= base_url('Marker'); ?>" class=" dropdown-item has-icon">
+                    <i class="fas fa-cog"></i> Pengaturan
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="<?= base_url("Login/logout") ?>" class="dropdown-item has-icon text-danger">

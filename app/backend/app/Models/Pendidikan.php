@@ -10,7 +10,7 @@ class Pendidikan extends Model
     use HasFactory;
     protected $table = 'pendidikan';
     protected $primaryKey = 'id_pendidikan';
-    protected $appends = ['setting', 'ethnicity', "header"];
+    protected $appends = ['ethnicity', "header"];
     protected $fillable = [
         "id_pendidikan",
         "user_id",
@@ -34,10 +34,6 @@ class Pendidikan extends Model
     public function jenjangPendidikan()
     {
         return $this->belongsTo('App\Models\jenjangPendidikan', 'jenjang_pendidikan_id', 'jenjang_pendidikan_id');
-    }
-    public function getSettingAttribute()
-    {
-        return Setting::where("table_config", $this->table)->get();
     }
     public function getEthnicityAttribute()
     {

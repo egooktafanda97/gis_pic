@@ -5,6 +5,21 @@ import { LayerSource } from "./LayerSource";
 import { func__generateGeoJsonMarker } from "./fx";
 import evn from "./Event";
 
+const genColor = () => {
+	const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+	return randomColor;
+};
+
+const GenerateColorCircle = (arrObj) => {
+	var g = arrObj.map((_) => {
+		return {
+			item: _,
+			color: `#${genColor()}`,
+		};
+	});
+	return g;
+};
+
 export function _InitLoadMap(
 	{ map, mapContainer, lat, lng, zoom },
 	{ circleFilter },
@@ -18,20 +33,21 @@ export function _InitLoadMap(
 		const GeoJsonData = await model__getData();
 		if (GeoJsonData?.data) {
 			const geometri = GeoJsonData?.data?.geoJson;
-			const config = GeoJsonData?.data?.setting;
+			const jumlhItem = GeoJsonData?.data?.item;
+			const marker = GeoJsonData?.data?.marker;
+			var ItemKey = Object.keys(jumlhItem);
+			const circleColors = GenerateColorCircle(ItemKey);
 			model__getDatapekanbaru((res) => {
 				layer.PolygonPku(res?.data);
 				callBack({
 					polygonPku: res?.data,
 					geometri: geometri,
-					config: config,
 				});
 			});
-
 			const featureGeo = geometri?.features;
 			geometri.features = [geometri.features[0]];
-			await layer.CircleMarker(geometri, config);
-			layer.IconMarker(geometri, config);
+			await layer.CircleMarker(geometri, circleColors);
+			layer.IconMarker(geometri, marker);
 			let i = 0;
 			const timer = setInterval(() => {
 				if (i < featureGeo.length) {

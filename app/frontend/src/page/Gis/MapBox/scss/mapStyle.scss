@@ -247,7 +247,8 @@
 	min-height: 100px;
 	border-radius: 10px;
 	background-color: #fff;
-	font-size: 1em;
+	font-size: .8em !important;
+	font-family: 'Poppins', sans-serif;
 
 	.header-popup {
 		display: flex;

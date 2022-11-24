@@ -1,6 +1,6 @@
 <!-- mapbox -------------------------------->
 <script>
-    <?php if (!empty($val['latitude']) && !empty($setting)) : ?>
+    <?php if (!empty($val['latitude']) && !empty($val['marker'])) : ?>
         mapboxgl.accessToken = "pk.eyJ1IjoiZWdvb2t0YWZhbmRhOTciLCJhIjoiY2pyN2tobWJuMGZpaDN5cXE3NTdydm8zbiJ9.iLZFxTrH353ju9RuZzX5Jw";
         const koordinat = [parseFloat("<?= $val['longitude'] ?? 0 ?>"), parseFloat("<?= $val['latitude'] ?? 0 ?>")];
         const map = new mapboxgl.Map({
@@ -28,7 +28,7 @@
         function LayerIcon() {
 
             // Add an image to use as a custom marker
-            map.loadImage("<?= base_url($setting['config_value']) ?>",
+            map.loadImage("<?= base_url('assets/img/icon_map/' . $val['marker']) ?>",
                 (error, image) => {
                     if (error) throw error;
                     map.addImage('custom-marker', image);

@@ -21,6 +21,17 @@ export const model__getByEthnicity = (ethnicity) => {
 	return getdata;
 };
 
+export const model__getDataKecamatan = async (kode, response) => {
+	const getdata = await axios
+		.get(`${API}main/dataKecamatan/${kode}`)
+		.catch((err) => {
+			console.log(err.reponse);
+		});
+	if (getdata) {
+		response(getdata?.data);
+	}
+};
+
 export const package_data_active = [
 	{
 		name: "Industri",
@@ -33,7 +44,7 @@ export const package_data_active = [
 		model: async () => await model__getByEthnicity("industri"),
 	},
 	{
-		name: "Tempat Ibadah",
+		name: "Tempat_Ibadah",
 		label: "Tempat Ibadah",
 		model: async () => await model__getByEthnicity("industri"),
 	},
@@ -43,7 +54,7 @@ export const package_data_active = [
 		model: async () => await model__getByEthnicity("industri"),
 	},
 	{
-		name: "Fasilitas Kesehatan",
+		name: "Fasilitas_Kesehatan",
 		label: "Fasilitas Kesehatan",
 		model: async () => await model__getByEthnicity("industri"),
 	},

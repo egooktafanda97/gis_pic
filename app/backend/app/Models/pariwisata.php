@@ -11,7 +11,7 @@ class pariwisata extends Model
     protected $table = 'pariwisata';
     protected $primaryKey = 'id_pariwisata';
     public $timestamps = true;
-    protected $appends = ['setting', 'ethnicity', "header"];
+    protected $appends = ['ethnicity', "header"];
     protected $fillable = [
         "id_pariwisata",
         "jenis_pariwisata_id",
@@ -28,10 +28,6 @@ class pariwisata extends Model
         "gambar",
     ];
 
-    public function getSettingAttribute()
-    {
-        return Setting::where("table_config", $this->table)->get();
-    }
     public function getEthnicityAttribute()
     {
         return $this->table;

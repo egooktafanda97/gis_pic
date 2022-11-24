@@ -4,10 +4,14 @@ import { useHistory } from "react-router-dom";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import $ from "jquery";
 // =======================================================
 // function
 import { _InitLoadMap } from "./function/v2SetUpRun";
-import { package_data_active } from "./model/main_model";
+import {
+	package_data_active,
+	model__getDataKecamatan,
+} from "./model/main_model";
 // Componsnet
 import CardItemComponent from "./components/CardTabItem";
 import LeftSidebarComponent from "./components/LeftContentSidebar";
@@ -36,6 +40,8 @@ export default function MpBoxv2() {
 	var popups = new mapboxgl.Popup({
 		closeButton: false,
 	});
+	const [kecamatanSelected, setKecamatanSelected] = useState({});
+
 	useEffect(() => {
 		if (getRedux) {
 			if (map.current) return;
@@ -69,7 +75,6 @@ export default function MpBoxv2() {
 			EventMapBox();
 		}
 	});
-
 	const Events = () => {
 		map.current.on("mousemove", "counties", (e) => {
 			map.current.getCanvas().style.cursor = "";
@@ -80,56 +85,81 @@ export default function MpBoxv2() {
 			map.current.setFilter("maine", ["in", "class", feature.properties.class]);
 
 			// ////
-			popups
-				.setLngLat(e.lngLat)
-				.setText(feature.properties?.name)
-				.addTo(map.current);
+			// popups
+			// 	.setLngLat(e.lngLat)
+			// 	.setText(feature.properties?.name)
+			// 	.addTo(map.current);
 		});
 		map.current.on("click", "counties", (e) => {
 			const feature = e.features[0];
 			setKodeKec(feature.properties.class);
-			// dispatch({
-			// 	type: "SIDEBAR",
-			// 	payload: {
-			// 		sid: "right",
-			// 		sid_right: true,
-			// 	},
-			// });
-			// setItemSideRight(<InfoGrafis kode={feature.properties.class} />);
-			// var popups = new mapboxgl.Popup();
-			console.log(e.clickOnLayer);
-			popups
-				.setLngLat(e.lngLat)
-				.setHTML(
-					/*html*/ `
-			<div class="box-popup">
-				<div class="box-container-popup">
-					<div class="header-popup">
-						<strong>Kecamatan</strong>
-						<i class="fa fa-times"></i>
-					</div>
-					<hr />
-					<div class="items-popup">
-						<span>key</span>
-						<span>value</span>
-					</div>
-					<div class="items-popup">
-						<span>key</span>
-						<span>value</span>
-					</div>
-				</div>
-			</div>
-			`
-				)
-				.addTo(map.current);
+			let f = map.current.queryRenderedFeatures(e.point, {
+				layers: ["circle", "points"],
+			});
+			if (f.length == 0) {
+				// var popups = new mapboxgl.Popup();
+				model__getDataKecamatan(feature.properties.class, (result) => {
+					setKecamatanSelected(result);
+					popups
+						.setLngLat(e.lngLat)
+						.setHTML(
+							/*html*/ `
+							<div class="box-popup">
+								<div class="box-container-popup">
+									<div class="header-popup">
+										<strong>${result?.nama_kecamatan ?? "-"}</strong>
+										<i class="fa fa-times popClose"></i>
+									</div>
+									<hr />
+									<div class="items-popup mt-3">
+										<span>Luas Wilayah</span>
+										<span>${result?.luas_wilayah ?? "-"}</span>
+									</div>
+									<div class="items-popup">
+										<span>Jumlah Penduduk</span>
+										<span>${result?.jumlah_penduduk ?? "-"}</span>
+									</div>
+									<div class="items-popup">
+										<span>Laju Pertumbuhan</span>
+										<span>${result?.laju_pertumbuhan ?? "-"}</span>
+									</div>
+									<hr />
+									<div class="items-popup mt-3">
+										<button class="btn btn-primary btn-sm w-100 popUpdetail">lebih lanjut</button>
+									</div>
+								</div>
+							</div>
+						`
+						)
+						.addTo(map.current);
+					$(document).on("click", ".popClose", function () {
+						popups.remove();
+					});
+					$(document).on("click", ".popUpdetail", function () {
+						dispatch({
+							type: "SIDEBAR",
+							payload: {
+								sid: "right",
+								sid_right: true,
+							},
+						});
+						setItemSideRight(
+							<InfoGrafis
+								data_kecamatan={result}
+								kode={feature.properties.class}
+							/>
+						);
+					});
+				});
+			}
 		});
 		map.current.on("mouseleave", "counties", function () {
-			map.current.getCanvas().style.cursor = "";
-			popups.remove();
+			// map.current.getCanvas().style.cursor = "";
+			// popups.remove();
 		});
 		map.current.on("mousemove", ["circle", "points"], (e) => {
-			map.current.getCanvas().style.cursor = "";
-			popups.remove();
+			// map.current.getCanvas().style.cursor = "";
+			// popups.remove();
 		});
 		// map.current.on("mouseleave", "counties", () => {
 		// 	map.current.getCanvas().style.cursor = "";
@@ -183,8 +213,8 @@ export default function MpBoxv2() {
 				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 				}
-
-				new mapboxgl.Popup()
+				console.log(description);
+				popups
 					.setLngLat(coordinates)
 					.setHTML(
 						/*html*/ `

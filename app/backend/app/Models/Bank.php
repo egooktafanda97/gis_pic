@@ -11,7 +11,7 @@ class Bank extends Model
     protected $table = 'bank';
     protected $primaryKey = 'id_bank';
     public $timestamps = true;
-    protected $appends = ['setting', 'ethnicity', "header"];
+    protected $appends = ['ethnicity', "header"];
     protected $fillable = [
         "jenis_bank_id",
         "nama_bank",
@@ -25,10 +25,6 @@ class Bank extends Model
         "gambar",
     ];
 
-    public function getSettingAttribute()
-    {
-        return Setting::where("table_config", $this->table)->get();
-    }
     public function getEthnicityAttribute()
     {
         return $this->table;

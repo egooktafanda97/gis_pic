@@ -171,6 +171,17 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label for="">Icon Map</label>
+                                <select class="form-control form-control-sm" id="marker_id" name="marker_id" require>
+                                    <option value="">pilih</option>
+                                    <?php foreach ($mark as $val) : ?>
+                                        <option value="<?= $val['id_marker'] ?>"><?= $val['name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label for="">Gambar</label>
                                 <input type="file" class="form-control form-control-sm" name="gambar" id="gambar" placeholder="Gambar">
                             </div>

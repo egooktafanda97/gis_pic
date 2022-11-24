@@ -4,13 +4,26 @@ namespace App\Http\Controllers;
 
 use App\Models\Industri;
 use App\Models\Pendidikan;
+use App\Models\TempatIbadah;
+use App\Models\Penginapan;
+use App\Models\FasilitasKesehatan;
+use App\Models\pariwisata;
+use App\Models\Bank;
 use App\Models\Setting;
+use App\Models\Kecamatan;
+use App\Models\MarkerSet;
 
 class MasterData extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['data_main', 'geojson']]);
+        $this->middleware('auth:api', ['except' => ['data_main', 'geojson', 'dataKecamatan']]);
+    }
+
+    public function dataKecamatan($kode)
+    {
+        $data = Kecamatan::where("kode_kecamatan", $kode)->first();
+        return response()->json($data);
     }
 
     public function data_main($arg = null)
@@ -23,10 +36,12 @@ class MasterData extends Controller
             default:
                 $concat = array_merge([
                     "industri" => $this->dataIndustri(),
-                    "pendidikan" => $this->dataPendidikan(),
-                    "bank" => [],
-                    "penginapan" => [],
-                    "tampat_ibadah" => []
+                    // "pendidikan" => $this->dataPendidikan(),
+                    // "tempat_ibadah" => TempatIbadah::all(),
+                    // "penginapan" => Penginapan::all(),
+                    // "fasilitas_kesehatan" => FasilitasKesehatan::all(),
+                    // "pariwisata" => pariwisata::all(),
+                    // "bank" => Bank::all()
                 ]);
 
                 return response()->json($this->BuidFormatGeoJson($concat));
@@ -45,13 +60,19 @@ class MasterData extends Controller
                 $concat = array_merge([
                     "industri" => $this->dataIndustri(),
                     "pendidikan" => $this->dataPendidikan(),
+                    "tempat_ibadah" => TempatIbadah::all(),
+                    "penginapan" => Penginapan::with(['jenis_penginapan', 'kelas_penginapan'])->get(),
+                    "fasilitas_kesehatan" => FasilitasKesehatan::all(),
+                    "pariwisata" => pariwisata::all(),
+                    "bank" => Bank::all()
                 ]);
 
-                $getPropertis = Setting::where("config", "map")->get();
+                $getMarkerIcon = MarkerSet::all();
 
                 return response()->json([
                     "geoJson" => $this->BuidFormatGeoJson($concat),
-                    "setting" => $getPropertis
+                    "item" => $concat,
+                    "marker" =>  $getMarkerIcon
                 ]);
 
                 break;
@@ -99,8 +120,9 @@ class MasterData extends Controller
                     "type" => "Feature",
                     "properties" => [
                         "ethnicity" => $value['ethnicity'],
-                        "data" => $this->dataLogicalDetail($value),
+                        "marker_id" => $value['marker_id'],
                         "items" => $value,
+                        "data" => $this->dataLogicalDetail($value),
                     ],
                     "geometry" => [
                         "type" => "Point",
@@ -220,6 +242,90 @@ class MasterData extends Controller
                 ];
                 break;
 
+            case "tempat_ibadah":
+                return [
+                    [
+                        "label" => "NAMA " . $data['ethnicity'],
+                        "value" => $data['nama_tempat_ibadah'] ?? "",
+                    ],
+                    [
+                        "label" => "JENIS " . $data['ethnicity'],
+                        "value" => $data['jenis_tempat_ibadah'] ?? "",
+                    ],
+                    [
+                        "label" => "LUAS " . $data['ethnicity'],
+                        "value" => $data['luas_tempat_ibadah'] ?? "",
+                    ],
+                    [
+                        "label" => "PERIZINAN " . $data['ethnicity'],
+                        "value" => $data['perizinan'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT " . $data['ethnicity'],
+                        "value" => $data['alamat'] ?? "",
+                    ],
+                    [
+                        "label" => "NAMA PENANGGUNG JAWAB ",
+                        "value" => $data['nama_penanggung_jawab'] ?? "",
+                    ],
+                    [
+                        "label" => "NOMOR TELEPON",
+                        "value" => $data['no_telp'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT WEBSITE",
+                        "value" => $data['alamat_website'] ?? "",
+                    ],
+                ];
+                break;
+            case "penginapan":
+                return [
+                    [
+                        "label" => "NAMA " . $data['ethnicity'],
+                        "value" => $data['nama_penginapan'] ?? "",
+                    ],
+                    [
+                        "label" => "JENIS " . $data['ethnicity'],
+                        "value" => $data['jenis_penginapan']['nama_jenis_penginapan'] ?? "",
+                    ],
+                    [
+                        "label" => "KELAS " . $data['ethnicity'],
+                        "value" => $data['kelas_penginapan']['nama_kelas_penginapan'] ?? "",
+                    ],
+                ];
+                break;
+            case "fasilitas_kesehatan":
+                return [
+                    [
+                        "label" => "NAMA " . $data['ethnicity'],
+                        "value" => $data['nama_pendidikan'] ?? "",
+                    ],
+                ];
+                break;
+            case "pariwisata":
+                return [
+                    [
+                        "label" => "NAMA " . $data['ethnicity'],
+                        "value" => $data['nama_pendidikan'] ?? "",
+                    ],
+                ];
+                break;
+            case "bank":
+                return [
+                    [
+                        "label" => "NAMA " . $data['ethnicity'],
+                        "value" => $data['nama_pendidikan'] ?? "",
+                    ],
+                ];
+                break;
+                // case "":
+                //     return [
+                //         [
+                //             "label" => "NAMA " . $data['ethnicity'],
+                //             "value" => $data['nama_pendidikan'] ?? "",
+                //         ],
+                //     ];
+                //     break;
             default:
                 # code...
                 break;

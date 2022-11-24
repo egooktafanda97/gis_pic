@@ -37,6 +37,9 @@ Route::group([
     Route::get('/geojson/{slug?}', [
         \App\Http\Controllers\MasterData::class, "geojson"
     ]);
+    Route::get('/dataKecamatan/{slug?}', [
+        \App\Http\Controllers\MasterData::class, "dataKecamatan"
+    ]);
 });
 
 Route::group([

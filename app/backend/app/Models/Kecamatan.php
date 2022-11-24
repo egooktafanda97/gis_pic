@@ -13,5 +13,11 @@ class Kecamatan extends Model
     protected $fillable = [
         "kode_kecamatan",
         "nama_kecamatan",
+        "batas_wilayah",
+        "luas_wilayah",
+        "geologi",
+        "iklim",
+        "jumlah_penduduk",
+        "laju_pertumbuhan"
     ];
 }

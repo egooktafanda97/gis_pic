@@ -7,7 +7,6 @@
                     <div class="flex-space-between w-100">
                         <div>
                             <strong>Master Industri</strong>
-                            <button class="btn btn-primary btn-sm"><i class="fa fa-bar-chart"></i> Grafik</button>
                         </div>
                         <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#m-crud"><i class="fa fa-plus"></i> Tambah Data</button> -->
                         <button class="btn btn-info trigger"><i class="fa fa-plus"></i> Tambah Data</button>
@@ -202,8 +201,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Icon Map (.png)</label>
-                                <input type="file" class="form-control form-control-sm" name="icon_map" id="icon_map" placeholder="Icon">
+                                <label for="">Icon Map</label>
+                                <select class="form-control form-control-sm" id="marker_id" name="marker_id" require>
+                                    <option value="">pilih</option>
+                                    <?php foreach ($mark as $val) : ?>
+                                        <option value="<?= $val['id_marker'] ?>"><?= $val['name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-12">

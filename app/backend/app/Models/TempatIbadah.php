@@ -11,7 +11,7 @@ class TempatIbadah extends Model
     protected $table = 'tempat_ibadah';
     protected $primaryKey = 'id_tempat_ibadah';
     public $timestamps = true;
-    protected $appends = ['setting', 'ethnicity', "header"];
+    protected $appends = ['ethnicity', "header"];
     protected $fillable = [
         "jenis_tempat_ibadah",
         "nama_tempat_ibadah",
@@ -26,10 +26,7 @@ class TempatIbadah extends Model
         "gambar",
     ];
 
-    public function getSettingAttribute()
-    {
-        return Setting::where("table_config", $this->table)->get();
-    }
+
     public function getEthnicityAttribute()
     {
         return $this->table;

@@ -52,6 +52,7 @@ class Penginapan extends CI_Controller
         $all_data = $this->getAllData($config['per_page'], $data['start']);
         $jenis_data = $this->getJenis();
         $kelas_data = $this->getKelas();
+        $marker_data = $this->getMarker();
         $data = [
             "title" => "Penginapan",
             "page" => $this->page . "index",
@@ -59,6 +60,7 @@ class Penginapan extends CI_Controller
             "result" =>  $all_data,
             "jenis" => $jenis_data,
             "kelas" => $kelas_data,
+            "mark" => $marker_data,
         ];
         $this->load->view('Router/route', $data);
     }
@@ -77,6 +79,7 @@ class Penginapan extends CI_Controller
         $this->db->order_by("id_penginapan ", "DESC");
         $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id");
         $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id");
+        $this->db->join("marker_set", "marker_set.id_marker = penginapan.marker_id");
         $result = $this->db->get_where("penginapan")->result_array();
 
         $result = array_map(function ($result) {
@@ -92,6 +95,7 @@ class Penginapan extends CI_Controller
     {
         $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id");
         $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id");
+        $this->db->join("marker_set", "marker_set.id_marker = penginapan.marker_id");
         $this->db->where("penginapan.id_penginapan", $id);
         $result = $this->db->get_where("penginapan")->row_array();
 
@@ -111,6 +115,12 @@ class Penginapan extends CI_Controller
         $result = $this->db->get_where("kelas_penginapan")->result_array();
         return $result;
     }
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
+        return $result;
+    }
 
     public function countAllData()
     {
@@ -128,7 +138,7 @@ class Penginapan extends CI_Controller
         $this->form_validation->set_rules('alamat_penginapan', 'alamat_penginapan', 'required');
         $this->form_validation->set_rules('no_telp', 'no_telp', 'required');
         $this->form_validation->set_rules('alamat_web', 'alamat_web', 'required');
-        $this->form_validation->set_rules('latitude', 't', 'required');
+        $this->form_validation->set_rules('latitude', 'latitude', 'required');
         $this->form_validation->set_rules('longitude', 'longitude', 'required');
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('error', 'gagal ditambahkan');
@@ -141,6 +151,7 @@ class Penginapan extends CI_Controller
                 if ($uploaded == false) {
                     $uploaded = "default.jpg";
                 }
+
                 // ==========================================
                 $data  = [
                     "jenis_penginapan_id" => $post['jenis_penginapan_id'],
@@ -154,6 +165,7 @@ class Penginapan extends CI_Controller
                     "alamat_web" => $post['alamat_web'],
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" => $post['marker_id'],
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -222,12 +234,14 @@ class Penginapan extends CI_Controller
                     "alamat_web" => $post['alamat_web'],
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" => $post['marker_id'],
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
                 $uploaded = up("gambar", "assets/img/foto/");
                 if ($uploaded != false) {
                     $data += ["gambar" => $uploaded];
                 }
+
                 $this->db->where('id_penginapan', $id);
                 $save = $this->db->update('penginapan', $data);
                 if ($save) {
@@ -249,6 +263,7 @@ class Penginapan extends CI_Controller
 
         $dataId =  $this->db->get_where('penginapan', ['id_penginapan' => $id_penginapan])->row_array();
         $getSetting = $this->db->get_where("setting", ["table_config" => 'penginapan', "config_key" => "icon"])->row_array();
+
         $data = array(
             'title' => "Detail Data",
             'page' => $this->page . "detail/index",
@@ -256,6 +271,18 @@ class Penginapan extends CI_Controller
             'script' => $this->page . "detail/script",
             'val' => $this->dataPenginapanById($id_penginapan),
             "setting" => $getSetting
+        );
+        $this->load->view('Router/route', $data);
+    }
+    public function maps($id_penginapan)
+    {
+
+        $dataId =  $this->db->get_where('penginapan', ['id_penginapan' => $id_penginapan])->row_array();
+        $data = array(
+            'title' => "Detail Data",
+            'page' => $this->page . "maps",
+            'script' => $this->page . "script",
+            'val' => $dataId
         );
         $this->load->view('Router/route', $data);
     }

@@ -11,7 +11,7 @@ class FasilitasKesehatan extends Model
     protected $table = 'fasilitas_kesehatan';
     protected $primaryKey = 'id_fasilitas_kesehatan';
     public $timestamps = true;
-    protected $appends = ['setting', 'ethnicity', "header"];
+    protected $appends = ['ethnicity', "header"];
     protected $fillable = [
         "type_fasilitas",
         "jenis_fasilitas_id",
@@ -28,10 +28,7 @@ class FasilitasKesehatan extends Model
         "gambar",
     ];
 
-    public function getSettingAttribute()
-    {
-        return Setting::where("table_config", $this->table)->get();
-    }
+
     public function getEthnicityAttribute()
     {
         return $this->table;

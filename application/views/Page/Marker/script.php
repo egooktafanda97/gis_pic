@@ -57,7 +57,7 @@
       })
       .then((willDelete) => {
         if (willDelete) {
-          window.location.href = "<?= base_url('Setting/deleted/'); ?>" + id
+          window.location.href = "<?= base_url('marker/deleted/'); ?>" + id
         }
       });
   })
@@ -66,17 +66,14 @@
   $(document).on('click', '.edit', function() {
     const dataid = $(this).data('id');
     async function getdata(id) {
-      const requestdata = await axios.get('<?= base_url('Setting/getById/') ?>' + id).catch((err) => {
+      const requestdata = await axios.get('<?= base_url('marker/getById/') ?>' + id).catch((err) => {
         console.log(err.response)
       });
       if (requestdata?.status ?? 400 == 200) {
 
         const data = requestdata.data;
-        $("#config_key").val(data?.config_key ?? "");
-        $("#config_value").val(data?.config_value ?? "");
-        $("#table_config").val(data?.table_config ?? "");
-        $("#sub_tabel").text(data?.sub_tabel ?? "");
-        $("#formmodal").attr('action', '<?= base_url('Setting/update/') ?>' + id)
+        $("#name").val(data?.name ?? "");
+        $("#formmodal").attr('action', '<?= base_url('marker/update/') ?>' + id)
       };
     }
     getdata(dataid)

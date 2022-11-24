@@ -11,7 +11,7 @@ class Penginapan extends Model
     protected $table = 'penginapan';
     protected $primaryKey = 'id_penginapan';
     public $timestamps = true;
-    protected $appends = ['setting', 'ethnicity', "header"];
+    protected $appends = ['ethnicity', "header"];
     protected $fillable = [
         "jenis_penginapan_id",
         "kelas_inap_id",
@@ -26,10 +26,13 @@ class Penginapan extends Model
         "logitude",
         "gambar"
     ];
-
-    public function getSettingAttribute()
+    public function jenis_penginapan()
     {
-        return Setting::where("table_config", $this->table)->get();
+        return $this->belongsTo('App\Models\jenisPenginapan', 'jenis_penginapan_id', 'id_jenis_penginapan');
+    }
+    public function kelas_penginapan()
+    {
+        return $this->belongsTo('App\Models\KelasPenginapan', 'kelas_inap_id', 'id_kelas_penginapan');
     }
     public function getEthnicityAttribute()
     {

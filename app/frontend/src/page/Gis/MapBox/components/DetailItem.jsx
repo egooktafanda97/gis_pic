@@ -94,7 +94,7 @@ export default function DetailItem(props) {
 					<div className="card-image-content">
 						<img
 							className="ImgData"
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample24.jpg"
+							src={`${BASE_URL}assets/img/foto/${data?.gambar}`}
 							alt=""
 						/>
 					</div>

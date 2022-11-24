@@ -51,11 +51,14 @@ class Tempat_ibadah extends CI_Controller
         $data['start'] = $this->uri->segment(3);
 
         $all_data = $this->getAllData($config['per_page'], $data['start']);
+        $marker_data = $this->getMarker();
+
         $data = [
             "title" => "Tempat Ibadah",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
-            "result" =>  $all_data
+            "result" =>  $all_data,
+            "mark" => $marker_data
         ];
         $this->load->view('Router/route', $data);
     }
@@ -70,8 +73,16 @@ class Tempat_ibadah extends CI_Controller
     public function dataTempatIbadahById($id)
     {
         $this->db->where("tempat_ibadah.id_tempat_ibadah", $id);
+        $this->db->join("marker_set", "marker_set.id_marker = tempat_ibadah.marker_id");
         $result = $this->db->get_where("tempat_ibadah")->row_array();
 
+        return $result;
+    }
+
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
         return $result;
     }
 
@@ -115,6 +126,7 @@ class Tempat_ibadah extends CI_Controller
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
                     "alamat_website" => $post['alamat_website'],
+                    "marker_id" => $post['marker_id'],
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -182,6 +194,7 @@ class Tempat_ibadah extends CI_Controller
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
                     "alamat_website" => $post['alamat_website'],
+                    "marker_id" => $post['marker_id'],
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
                 $uploaded = up("gambar", "assets/img/foto/");
@@ -209,6 +222,7 @@ class Tempat_ibadah extends CI_Controller
 
         $dataId =  $this->db->get_where('tempat_ibadah', ['id_tempat_ibadah' => $id_tempat_ibadah])->row_array();
         $getSetting = $this->db->get_where("setting", ["table_config" => 'tempat_ibadah', "config_key" => "icon"])->row_array();
+
         $data = array(
             'title' => "Detail Data",
             'page' => $this->page . "detail/index",

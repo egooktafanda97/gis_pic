@@ -50,18 +50,13 @@ export function LayerSource(maps) {
 				},
 			});
 		},
-		CircleMarker: (geoJson, config) => {
+		CircleMarker: (geoJson, circleColors) => {
 			const arr = ["match", ["get", "ethnicity"]];
-			if (config.length > 0) {
-				config.map((rr, i) => {
-					if (rr.config_key == "circle-color") {
-						arr.push(rr.table_config);
-						arr.push(rr.config_value);
-					}
-				});
-			}
+			circleColors.map((x) => {
+				arr.push(x?.item);
+				arr.push(x?.color);
+			});
 			arr.push("#000");
-
 			map.addSource("marker_data", {
 				type: "geojson",
 				data: geoJson,
@@ -104,26 +99,28 @@ export function LayerSource(maps) {
 				},
 			});
 		},
-		IconMarker: (geoJson, config) => {
-			if (config.length > 0) {
+		IconMarker: (geoJson, marker) => {
+			if (marker.length > 0) {
 				map.addSource("pointer-marker", {
 					type: "geojson",
 					data: geoJson,
 				});
-				const marker_id = ["match", ["get", "ethnicity"]];
-				config.map((its, i) => {
-					if (its.config_key == "icon") {
-						marker_id.push(its.table_config);
-						marker_id.push(`marker-${its.table_config}`);
-					}
+				const marker_id = ["match", ["get", "marker_id"]];
+				marker.map((its, i) => {
+					marker_id.push(its.id_marker);
+					marker_id.push(`marker-${its.id_marker}`);
 				});
 				marker_id.push("-");
-				config.map((itm, i) => {
-					if (itm.config_key == "icon") {
-						map.loadImage(BASE_URL + itm.config_value, (error, image) => {
-							if (error) throw error;
-							map.addImage(`marker-${itm.table_config}`, image);
-						});
+
+				marker.map((itm, i) => {
+					if (itm) {
+						map.loadImage(
+							`${BASE_URL}assets/img/icon_map/${itm?.marker}`,
+							(error, image) => {
+								if (error) throw error;
+								map.addImage(`marker-${itm.id_marker}`, image);
+							}
+						);
 					}
 				});
 				map.addLayer({

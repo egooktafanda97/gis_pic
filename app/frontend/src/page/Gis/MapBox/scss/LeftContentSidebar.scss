@@ -77,7 +77,7 @@
 	.MenuContainer {
 		.ItemMenuContainer {
 			padding: 10px;
-			background: #e7e7e7;
+
 			display: flex;
 			align-items: center;
 			width: 100%;
@@ -95,6 +95,9 @@
 				display: flex;
 				width: 100%;
 				align-items: center;
+				background: #e7e7e7;
+				padding: 10px;
+				border-radius: 5px;
 
 				.IconMenuContainer {
 					width: 50px;

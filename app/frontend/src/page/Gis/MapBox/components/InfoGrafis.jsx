@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { FaMap } from "react-icons/fa";
 import { getInfoGrafis } from "../model/main_model";
 import ItemInfoMenuGrap from "./ItemMenuInfoGraph";
+import ItemMenuInfoGraphKecamatan from "./ItemMenuInfoGraphKecamatan";
 import { useDispatch, useSelector } from "react-redux";
 const InfoGrafis = (props) => {
-	const { kode } = props;
+	const { kode, data_kecamatan } = props;
 	const getRedux = useSelector((state) => state);
 	const dispatch = useDispatch();
 
@@ -15,6 +16,9 @@ const InfoGrafis = (props) => {
 			getData(kode);
 		}
 	}, [kode]);
+	useEffect(() => {
+		console.log(props);
+	});
 	const getData = async (kode) => {
 		const d = await getInfoGrafis(kode);
 		const arr = [];
@@ -88,8 +92,13 @@ const InfoGrafis = (props) => {
 			</ul>
 			<div className="tabs__content">
 				<div className="p-3">
-					<div id="menuSidebarLeft" style={{ marginTop: "10px" }}>
+					<div
+						id="menuSidebarLeft"
+						style={{ marginTop: "10px", padding: "0", fontSize: ".8em" }}
+					>
 						<div className="MenuContainer">
+							<ItemMenuInfoGraphKecamatan {...data_kecamatan} />
+							<hr />
 							{info.length > 0 &&
 								info.map((_) => {
 									return <ItemInfoMenuGrap {..._} />;
@@ -99,7 +108,6 @@ const InfoGrafis = (props) => {
 								<h5>Tidak ada informasi pada kecamatan ini</h5>
 							)}
 						</div>
-						<hr />
 					</div>
 				</div>
 			</div>

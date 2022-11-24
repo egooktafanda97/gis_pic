@@ -20,7 +20,7 @@ class Info_grafis extends CI_Controller
     {
         $this->load->library('pagination');
         // library pagination
-        $config['base_url'] = base_url("jenis_bank/index/");
+        $config['base_url'] = base_url("InfoGrafis/index/");
         $config['total_rows'] = $this->countAllData();
         $config['per_page'] = 10;
 
@@ -61,6 +61,7 @@ class Info_grafis extends CI_Controller
             "title" => "Info Grafis Kecamatan",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
+            "style" => $this->page . "style",
             "kecamatan" => $this->getKecamatan(),
             "result" =>  $all_data,
         ];
@@ -105,6 +106,50 @@ class Info_grafis extends CI_Controller
             }
         } catch (\Throwable $th) {
             $this->session->set_flashdata('error', 'gagal ditambahkan');
+            redirect('Info_grafis');
+        }
+    }
+
+    public function deleted($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('info_grafis');
+
+        $this->session->set_flashdata('success', 'data berhasil dihapus');
+        redirect('info_grafis');
+    }
+
+    public function getById($id)
+    {
+
+        $getData = $this->db->get_where('info_grafis', ['id' => $id])->row_array();
+        echo json_encode($getData);
+    }
+
+    public function update($id)
+    {
+        try {
+            $post = $this->input->post();
+            $main = [
+                "kode_kecamatan" => $post['kode_kecamatan'],
+                "tahun" => $post["tahun"],
+                "tanggal" => $post["tanggal"],
+                "faktor" => $post['faktor'],
+                "sub_faktor" => $post['sub_faktor'],
+                "nama" => $post['nama'],
+                "keterangan" => $post['keterangan'],
+            ];
+            $this->db->where('id', $id);
+            $save = $this->db->update('info_grafis', $main);
+            if ($save) {
+                $this->session->set_flashdata('success', 'berhasil di ubah');
+                redirect('Info_grafis');
+            } else {
+                $this->session->set_flashdata('error', 'gagal di ubah');
+                redirect('Info_grafis');
+            }
+        } catch (\Throwable $th) {
+            $this->session->set_flashdata('error', 'kesalahan');
             redirect('Info_grafis');
         }
     }

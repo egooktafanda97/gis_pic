@@ -10,7 +10,7 @@ class Industri extends Model
     protected $table = 'industri';
     protected $primaryKey = 'id_industri';
     public $timestamps = true;
-    protected $appends = ['setting', 'ethnicity', "header"];
+    protected $appends = ['ethnicity', "header"];
     protected $fillable = [
         "user_id",
         "pic_industri_id",
@@ -45,10 +45,6 @@ class Industri extends Model
     public function SubSektor()
     {
         return $this->belongsTo('App\Models\SubSektor', 'sub_sektor_industri_id', 'id_subsektor_industri');
-    }
-    public function getSettingAttribute()
-    {
-        return Setting::where("table_config", $this->table)->get();
     }
     public function getEthnicityAttribute()
     {

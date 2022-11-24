@@ -51,12 +51,14 @@ class Fasilitas_kesehatan extends CI_Controller
 
         $all_data = $this->getAllData($config['per_page'], $data['start']);
         $jenis_data = $this->getJenis();
+        $marker_data = $this->getMarker();
         $data = [
             "title" => "Fasilitas Kesehatan",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
             "result" =>  $all_data,
             "jenis" => $jenis_data,
+            "mark" => $marker_data,
         ];
         $this->load->view('Router/route', $data);
     }
@@ -73,6 +75,7 @@ class Fasilitas_kesehatan extends CI_Controller
     {
         $this->db->order_by("id_fasilitas_kesehatan ", "DESC");
         $this->db->join("jenis_fasilitas_kesehatan", "jenis_fasilitas_kesehatan.id_jenis_fasilitas = fasilitas_kesehatan.jenis_fasilitas_id");
+        $this->db->join("marker_set", "marker_set.id_marker = fasilitas_kesehatan.marker_id");
         $result = $this->db->get_where("fasilitas_kesehatan")->result_array();
 
         $result = array_map(function ($result) {
@@ -88,6 +91,7 @@ class Fasilitas_kesehatan extends CI_Controller
     public function dataFasilitasKesehatanById($id)
     {
         $this->db->join("jenis_fasilitas_kesehatan", "jenis_fasilitas_kesehatan.id_jenis_fasilitas = fasilitas_kesehatan.jenis_fasilitas_id");
+        $this->db->join("marker_set", "marker_set.id_marker = fasilitas_kesehatan.marker_id");
         $this->db->where("fasilitas_kesehatan.id_fasilitas_kesehatan", $id);
         $result = $this->db->get_where("fasilitas_kesehatan")->row_array();
 
@@ -99,6 +103,12 @@ class Fasilitas_kesehatan extends CI_Controller
     {
         $this->db->order_by("id_jenis_fasilitas", "DESC");
         $result = $this->db->get_where("jenis_fasilitas_kesehatan")->result_array();
+        return $result;
+    }
+    public function getMarker()
+    {
+        $this->db->order_by("id_marker", "DESC");
+        $result = $this->db->get_where("marker_set")->result_array();
         return $result;
     }
 
@@ -132,6 +142,7 @@ class Fasilitas_kesehatan extends CI_Controller
                 if ($uploaded == false) {
                     $uploaded = "default.jpg";
                 }
+
                 // ==========================================
                 $data  = [
                     "type_fasilitas" => $post['type_fasilitas'],
@@ -146,6 +157,7 @@ class Fasilitas_kesehatan extends CI_Controller
                     "alamat_website" => $post['alamat_website'],
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" =>  $post['marker_id'],
                     "gambar" => $uploaded,
                     "created_at" => date('Y-m-d H:i:s'),
                     "updated_at" => date('Y-m-d H:i:s')
@@ -216,12 +228,14 @@ class Fasilitas_kesehatan extends CI_Controller
                     "alamat_website" => $post['alamat_website'],
                     "latitude" => $post['latitude'],
                     "longitude" => $post['longitude'],
+                    "marker_id" =>  $post['marker_id'],
                     "updated_at" => date('Y-m-d H:i:s')
                 ];
                 $uploaded = up("gambar", "assets/img/foto/");
                 if ($uploaded != false) {
                     $data += ["gambar" => $uploaded];
                 }
+
                 $this->db->where('id_fasilitas_kesehatan', $id);
                 $save = $this->db->update('fasilitas_kesehatan', $data);
                 if ($save) {
@@ -244,6 +258,7 @@ class Fasilitas_kesehatan extends CI_Controller
 
         $dataId =  $this->db->get_where('fasilitas_kesehatan', ['id_fasilitas_kesehatan' => $id_fasilitas_kesehatan])->row_array();
         $getSetting = $this->db->get_where("setting", ["table_config" => 'fasilitas_kesehatan', "config_key" => "icon"])->row_array();
+
         $data = array(
             'title' => "Detail Data",
             'page' => $this->page . "detail/index",
