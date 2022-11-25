@@ -343,8 +343,8 @@ export default function MpBoxv2() {
 			{/* )} */}
 
 			{/* <div className="InfoWindowMulty">
-                <CardInfoWindow />
-            </div> */}
+				<CardInfoWindow />
+			</div> */}
 		</div>
 	);
 }
