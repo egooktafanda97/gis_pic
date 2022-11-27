@@ -15,13 +15,29 @@ const ItemMenuMode = (props) => {
 		$("[name='map_mode']").change(function () {
 			// map.current?.removeSource("maine");
 			const MainData = InitData;
+
 			const e = Event(map.current);
 			e.mapMode($(this).attr("id"), (maps) => {
 				const layer = LayerSource(maps);
 				layer.PolygonPku(InitData?.polygonPku);
 				if (MainData?.geometri == undefined) return;
-				layer.CircleMarker(MainData?.geometri, MainData?.config);
-				layer.IconMarker(MainData?.geometri, MainData?.config);
+
+				// geometri.features = [geometri.features[0]];
+				layer.CircleMarker(MainData?.geometri, MainData?.items);
+				layer.IconMarker(MainData?.geometri, MainData?.marker);
+				// let i = 0;
+				// const timer = setInterval(() => {
+				// 	if (i < featureGeo.length) {
+				// 		geometri.features.push(featureGeo[i]);
+				// 		map.getSource("marker_data").setData(geometri);
+				// 		if (map.getSource("pointer-marker")) {
+				// 			map.getSource("pointer-marker").setData(geometri);
+				// 		}
+				// 		i++;
+				// 	} else {
+				// 		window.clearInterval(timer);
+				// 	}
+				// }, 10);
 				if (!map?.current?.getLayer("__3dMode")) {
 					layer._3DModelLayer(layer.LabelMode(), "__3dMode");
 				}

@@ -5,6 +5,7 @@ import { addOrRemove } from "../function/fx";
 import Event from "../function/Event";
 import { LayerSource } from "../function/LayerSource";
 import geoJsonPolygonPku from "../../json/pekanbaru.json";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function ItemMenuInfoGraphKecamatan(props) {
 	const [trigger, setTrigger] = useState(false);
@@ -17,8 +18,17 @@ export default function ItemMenuInfoGraphKecamatan(props) {
 					setTrigger(!trigger);
 				}}
 			>
-				<div className="LabelMenuContainer">
+				<div
+					className="LabelMenuContainer"
+					style={{
+						display: "flex",
+						justifyContent: "space-between",
+						alignItems: "center",
+						width: "100%",
+					}}
+				>
 					<label htmlFor="">Kecamatan {props?.nama_kecamatan}</label>
+					<FaChevronDown />
 				</div>
 			</div>
 			<div

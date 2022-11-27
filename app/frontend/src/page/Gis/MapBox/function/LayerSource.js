@@ -34,8 +34,8 @@ export function LayerSource(maps) {
 						"fill-outline-color": "rgba(0,0,0,0.1)",
 						"fill-color": "rgba(0,0,0,0.1)",
 					},
-				},
-				"settlement-label"
+				}
+				// "settlement-label"
 			);
 
 			map.addLayer({
@@ -44,7 +44,7 @@ export function LayerSource(maps) {
 				source: "maine",
 				layout: {},
 				paint: {
-					"line-color": "trasparent",
+					"line-color": "red",
 					"line-width": 1,
 					"line-dasharray": [2, 1],
 				},
@@ -111,7 +111,6 @@ export function LayerSource(maps) {
 					marker_id.push(`marker-${its.id_marker}`);
 				});
 				marker_id.push("-");
-
 				marker.map((itm, i) => {
 					if (itm) {
 						map.loadImage(

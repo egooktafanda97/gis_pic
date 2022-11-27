@@ -8,10 +8,7 @@ import $ from "jquery";
 // =======================================================
 // function
 import { _InitLoadMap } from "./function/v2SetUpRun";
-import {
-	package_data_active,
-	model__getDataKecamatan,
-} from "./model/main_model";
+import { model__getDataKecamatan } from "./model/main_model";
 // Componsnet
 import CardItemComponent from "./components/CardTabItem";
 import LeftSidebarComponent from "./components/LeftContentSidebar";
@@ -32,7 +29,7 @@ export default function MpBoxv2() {
 	const [lng, setLng] = useState(101.4451276040001);
 	const [lat, setLat] = useState(0.532236798000042);
 	const [zoom, setZoom] = useState(11);
-	const [sidebar, setSidebar] = useState(false);
+	const [sidebar, setSidebar] = useState(true);
 	const [dataSelect, setDataSelect] = useState({});
 	const [CollBackInit, setCollBackInit] = useState({});
 	const [kodeKec, setKodeKec] = useState(null);
@@ -45,32 +42,20 @@ export default function MpBoxv2() {
 	useEffect(() => {
 		if (getRedux) {
 			if (map.current) return;
-			dispatch({
-				type: "SEKTOR_ACTIVE",
-				payload: package_data_active.map((i) => {
-					return i.name;
-				}),
-			});
 			map.current = new mapboxgl.Map({
 				container: mapContainer.current,
 				style: "mapbox://styles/mapbox/light-v10",
+				// style: "mapbox://styles/mapbox/satellite-v9", // style URL
+				// projection: "globe", // Display the map as a globe, since
 				center: [lng, lat],
 				zoom: zoom,
 				pitch: 45,
 				bearing: -17.6,
 				antialias: true,
 			});
-			_InitLoadMap(
-				{ map: map.current },
-				{
-					circleFilter: package_data_active.map((i) => {
-						return i.name;
-					}),
-				},
-				(obj) => {
-					setCollBackInit(obj);
-				}
-			);
+			_InitLoadMap({ map: map.current }, {}, (obj) => {
+				setCollBackInit(obj);
+			});
 			Events();
 			EventMapBox();
 		}
@@ -125,7 +110,9 @@ export default function MpBoxv2() {
 									</div>
 									<hr />
 									<div class="items-popup mt-3">
-										<button class="btn btn-primary btn-sm w-100 popUpdetail">lebih lanjut</button>
+										<a href="${BASE_URL}website/kecamatan/${
+								feature.properties.class
+							}" target="_blank" class="btn btn-primary btn-sm w-100 popUpdetail">lebih lanjut</a>
 									</div>
 								</div>
 							</div>
@@ -213,7 +200,6 @@ export default function MpBoxv2() {
 				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 				}
-				console.log(description);
 				popups
 					.setLngLat(coordinates)
 					.setHTML(
@@ -254,7 +240,7 @@ export default function MpBoxv2() {
 			lastZoom = currentZoom;
 		});
 		map.current.on("click", (e) => {
-			setSidebar(false);
+			// setSidebar(false);
 		});
 		// map.current.on("contextmenu", "maine", function (e) {
 		// 	var popups = new mapboxgl.Popup();
@@ -267,7 +253,6 @@ export default function MpBoxv2() {
 	}, [getRedux]);
 
 	const swithing = (val) => {
-		console.log(val);
 		map.current.setFilter("circle", [
 			"match",
 			["get", "ethnicity"],
@@ -292,8 +277,8 @@ export default function MpBoxv2() {
 				}`}
 			/>
 			{/* <button className="btn-sidebar" onClick={() => setSidebar(!sidebar)}>
-        <i className="fa fa-bars"></i>
-    </button> */}
+				<i className="fa fa-bars"></i>
+			</button> */}
 
 			<div className={`sidebar-map ${sidebar ? "active" : ""}`}>
 				<div className="top-sid">

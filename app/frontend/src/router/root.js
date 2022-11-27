@@ -18,4 +18,11 @@ export default [
 		label: "Gis",
 		Component: lazy(() => import("../page/Gis/Index")),
 	},
+	{
+		exact: true,
+		name: "master",
+		path: ["/master"],
+		label: "Master Data",
+		Component: lazy(() => import("../page/Master/Index")),
+	},
 ];

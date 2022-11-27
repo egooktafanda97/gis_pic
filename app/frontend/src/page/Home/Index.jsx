@@ -68,7 +68,7 @@ export default function Index() {
 								)}
 							</h1>
 						</div>
-						<div class="button second">
+						<div class="button second" onClick={() => history.push("/master")}>
 							<div class="border"></div>
 							<h1>MASTER DATA</h1>
 						</div>
