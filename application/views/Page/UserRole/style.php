@@ -5,13 +5,13 @@
         text-decoration: none !important;
     }
 
-    .nav,
-    .nav-item {
+    .navs,
+    .navs-item {
         position: relative;
     }
 
-    .nav-item:before,
-    .nav1 .nav-item:before {
+    .navs-item:before,
+    .navs1 .navs-item:before {
         width: 100%;
         height: 5px;
         background-color: #dfe2ea;
@@ -31,7 +31,7 @@
         align-items: center;
     }
 
-    .nav {
+    .navs {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
@@ -44,7 +44,7 @@
         box-shadow: 0 8px 36px rgba(157, 160, 175, 0.8);
     }
 
-    .nav-item {
+    .navs-item {
         color: #83818c;
         padding: 10px 0px;
         text-decoration: none;
@@ -57,7 +57,7 @@
         font-weight: 700;
     }
 
-    .nav-item:before {
+    .navs-item:before {
         content: "";
         position: absolute;
         -webkit-transition: 0.3s;
@@ -65,22 +65,22 @@
         transition: 0.3s;
     }
 
-    .nav-item:not(.active):hover:before {
+    .navs-item:not(.active):hover:before {
         opacity: 1;
         bottom: 0;
     }
 
-    .nav-item.act:not(.active):before {
+    .navs-item.act:not(.active):before {
         opacity: 1;
         background-color: #6777ef;
 
     }
 
-    .nav-item:not(.active):hover {
+    .navs-item:not(.active):hover {
         color: #333;
     }
 
-    .nav-indicator {
+    .navs-indicator {
         position: absolute;
         bottom: 0;
         -webkit-transition: 0.4s;
@@ -90,13 +90,13 @@
         z-index: 1;
     }
 
-    .nav1 .nav-indicator {
+    .navs1 .navs-indicator {
         height: 5px;
         left: 0;
         border-radius: 8px 8px 0 0;
     }
 
-    .nav1 .nav-item:before {
+    .navs1 .navs-item:before {
         bottom: -6px;
         left: 0;
         border-radius: 8px 8px 0 0;
@@ -105,8 +105,8 @@
         transition: 0.3s;
     }
 
-    .nav2,
-    .nav3 {
+    .navs2,
+    .navs3 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -117,13 +117,13 @@
         padding: 20px;
     }
 
-    .nav2 .nav-indicator {
+    .navs2 .navs-indicator {
         width: 5px;
         left: 0;
         border-radius: 0 8px 8px 0;
     }
 
-    .nav2 .nav-item:before {
+    .navs2 .navs-item:before {
         bottom: 0;
         left: -27px;
         width: 6px;
@@ -131,14 +131,14 @@
         border-radius: 0 8px 8px 0;
     }
 
-    .nav3 .nav-indicator {
+    .navs3 .navs-indicator {
         width: 5px;
         border-radius: 8px 0 0 8px;
         left: initial;
         right: 0;
     }
 
-    .nav3 .nav-item:before {
+    .navs3 .navs-item:before {
         bottom: 0;
         left: initial;
         right: -27px;
@@ -154,23 +154,23 @@
     }
 
     @media only screen and (max-width: 768px) {
-        .nav {
+        .navs {
             min-width: 100%;
         }
 
-        .nav1 {
+        .navs1 {
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
         }
 
-        .nav-item {
+        .navs-item {
             padding: 25px 15px;
         }
     }
 
     @media (max-width: 580px) {
-        .nav1 {
+        .navs1 {
             -webkit-box-pack: start;
             -ms-flex-pack: start;
             justify-content: flex-start;

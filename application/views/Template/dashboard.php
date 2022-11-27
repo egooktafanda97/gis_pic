@@ -3,95 +3,208 @@
 <?php $assets = base_url("assets/"); ?>
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title><?= $title ?? "" ?></title>
+    <title>PIC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="ego oktafanda" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="https://bidangsampahdlhpelalawan.com/assets/img/logo/logo.ico" type="image/x-icon">
 
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="<?= $assets ?>template/dist/assets/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= $assets ?>template/dist/assets/modules/fontawesome/css/all.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="<?= base_url("assets/admin/dist/") ?>assets/css/style.css">
 
-    <!-- CSS Libraries -->
-
+    <!-- ========== -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css" />
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="<?= $assets ?>template/dist/assets/css/style.css">
-    <link rel="stylesheet" href="<?= $assets ?>template/dist/assets/css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="<?= $assets ?>css/style.css">
-    <!-- Start GA -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
+    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <style>
+        #datatable-responsive_paginate {
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-94034622-3');
-        window.base_url = "<?= base_url() ?>"
-        window.segment = "<?= $this->uri->segment(1) ?>"
-    </script>
-    <?php !empty($style) ? $this->load->view('/Page/' . $style) : "" ?>
-    <!-- /END GA -->
+        .pagination {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .pagination .active a {
+            color: #143361;
+            background-color: transparent;
+            font-weight: 600;
+        }
+
+        .pagination .active a:hover {
+            background-color: transparent;
+            color: #143361;
+            border: 0px;
+        }
+
+        .pagination .active a:focus {
+            background-color: transparent;
+            color: #143361;
+            outline: none;
+        }
+
+        .pagination li a {
+            border: 1px;
+            margin-left: 0px;
+            color: #707070;
+            padding: 7px 2px;
+            margin: 0px 20px;
+        }
+
+        .pagination li a:hover {
+            background-color: transparent;
+            color: #4a90e2;
+            padding-bottom: 2px;
+            border-bottom: 1px solid;
+        }
+
+        .pagination li a:focus {
+            outline: none;
+            background-color: transparent;
+            /*color:#707070;*/
+        }
+
+        .pagination li:first-child a,
+        .pagination li:last-child a {
+            border: 2px solid #143361 !important;
+            border-radius: 6px;
+            margin: 0px;
+            padding: 6px 12px;
+            border: 2px solid;
+            font-size: 14px;
+            color: #143361;
+        }
+
+        .pagination li:first-child a:hover,
+        .pagination li:last-child a:hover {
+            text-decoration: none !important;
+            color: #fff;
+            background-color: #143361;
+        }
+
+        .pagination li:first-child a:focus,
+        .pagination li:last-child a:focus {
+            outline: none;
+        }
+    </style>
+    <?php !empty($style) ? $this->load->view('Page/' . $style) : ""; ?>
+
 </head>
 
-<body>
-    <div id="app">
-        <div class="main-wrapper main-wrapper-1">
-            <div class="navbar-bg"></div>
-            <?php $this->load->view("Template/nav-top") ?>
-            <div class="main-sidebar sidebar-style-2">
-                <?php $this->load->view("Template/route") ?>
-            </div>
-
-            <!-- Main Content -->
-            <div class="main-content">
-                <?php $this->load->view('/Page/' . $page); ?>
-            </div>
-            <footer class="main-footer">
-                <div class="footer-left">
-                    Copyright &copy; 2022</a>
-                </div>
-                <div class="footer-right">
-
-                </div>
-            </footer>
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
         </div>
     </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <?php $this->load->view('Template/route'); ?>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
 
-    <!-- General JS Scripts -->
-    <script src="<?= $assets ?>template/dist/assets/modules/jquery.min.js"></script>
-    <script src="<?= $assets ?>template/dist/assets/modules/popper.js"></script>
-    <script src="<?= $assets ?>template/dist/assets/modules/tooltip.js"></script>
-    <script src="<?= $assets ?>template/dist/assets/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?= $assets ?>template/dist/assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="<?= $assets ?>template/dist/assets/modules/moment.min.js"></script>
-    <script src="<?= $assets ?>template/dist/assets/js/stisla.js"></script>
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+            <a href="#!" class="b-brand">
+                <!-- ========   change your logo hear   ============ -->
+                <img src="assets/images/logo.png" alt="" class="logo">
+                <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+            </a>
+            <a href="#!" class="mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                    <div class="search-bar">
+                        <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                        <button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
 
-    <!-- JS Libraies -->
-    <!-- dataTable -->
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="feather icon-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <ul class="pro-body">
+                                <li><a href="user-profile.html" class="dropdown-item"><i class="fa fa-user"></i> Profile</a></li>
+                                <li><a href="<?= base_url('Marker'); ?>" class="dropdown-item"><i class="fa fa-cog"></i> Setting</a></li>
+                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    </header>
+    <!-- [ Header ] end -->
+
+
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <!-- <h5 class="m-b-10">Bank Sampah Pelalawan</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <?php $this->load->view('/Page/' . $page); ?>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+    <script src="<?= base_url("assets/admin/dist/") ?>assets/js/vendor-all.min.js"></script>
+    <script src="<?= base_url("assets/admin/dist/") ?>assets/js/plugins/bootstrap.min.js"></script>
+    <script src="<?= base_url("assets/admin/dist/") ?>assets/js/ripple.js"></script>
+    <script src="<?= base_url("assets/admin/dist/") ?>assets/js/pcoded.js"></script>
+
+    <!-- data tables -->
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
 
-    <!-- Page Specific JS File -->
-
-    <!-- Template JS File -->
-    <script src="<?= $assets ?>template/dist/assets/js/scripts.js"></script>
-    <script src="<?= $assets ?>template/dist/assets/js/custom.js"></script>
-    <!-- ------ add script ------------------ -->
+    <!--  -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="<?= base_url("assets/js/") ?>costum_js.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Bootstrap-4-Dropdown-Select-Plugin-jQuery/dist/js/bootstrap-select.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js">
+    </script>
 
     <script src="<?= base_url("assets/js/script.js") ?>"></script>
 
-
-
-    <!-- ------------------------------------ -->
-
-    <?php !empty($script) ? $this->load->view('/Page/' . $script) : "" ?>
+    <?php !empty($script) ? $this->load->view('Page/' . $script) : ""; ?>
 
 </body>
 

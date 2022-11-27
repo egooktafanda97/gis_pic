@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapps=self.webpackChunkapps||[]).push([[293],{9293:function(e,n,u){u.r(n),u.d(n,{default:function(){return r}});var t=u(7294);function r(){return t.createElement("div",null,"index")}}}]);

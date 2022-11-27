@@ -30,6 +30,7 @@ class Industri extends Model
         "latitude",
         "longitude",
         "gambar",
+        "marker_id",
         "created_at",
         "updated_at",
     ];

@@ -12,12 +12,13 @@ use App\Models\Bank;
 use App\Models\Setting;
 use App\Models\Kecamatan;
 use App\Models\MarkerSet;
+use App\Models\SektorUtama;
 
 class MasterData extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['data_main', 'geojson', 'dataKecamatan']]);
+        $this->middleware('auth:api', ['except' => ['data_main', 'geojson', 'dataKecamatan', 'ImportDataJson']]);
     }
 
     public function dataKecamatan($kode)
@@ -137,6 +138,51 @@ class MasterData extends Controller
             }
         }
         return $res;
+    }
+    public function ImportDataJson()
+    {
+        $str = json_decode(file_get_contents('http://localhost/sig_pku/app/public/data/import_v1.json'), true);
+        $dd = [];
+        foreach ($str as $key => $value) {
+            $v = str_split($value['GARIS BUJUR']);
+            $h = "";
+            for ($i = 0; $i < count($v); $i++) {
+                if ($i == 3)
+                    $h .= ".";
+                $h .= $v[$i];
+                // Industri::create();
+
+            }
+
+            $sektor = SektorUtama::where("nama_sektor_utama_industri", $value['SEKTOR'])->first();
+            if (empty($sektor)) {
+                $s = SektorUtama::create([
+                    "nama_sektor_utama_industri" => $value['SEKTOR']
+                ]);
+                $sektor = $s->id_sektor_industri;
+            } else {
+                $sektor = $sektor->id_sektor_industri;
+            }
+            $tel = $value['TELP.'] ?? "0";
+            Industri::create([
+                "user_id" => 1,
+                "sektor_industri_id" => $sektor,
+                "nama_industri" => $value['NAMA USAHA'],
+                "besar_modal_industri" => $value['modal_usaha'] ?? "",
+                "nama_pemilik_industri" => $value['NAMA PEMILIK'] ?? "",
+                "telp_pemilik_industri" => "+62" . $tel,
+                // "deskripsi_industri" => $value[''],
+                "alamat_industri" => $value['ALAMAT USAHA'] ?? "",
+                // "provinsi_id",
+                // "kabupaten_id",
+                // "kecamatan_id",
+                // "kelurahan_id",
+                "latitude" => $value['GARIS LINTANG'] ?? "0",
+                "longitude" => $h,
+                "gambar" => "default.jpg",
+                "marker_id" => 2
+            ]);
+        }
     }
     public function dataLogicalDetail($data)
     {

@@ -20,4 +20,11 @@ class Website extends CI_Controller
     {
         $this->load->view('web/index');
     }
+    public function kecamatan($kode_kecamatan)
+    {
+        $data = [
+            "data_kecamatan" => $this->db->get_where("kecamatan", ["kode_kecamatan" => $kode_kecamatan])->row_array()
+        ];
+        $this->load->view('web/kecamatan', $data);
+    }
 }

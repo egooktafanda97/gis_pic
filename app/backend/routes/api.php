@@ -40,6 +40,9 @@ Route::group([
     Route::get('/dataKecamatan/{slug?}', [
         \App\Http\Controllers\MasterData::class, "dataKecamatan"
     ]);
+    Route::get('/ImportDataJson', [
+        \App\Http\Controllers\MasterData::class, "ImportDataJson"
+    ]);
 });
 
 Route::group([
