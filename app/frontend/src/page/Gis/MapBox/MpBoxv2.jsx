@@ -112,7 +112,7 @@ export default function MpBoxv2() {
 									<div class="items-popup mt-3">
 										<a href="${BASE_URL}website/kecamatan/${
 								feature.properties.class
-							}" target="_blank" class="btn btn-primary btn-sm w-100 popUpdetail">lebih lanjut</a>
+							}" target="_blank" class="btn btn-primary btn-sm w-100">lebih lanjut</a>
 									</div>
 								</div>
 							</div>

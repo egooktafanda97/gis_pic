@@ -42,7 +42,7 @@
         </div>
 
 
-        <div class="site-blocks-cover overlay" style="background-image: url(<?= base_url("assets/img/kecamatan/test.jpg") ?>);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="site-blocks-cover overlay" style="background-image: url(<?= base_url("app/public/template/img/header-bg3.jpg") ?>);" data-aos="fade" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
 

@@ -18,13 +18,26 @@ class MasterData extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['data_main', 'geojson', 'dataKecamatan', 'ImportDataJson']]);
+        $this->middleware('auth:api', ['except' => ['data_main', 'geojson', 'dataKecamatan', 'ImportDataJson', 'getDataMaster']]);
     }
 
     public function dataKecamatan($kode)
     {
         $data = Kecamatan::where("kode_kecamatan", $kode)->first();
         return response()->json($data);
+    }
+    public function getDataMaster()
+    {
+        $concat = array_merge([
+            "industri" => $this->dataIndustri(),
+            "pendidikan" => $this->dataPendidikan(),
+            "tempat_ibadah" => TempatIbadah::all(),
+            "penginapan" => Penginapan::with(['jenis_penginapan', 'kelas_penginapan'])->get(),
+            "fasilitas_kesehatan" => FasilitasKesehatan::all(),
+            "pariwisata" => pariwisata::all(),
+            "bank" => Bank::all()
+        ]);
+        return  response()->json($concat);
     }
 
     public function data_main($arg = null)
@@ -37,16 +50,17 @@ class MasterData extends Controller
             default:
                 $concat = array_merge([
                     "industri" => $this->dataIndustri(),
-                    // "pendidikan" => $this->dataPendidikan(),
-                    // "tempat_ibadah" => TempatIbadah::all(),
-                    // "penginapan" => Penginapan::all(),
-                    // "fasilitas_kesehatan" => FasilitasKesehatan::all(),
-                    // "pariwisata" => pariwisata::all(),
-                    // "bank" => Bank::all()
+                    "pendidikan" => $this->dataPendidikan(),
+                    "tempat_ibadah" => TempatIbadah::all(),
+                    "penginapan" => Penginapan::with(['jenis_penginapan', 'kelas_penginapan'])->get(),
+                    "fasilitas_kesehatan" => FasilitasKesehatan::all(),
+                    "pariwisata" => pariwisata::all(),
+                    "bank" => Bank::all()
                 ]);
 
-                return response()->json($this->BuidFormatGeoJson($concat));
+                // return response()->json($this->BuidFormatGeoJson($concat));
 
+                return response()->json($concat);
                 break;
         }
     }

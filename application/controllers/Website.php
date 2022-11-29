@@ -27,4 +27,8 @@ class Website extends CI_Controller
         ];
         $this->load->view('web/kecamatan', $data);
     }
+    public function master_data()
+    {
+        $this->load->view('web/master_data');
+    }
 }

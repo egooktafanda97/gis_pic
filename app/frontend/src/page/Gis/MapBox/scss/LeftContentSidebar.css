@@ -1,0 +1,170 @@
+#menuSidebarLeft {
+  padding: 15px;
+  margin-top: 85px;
+}
+
+#menuSidebarLeft h5 {
+  color: gray;
+  font-size: 1em;
+}
+
+#menuSidebarLeft .radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+#menuSidebarLeft .radio input[type="radio"] + .radio-label:before {
+  content: '';
+  background: #f4f4f4;
+  border-radius: 100%;
+  border: 1px solid #b4b4b4;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  position: relative;
+  top: -0.2em;
+  margin-right: 1em;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+#menuSidebarLeft .radio input[type="radio"]:checked + .radio-label:before {
+  background-color: #3197EE;
+  -webkit-box-shadow: inset 0 0 0 4px #f4f4f4;
+          box-shadow: inset 0 0 0 4px #f4f4f4;
+}
+
+#menuSidebarLeft .radio input[type="radio"]:focus + .radio-label:before {
+  outline: none;
+  border-color: #3197EE;
+}
+
+#menuSidebarLeft .radio input[type="radio"]:disabled + .radio-label:before {
+  -webkit-box-shadow: inset 0 0 0 4px #f4f4f4;
+          box-shadow: inset 0 0 0 4px #f4f4f4;
+  border-color: #b4b4b4;
+  background: #b4b4b4;
+}
+
+#menuSidebarLeft .radio input[type="radio"] + .radio-label:empty:before {
+  margin-right: 0;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #212121;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer.dropDown {
+  height: auto;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .container-main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e7e7e7;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .container-main-menu .IconMenuContainer {
+  width: 50px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .container-main-menu .IconMenuContainer i {
+  margin: 0;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .container-main-menu .LabelMenuContainer {
+  font-size: 1em;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .container-main-menu .LabelMenuContainer label {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
+  padding-left: 50px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu.right-modal-child {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu.active {
+  padding-top: 15px;
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
+  height: auto;
+  overflow: auto;
+  margin-top: 20px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu .component-box {
+  margin-bottom: 5px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu .IconMenuContainer {
+  width: 50px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu .IconMenuContainer i {
+  margin: 0;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu .LabelMenuContainer {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+#menuSidebarLeft .MenuContainer .ItemMenuContainer .child-main-menu .LabelMenuContainer label {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#menuSidebarLeft hr {
+  color: gray;
+}
+/*# sourceMappingURL=LeftContentSidebar.css.map */

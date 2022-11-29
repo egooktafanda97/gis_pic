@@ -1,58 +1,57 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="zxx" class="no-js">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>PIC</title>
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>GIS</title>
-
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url("app/public/") ?>assets/img/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url("app/public/") ?>assets/img/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url("app/public/") ?>assets/img/favicons/favicon-16x16.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url("app/public/") ?>assets/img/favicons/favicon.ico" />
-    <!-- <link rel="manifest" href="assets/img/favicons/manifest.json" /> -->
-    <!-- <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png" /> -->
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="<?= base_url("app/public/") ?>css/theme.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500" rel="stylesheet" />
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/linearicons.css" />
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/font-awesome.min.css" />
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/bootstrap.css" />
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/owl.carousel.css" />
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/magnific-popup.css" />
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/nice-select.css" />
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/main.css" />
+    <link rel="stylesheet" href="<?= base_url("app/public/template/") ?>css/constum.css" />
 </head>
 
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+
     <div id="root"></div>
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
     <script>
         const base_url = "<?= base_url("") ?>";
         window.base_url = base_url;
         window.web_url = base_url + 'app/public/bundle/';
         window.web_public = base_url + 'app/frontend/public/';
     </script>
-
-    <!-- ===============================================-->
     <script src="<?= base_url("app/public/bundle/main.bundle.js") ?>"></script>
-    <script src="<?= base_url("app/public/") ?>vendors/@popperjs/popper.min.js"></script>
-    <script src="<?= base_url("app/public/") ?>vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="<?= base_url("app/public/") ?>vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="<?= base_url("app/public/") ?>vendors/fontawesome/all.min.js"></script>
-    <script src="<?= base_url("app/public/") ?>js/theme.js"></script>
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script src="<?= base_url("app/public/template/") ?>js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/vendor/bootstrap.min.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/jquery.ajaxchimp.min.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/parallax.min.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/owl.carousel.min.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/isotope.pkgd.min.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/jquery.nice-select.min.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/jquery.magnific-popup.min.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/jquery.sticky.js"></script>
+    <script src="<?= base_url("app/public/template/") ?>js/main.js"></script>
 </body>
 
 </html>

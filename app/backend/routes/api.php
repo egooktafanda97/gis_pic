@@ -43,6 +43,9 @@ Route::group([
     Route::get('/ImportDataJson', [
         \App\Http\Controllers\MasterData::class, "ImportDataJson"
     ]);
+    Route::get('/getDataMaster', [
+        \App\Http\Controllers\MasterData::class, "getDataMaster"
+    ]);
 });
 
 Route::group([

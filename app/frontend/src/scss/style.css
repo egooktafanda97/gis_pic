@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Rajdhani:wght@500&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Rajdhani:wght@500&family=Roboto:wght@500&display=swap");
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
@@ -30,5 +30,9 @@
 
 .font-rajdhani {
   font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
