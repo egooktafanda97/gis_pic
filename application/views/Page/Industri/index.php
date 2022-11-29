@@ -8,12 +8,10 @@
                         <div>
                             <strong>Master Industri</strong>
                         </div>
-                        <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#m-crud"><i class="fa fa-plus"></i> Tambah Data</button> -->
                         <button class="btn btn-info trigger"><i class="fa fa-plus"></i> Tambah Data</button>
                     </div>
-
-
                 </div>
+
                 <div class="card-body">
                     <div class="w-100">
                         <table id="example" class="display nowrap cell-border" style="width:100%">

@@ -9,6 +9,7 @@ use App\Models\Penginapan;
 use App\Models\FasilitasKesehatan;
 use App\Models\pariwisata;
 use App\Models\Bank;
+use App\Models\Spbu;
 use App\Models\Setting;
 use App\Models\Kecamatan;
 use App\Models\MarkerSet;
@@ -37,12 +38,13 @@ class MasterData extends Controller
             default:
                 $concat = array_merge([
                     "industri" => $this->dataIndustri(),
-                    // "pendidikan" => $this->dataPendidikan(),
-                    // "tempat_ibadah" => TempatIbadah::all(),
-                    // "penginapan" => Penginapan::all(),
-                    // "fasilitas_kesehatan" => FasilitasKesehatan::all(),
-                    // "pariwisata" => pariwisata::all(),
-                    // "bank" => Bank::all()
+                    "pendidikan" => $this->dataPendidikan(),
+                    "tempat_ibadah" => TempatIbadah::all(),
+                    "penginapan" => Penginapan::all(),
+                    "fasilitas_kesehatan" => FasilitasKesehatan::all(),
+                    "pariwisata" => pariwisata::all(),
+                    "bank" => Bank::all(),
+                    "spbu" => Spbu::all()
                 ]);
 
                 return response()->json($this->BuidFormatGeoJson($concat));
@@ -65,7 +67,8 @@ class MasterData extends Controller
                     "penginapan" => Penginapan::with(['jenis_penginapan', 'kelas_penginapan'])->get(),
                     "fasilitas_kesehatan" => FasilitasKesehatan::all(),
                     "pariwisata" => pariwisata::all(),
-                    "bank" => Bank::all()
+                    "bank" => Bank::all(),
+                    "spbu" => Spbu::all()
                 ]);
 
                 $getMarkerIcon = MarkerSet::all();
@@ -338,13 +341,81 @@ class MasterData extends Controller
                         "label" => "KELAS " . $data['ethnicity'],
                         "value" => $data['kelas_penginapan']['nama_kelas_penginapan'] ?? "",
                     ],
+                    [
+                        "label" => "NAMA PEMILIK " . $data['ethnicity'],
+                        "value" => $data['nama_pemilik'] ?? "",
+                    ],
+                    [
+                        "label" => "JUMLAH KAMAR",
+                        "value" => $data['jumlah_kamar'] ?? "",
+                    ],
+                    [
+                        "label" => "PERIZINAN" . $data['ethnicity'],
+                        "value" => $data['perizinan'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT " . $data['ethnicity'],
+                        "value" => $data['alamat_penginapan'] ?? "",
+                    ],
+                    [
+                        "label" => "NOMOR TELEPON",
+                        "value" => $data['no_telp'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT WEBSITE",
+                        "value" => $data['alamat_website'] ?? "",
+                    ],
+                    [
+                        "label" => "Kordinat",
+                        "value" => $data['latitude'] . "," . $data['longitude'],
+                    ],
                 ];
                 break;
             case "fasilitas_kesehatan":
                 return [
                     [
                         "label" => "NAMA " . $data['ethnicity'],
-                        "value" => $data['nama_pendidikan'] ?? "",
+                        "value" => $data['nama_fasilitas'] ?? "",
+                    ],
+                    [
+                        "label" => "JENIS " . $data['ethnicity'],
+                        "value" => $data['jenis_fasilitas_kesehatan']['nama_jenis_fasilitas'] ?? "",
+                    ],
+                    [
+                        "label" => "TYPE " . $data['ethnicity'],
+                        "value" => $data['type_fasilitas'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT " . $data['ethnicity'],
+                        "value" => $data['alamat'] ?? "",
+                    ],
+                    [
+                        "label" => "PERIZINAN" . $data['ethnicity'],
+                        "value" => $data['perizinan'] ?? "",
+                    ],
+                    [
+                        "label" => "JUMLAH KAMAR",
+                        "value" => $data['jumlah_kamar'] ?? "",
+                    ],
+                    [
+                        "label" => "JUMLAH PASIEN RATA-RATA",
+                        "value" => $data['jumlah_pasien_rata'] ?? "",
+                    ],
+                    [
+                        "label" => "NAMA PEMILIK " . $data['ethnicity'],
+                        "value" => $data['nama_pemilik'] ?? "",
+                    ],
+                    [
+                        "label" => "NOMOR TELEPON",
+                        "value" => $data['no_telp'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT WEBSITE",
+                        "value" => $data['alamat_website'] ?? "",
+                    ],
+                    [
+                        "label" => "Kordinat",
+                        "value" => $data['latitude'] . "," . $data['longitude'],
                     ],
                 ];
                 break;
@@ -352,28 +423,106 @@ class MasterData extends Controller
                 return [
                     [
                         "label" => "NAMA " . $data['ethnicity'],
-                        "value" => $data['nama_pendidikan'] ?? "",
+                        "value" => $data['nama_tempat_pariwisata'] ?? "",
                     ],
+                    [
+                        "label" => "JENIS " . $data['ethnicity'],
+                        "value" => $data['jenis_pariwisata']['nama_jenis_pariwisata'] ?? "",
+                    ],
+                    [
+                        "label" => "KEPEMILIKAN " . $data['ethnicity'],
+                        "value" => $data['kepemilikan'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT " . $data['ethnicity'],
+                        "value" => $data['alamat_tempat_pariwisata'] ?? "",
+                    ],
+                    [
+                        "label" => "PERIZINAN" . $data['ethnicity'],
+                        "value" => $data['perizinan'] ?? "",
+                    ],
+                    [
+                        "label" => "NAMA PEMILIK " . $data['ethnicity'],
+                        "value" => $data['nama_pemilik'] ?? "",
+                    ],
+                    [
+                        "label" => "NO TELEPON",
+                        "value" => $data['no_telp'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT WEBSITE",
+                        "value" => $data['alamat_website'] ?? "",
+                    ],
+                    [
+                        "label" => "Kordinat",
+                        "value" => $data['latitude'] . "," . $data['longitude'],
+                    ],
+
                 ];
                 break;
             case "bank":
                 return [
                     [
                         "label" => "NAMA " . $data['ethnicity'],
-                        "value" => $data['nama_pendidikan'] ?? "",
+                        "value" => $data['nama_bank'] ?? "",
+                    ],
+                    [
+                        "label" => "JENIS " . $data['ethnicity'],
+                        "value" => $data['jenis_bank']['nama_jenis_bank'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT " . $data['ethnicity'],
+                        "value" => $data['alamat_bank'] ?? "",
+                    ],
+                    [
+                        "label" => "PERIZINAN" . $data['ethnicity'],
+                        "value" => $data['perizinan'] ?? "",
+                    ],
+                    [
+                        "label" => "NO TELEPON",
+                        "value" => $data['no_telp'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT WEBSITE",
+                        "value" => $data['alamat_website'] ?? "",
+                    ],
+                    [
+                        "label" => "Kordinat",
+                        "value" => $data['latitude'] . "," . $data['longitude'],
                     ],
                 ];
                 break;
-                // case "":
-                //     return [
-                //         [
-                //             "label" => "NAMA " . $data['ethnicity'],
-                //             "value" => $data['nama_pendidikan'] ?? "",
-                //         ],
-                //     ];
-                //     break;
-            default:
-                # code...
+            case "spbu":
+                return [
+                    [
+                        "label" => "NOMOR SPBU " . $data['ethnicity'],
+                        "value" => $data['nomor_spbu'] ?? "",
+                    ],
+                    [
+                        "label" => "JENIS " . $data['ethnicity'],
+                        "value" => $data['jenis_spbu']['nama_jenis_spbu'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT " . $data['ethnicity'],
+                        "value" => $data['alamat'] ?? "",
+                    ],
+                    [
+                        "label" => "JUMLAH JENIS BBM" . $data['ethnicity'],
+                        "value" => $data['jumlah_jenis_bbm'] ?? "",
+                    ],
+                    [
+                        "label" => "JUMLAH KENDARAAN" . $data['ethnicity'],
+                        "value" => $data['jumlah_kendaraan'] ?? "",
+                    ],
+                    [
+                        "label" => "ALAMAT WEBSITE",
+                        "value" => $data['alamat_website'] ?? "",
+                    ],
+                    [
+                        "label" => "Kordinat",
+                        "value" => $data['latitude'] . "," . $data['longitude'],
+                    ],
+                ];
                 break;
         }
     }
