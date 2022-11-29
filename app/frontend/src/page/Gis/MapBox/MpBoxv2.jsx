@@ -234,7 +234,7 @@ export default function MpBoxv2() {
 				if (currentZoom < 14.8) {
 					map.current.setLayoutProperty("circle", "visibility", "visible");
 					map.current.setLayoutProperty("points", "visibility", "none");
-					map.current.setPaintProperty("maine", "fill-opacity", 0.75);
+					map.current.setPaintProperty("maine", "fill-opacity", 0.1);
 				}
 			}
 			lastZoom = currentZoom;
@@ -280,7 +280,10 @@ export default function MpBoxv2() {
 				<i className="fa fa-bars"></i>
 			</button> */}
 
-			<div className={`sidebar-map ${sidebar ? "active" : ""}`}>
+			<div
+				className={`sidebar-map ${sidebar ? "active" : ""}`}
+				style={{ height: "100%", overflowX: "auto" }}
+			>
 				<div className="top-sid">
 					<div className="container-top-sid">
 						<div

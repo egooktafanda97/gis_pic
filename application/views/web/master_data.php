@@ -49,10 +49,7 @@
         }
 
         #map {
-            position: absolute;
-            top: 0;
             height: 300px;
-            bottom: 0;
             width: 100%;
         }
     </style>
@@ -73,24 +70,16 @@
 
                 <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li><a class="active" href="">Home</a></li>
-                        <li><a href="gis">Peta</a></li>
-                        <li><a href="master_data">Master Data</a></li>
-                        <li><a href="services.html">Tentang</a></li>
-                        <!-- <li class="dropdown">
-                            <a
-                            class="dropdown-toggle"
-                            href="#"
-                            id="navbardrop"
-                            data-toggle="dropdown">
-                            Pages
-                            </a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="projects.html">Projects</a>
-                            <a class="dropdown-item" href="elements.html">Elements</a>
-                            </div>
-                        </li> -->
-                        <li><a href="contact.html">Kontak</a></li>
+                        <li><a href="<?= base_url("/website") ?>">Home</a></li>
+                        <li><a href="<?= base_url("website/gis") ?>">Peta</a></li>
+                        <li><a href="<?= base_url("website/master_data") ?>" class="active">Master Data</a></li>
+                        <li><a href="<?= base_url("website/tentang") ?>">Tentang</a></li>
+                        <li>
+                            <a href="#">Tentang</a>
+                        </li>
+                        <li>
+                            <a href="#">Kontak</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -114,24 +103,69 @@
     <!-- Start features Area -->
     <section class="features-area" style="margin-top: 50px;" id="news">
         <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?= base_url("website/master_data?p=tabel") ?>">Data Pic</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="<?= base_url("website/master_data_kecamatan") ?>">Data Kecamatan</a></li>
+                </ol>
+            </nav>
             <div class="row">
                 <div class="col-md-8">
-                    <canvas id="myChart" width="400" height="250"></canvas>
+                    <div class="card">
+                        <div class="card-header bg-primary d-flex justify-content-between align-items-center">
+                            <strong style="color: #fff;">GRAFIK JUMLAH PIC</strong>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="<?= base_url("website/master_data?p=grafik") ?>" type="button" class="btn btn-secondary btn-sm <?= empty($_GET['p']) || $_GET['p'] == "grafik" ? "active" : "" ?>">Grafik</a>
+                                <a href="<?= base_url("website/master_data?p=tabel") ?>" type="button" class="btn btn-secondary btn-sm <?= !empty($_GET['p']) && $_GET['p'] == "tabel" ? "active" : "" ?>">Tabel</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <?php if (empty($_GET['p']) || $_GET['p'] == "grafik") : ?>
+                                <canvas id="myChart" width="400" height="250"></canvas>
+                            <?php endif ?>
+                            <?php if (!empty($_GET['p']) && $_GET['p'] == "tabel") : ?>
+                                <div class="w-100 mb-2" style="display: flex; justify-content: flex-end;border-bottom: 1px solid gray;margin-bottom: 3px;">
+                                    <div class="form-group">
+                                        <select name="filter-pic" id="filter-pic" class="form-control form-control-sm">
+                                            <option value="industri">Industri</option>
+                                            <option value="pendidikan">Pendidikan</option>
+                                            <option value="tempat_ibadah">Tempat Ibadah</option>
+                                            <option value="penginapan">Penginapan</option>
+                                            <option value="fasilitas_kesehatan">Fasilitas Kesehatan</option>
+                                            <option value="pariwisata">Pariwisata</option>
+                                            <option value="spbu">Spbu</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="w-100" style="overflow-x: auto;">
+                                    <table id="example" class="display nowrap cell-border tbl" style="width:100%">
+
+                                    </table>
+                                </div>
+                            <?php endif ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card mb-3 p-2">
-                        <div class="w-100">
-                            <table style="width: 100%; font-size: 1em;">
-                                <tr>
-                                    <td style="width: 80%;">Jumlah Kecamatan</td>
-                                    <td class="text-right">15</td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 80%;">Jumlah pic</td>
-                                    <td class="text-right pic"></td>
-                                </tr>
-                            </table>
+                    <div class="card mb-3">
+                        <div class="card-header bg-info">
+                            <strong style="color: #fff;">KETERANGAN</strong>
                         </div>
+                        <div class="card-body">
+                            <div class="w-100">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Jumlah Kecamatan
+                                        <span class="">15</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Jumlah pic
+                                        <span class="pic">2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="card">
                         <div id="map"></div>
@@ -225,6 +259,7 @@
                     jml++;
                 });
                 $(".pic").html(jml);
+
                 const ctx = document.getElementById('myChart');
                 new Chart(ctx, {
                     type: 'bar',
@@ -309,6 +344,171 @@
                         }
                     });
                 });
+                const getData_circle = await axios.get("<?= base_url("app/api/main/geojson") ?>").catch((err) => {
+                    console.log(err.response);
+                });
+
+
+                const colors = [
+                    "#1e81b0",
+                    "#e28743",
+                    "#eab676",
+                    "#76b5c5",
+                    "#21130d",
+                    "#873e23",
+                    "#abdbe3",
+                    "#063970",
+                    "#154c79",
+                ];
+                const GenerateColorCircle = (arrObj, items) => {
+                    var g = arrObj.map((_, i) => {
+                        return {
+                            item: _,
+                            color: colors[i],
+                            data: items[_],
+                        };
+                    });
+                    return g;
+                };
+                if (getData_circle) {
+                    const geometri = getData_circle?.geoJson;
+                    const jumlhItem = getData_circle?.item;
+                    const marker = getData_circle?.marker;
+                    var ItemKey = Object.keys(jumlhItem);
+                    const configureItem = GenerateColorCircle(ItemKey, jumlhItem);
+
+
+                    const CircleMarker = (geoJson, circleColors) => {
+                        const arr = ["match", ["get", "ethnicity"]];
+                        circleColors.map((x) => {
+                            arr.push(x?.item);
+                            arr.push(x?.color);
+                        });
+                        arr.push("#000");
+                        map.addSource("marker_data", {
+                            type: "geojson",
+                            data: geoJson,
+                        });
+                        const mode_circle_radius_config = {
+                            mode_1: {
+                                property: "sqrt",
+                                stops: [
+                                    [{
+                                        zoom: 8,
+                                        value: 250
+                                    }, 10],
+                                    // [{ zoom: 8, value: 250 }, 0],
+                                    [{
+                                        zoom: 11,
+                                        value: 250
+                                    }, 20],
+                                    // [{ zoom: 11, value: 250 }, 20],
+                                    [{
+                                        zoom: 15,
+                                        value: 250
+                                    }, 0],
+                                    [{
+                                        zoom: 20,
+                                        value: 0
+                                    }, 0],
+                                ],
+                            },
+                            mode_2: {
+                                base: 50,
+                                stops: [
+                                    [12, 3],
+                                    [40, 180],
+                                ],
+                            },
+                        };
+                        map.addLayer({
+                            id: "circle",
+                            type: "circle",
+                            source: "marker_data",
+                            layout: {
+                                // Make the layer visible by default.
+                                visibility: "visible",
+                            },
+                            paint: {
+                                "circle-radius-transition": {
+                                    duration: 300
+                                },
+                                "circle-color": "#F98200",
+                                "circle-stroke-color": "#595655",
+                                "circle-stroke-opacity": 0.5,
+                                "circle-radius": mode_circle_radius_config.mode_2,
+                                "circle-color": arr,
+                            },
+                        });
+                    }
+                    CircleMarker(getData_circle?.geoJson, configureItem);
+
+
+
+                    function createTable(data, selection) {
+                        var heed = ``;
+                        var bd = ``;
+
+                        var no = 1;
+                        data?.map((res, i) => {
+
+                            if (selection == res?.properties?.ethnicity) {
+                                var __data = `<tr>`;
+                                __data += `<td scope="col">${no}</td>`
+                                res?.properties?.data?.map((izz, X) => {
+                                    if (no == 1) {
+                                        heed += `<th scope="col">${izz?.label?.toUpperCase()}</th>`;
+                                    }
+                                    __data += `<td scope="col">${izz?.value}</td>`;
+                                })
+                                __data += `<td scope="col" class="text-center">
+                                                <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
+                                            </td></tr>`;
+                                bd += __data;
+                                no++;
+                            }
+
+                        });
+
+
+                        var headers = `<thead>
+                                        <tr>
+                                        <th scope="col">No</th>
+                                            ${heed}
+                                            <th scope="col">#</th>
+                                        </tr>
+                                    </thead>`;
+                        var footers = `<tfoot>
+                                        <tr>
+                                        <th scope="col">No</th>
+                                            ${heed}
+                                            <th scope="col">#</th>
+                                        </tr>
+                                    </tfoot>`;
+
+                        var tBody = `<tbody>
+                                    ${bd}
+                                </tbody>`;
+
+                        return headers + footers + bd;
+
+                    }
+                    if ($("#filter-pic").val() == 'industri') {
+                        var results = createTable(getData_circle?.geoJson?.features, $("#filter-pic").val());
+                        $(".tbl").html(results)
+                    }
+
+
+                    $("#filter-pic").change(function() {
+                        var results = createTable(getData_circle?.geoJson?.features, $(this).val());
+                        $(".tbl").html(results)
+                        // console.log(getData_circle?.geoJson?.features)
+
+                    })
+
+
+                }
+
             }
         })();
     </script>

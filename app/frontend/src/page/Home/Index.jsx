@@ -341,7 +341,7 @@ export default function Index() {
 									PIC <br />
 									PEKANBARU INVESTMENT CENTER
 								</h2>
-								<a href="#" className="primary-btn">
+								<a href={`${BASE_URL}website/gis`} className="primary-btn">
 									PETA
 								</a>
 							</div>
@@ -365,7 +365,7 @@ export default function Index() {
 			{/* End banner Area */}
 
 			{/* Start features Area */}
-			<section className="features-area section-gap-top" id="news">
+			{/* <section className="features-area section-gap-top" id="news">
 				<div className="container">
 					<div className="row feature_inner">
 						<div className="col-lg-3 col-md-6">
@@ -398,7 +398,7 @@ export default function Index() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 			{/* End features Area */}
 
 			{/* Start About Area */}
@@ -406,22 +406,35 @@ export default function Index() {
 				<div className="container">
 					<div className="row align-items-center justify-content-center">
 						<div className="col-lg-7 col-md-12 about-left">
-							<img className="img-fluid" src="img/about.png" alt />
+							<img
+								className="img-fluid"
+								src={`${BASE_API_PUBLIC}template/img/about.png`}
+								alt
+							/>
 						</div>
 						<div className="col-lg-5 col-md-12 about-right">
 							<div className="section-title text-left">
 								<h4>About Us</h4>
 								<h2>
-									We are world <br />
-									number one Company
+									KOTA <br />
+									PEKANBARU
 								</h2>
 							</div>
 							<div>
 								<p>
-									Face male he light it moveth darkness winged eveni seas after
-									life every gathering is forth two kind lesser i from seas him
-									open him From creepeth after, life is above image from
-									replenish behold great
+									Secara geografis kota Pekanbaru memiliki posisi strategis
+									berada pada jalur Lintas Timur Sumatra, terhubung dengan
+									beberapa kota seperti Medan, Padang dan Jambi, dengan wilayah
+									administratif, diapit oleh Kabupaten Siak pada bagian utara
+									dan timur, sementara bagian barat dan selatan oleh Kabupaten
+									Kampar.
+								</p>
+								<p>
+									Kota ini dibelah oleh Sungai Siak yang mengalir dari barat ke
+									timur dan berada pada ketinggian berkisar antara 5–50 meter di
+									atas permukaan laut. Kota ini termasuk beriklim tropis dengan
+									suhu udara maksimum berkisar antara 34,1 °C hingga 35,6 °C,
+									dan suhu minimum antara 20,2 °C hingga 23,0 °C.
 								</p>
 							</div>
 							<a href="#" className="primary-btn">
@@ -443,7 +456,7 @@ export default function Index() {
 							<a
 								id="play-home-video"
 								className="video-play-button"
-								href="https://www.youtube.com/watch?v=_C5vCGB8Xx0"
+								href="https://www.youtube.com/watch?v=lza0cUEuIuc"
 							>
 								<span />
 							</a>

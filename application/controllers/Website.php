@@ -31,4 +31,9 @@ class Website extends CI_Controller
     {
         $this->load->view('web/master_data');
     }
+    public function master_data_kecamatan()
+    {
+        $data['kecamatan'] = $this->db->get_where("kecamatan")->result_array();
+        $this->load->view('web/master_data_kecamatan', $data);
+    }
 }

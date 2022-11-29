@@ -21,7 +21,7 @@ export function LayerSource(maps) {
 				paint: {
 					"fill-outline-color": "#484896",
 					"fill-color": "#6e599f",
-					"fill-opacity": 0.75,
+					"fill-opacity": 0.1,
 				},
 				filter: ["in", "class", ""],
 			});
@@ -31,8 +31,8 @@ export function LayerSource(maps) {
 					type: "fill",
 					source: "maine",
 					paint: {
-						"fill-outline-color": "rgba(0,0,0,0.1)",
-						"fill-color": "rgba(0,0,0,0.1)",
+						"fill-color": "transparent",
+						"fill-opacity": 0.1,
 					},
 				}
 				// "settlement-label"

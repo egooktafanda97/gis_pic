@@ -172,7 +172,11 @@ const Layout = (props) => {
 				<nav className="navbar navbar-expand-lg navbar-light">
 					<div className="container">
 						<a className="navbar-brand" href="index.html">
-							<img src="img/logo.png" alt style={{ height: 20 }} />
+							<img
+								src={`${BASE_API_PUBLIC}template/img/logo.png`}
+								alt
+								style={{ height: 20 }}
+							/>
 						</a>
 						<button
 							className="navbar-toggler"
@@ -202,7 +206,7 @@ const Layout = (props) => {
 									<a href={`${BASE_URL}website/master_data`}>Master Data</a>
 								</li>
 								<li>
-									<a href="services.html">Tentang</a>
+									<a href="#">Tentang</a>
 								</li>
 								{/* <li class="dropdown">
                                     <a
@@ -218,7 +222,7 @@ const Layout = (props) => {
                                     </div>
                                     </li> */}
 								<li>
-									<a href="contact.html">Kontak</a>
+									<a href="#">Kontak</a>
 								</li>
 							</ul>
 						</div>

@@ -80,20 +80,6 @@
                         <li>
                             <a href="#">Kontak</a>
                         </li>
-                        <!-- <li class="dropdown">
-                            <a
-                            class="dropdown-toggle"
-                            href="#"
-                            id="navbardrop"
-                            data-toggle="dropdown">
-                            Pages
-                            </a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="projects.html">Projects</a>
-                            <a class="dropdown-item" href="elements.html">Elements</a>
-                            </div>
-                        </li> -->
-                        <!-- <li><a href="contact.html">Kontak</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -107,7 +93,7 @@
         <div class="container">
             <div class="row justify-content-between align-items-center text-center banner-content">
                 <div class="col-lg-12">
-                    <h1 class="text-white"><?= $data_kecamatan['nama_kecamatan'] ?></h1>
+                    <h1 class="text-white">Data Kecamatan</h1>
                 </div>
             </div>
         </div>
@@ -116,85 +102,60 @@
 
     <!-- Start features Area -->
     <section class="features-area" style="margin-top: 50px;" id="news">
-        <div class="site-section bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 mb-5" data-aos="fade">
-                        <div class="p-5 bg-white" style="margin-top: -150px;">
-                            <div>
-                                <h5><strong>Batas Wilayah</strong></h5>
-                                <p><?= $data_kecamatan['batas_wilayah'] ?? "-" ?></p>
-                            </div>
-                            <hr>
-                            <div>
-                                <h5><strong>Letak</strong></h5>
-                                <p><?= $data_kecamatan['letak'] ?? "-" ?></p>
-                            </div>
-                            <hr>
-                            <div>
-                                <h5><strong>Geologi</strong></h5>
-                                <p><?= $data_kecamatan['geologi'] ?? "-" ?></p>
-                            </div>
-                            <hr>
-                            <div>
-                                <h5><strong>Iklim</strong></h5>
-                                <p><?= $data_kecamatan['iklim' ?? "-"] ?></p>
-                            </div>
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?= base_url("website/master_data?p=tabel") ?>">Data Pic</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="<?= base_url("website/master_data_kecamatan") ?>">Data Kecamatan</a></li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-primary d-flex justify-content-between align-items-center">
+                            <strong style="color: #fff;">DATA KECAMATAN</strong>
                         </div>
-                    </div>
-                    <div class="col-md-5" data-aos="fade" data-aos-delay="100">
-                        <div class="p-4 mb-3 bg-white">
-                            <nav>
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Tentang</a>
-                                    <!-- <a class="nav-item nav-link" id="nav-kelurahan-tab" data-toggle="tab" href="#nav-kelurahan" role="tab" aria-controls="nav-kelurahan" aria-selected="true">Kelurahan</a>
-                                    <a class="nav-item nav-link" id="nav-pic-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="true">Pic</a>
-                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Peta</a> -->
-                                </div>
-                            </nav>
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                    <div class="mt-3">
-                                        <!-- <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>NAMA IBUKOTA KECAMATAN</strong>
-                                            <label for="">90,9</label>
-                                        </div> -->
-                                        <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>LUAS WILAYAH</strong>
-                                            <label for=""><?= $data_kecamatan['luas_wilayah'] ?></label>
-                                        </div>
-                                        <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>JUMLAH KELURAHAN/DESA</strong>
-                                            <label for="">10</label>
-                                        </div>
-                                        <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>JUMLAH PENDUDUK</strong>
-                                            <label for="">99,0</label>
-                                        </div>
-                                        <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>LAJU PERTUMBUHAN</strong>
-                                            <label for=""><?= $data_kecamatan['laju_pertumbuhan'] ?></label>
-                                        </div>
-                                        <!-- <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>PRESENTASE PENDUDUK</strong>
-                                            <label for="">00</label>
-                                        </div>
-                                        <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>KEPADATAN PENDUDUK km2</strong>
-                                            <label for="">00</label>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-kelurahan" role="tabpanel" aria-labelledby="nav-kelurahan-tab">
-                                    <div class="mt-3">
-                                        <div style="font-size:.8em; display: flex; justify-content: space-between; align-items: center; padding: 3px; border-bottom: 1px solid gray; margin-bottom: 3px;">
-                                            <strong>NAMA IBUKOTA KECAMATAN</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">...</div>
-                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                            </div>
+                        <div class="card-body">
+                            <table id="example" class="display nowrap cell-border" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th scope=" col">No</th>
+                                        <th scope="col">Nama Kecamatan</th>
+                                        <th scope="col">Luas Wilayah</th>
+                                        <th scope="col">Jumlah Penduduk</th>
+                                        <th scope="col">Laju Pertumbuhan Penduduk</th>
+                                        <th scope="col">#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>#</th>
+                                        <th scope=" col">No</th>
+                                        <th scope="col">Nama Kecamatan</th>
+                                        <th scope="col">Luas Wilayah</th>
+                                        <th scope="col">Jumlah Penduduk</th>
+                                        <th scope="col">Laju Pertumbuhan Penduduk</th>
+                                        <th scope="col">#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <?php $i = 1;
+                                    foreach ($kecamatan as $value) : ?>
+                                        <tr>
+                                            <td>#</td>
+                                            <td><?= $i++ ?></td>
+                                            <td><?= $value['nama_kecamatan'] ?></td>
+                                            <td><?= $value['luas_wilayah'] ?></td>
+                                            <td><?= $value['jumlah_penduduk'] ?></td>
+                                            <td><?= $value['laju_pertumbuhan'] ?></td>
+                                            <td scope="col" class="text-center">
+                                                <a href="<?= base_url("website/kecamatan/" . $value['kode_kecamatan']) ?>" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
