@@ -71,19 +71,19 @@ class Industri extends CI_Controller
     {
         $this->db->order_by("id_industri", "DESC");
         $this->db->limit($limit, $start);
-        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
-        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
-        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
+        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id", 'left');
+        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id", 'left');
+        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id", 'left');
         $result = $this->db->get_where("industri")->result_array();
         return $result;
     }
     public function dataIndustri()
     {
         $this->db->order_by("id_industri", "DESC");
-        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
-        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
-        $this->db->join("marker_set", "marker_set.id_marker = industri.marker_id");
-        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
+        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id", 'left');
+        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id", 'left');
+        $this->db->join("marker_set", "marker_set.id_marker = industri.marker_id", 'left');
+        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id", 'left');
         $result = $this->db->get_where("industri")->result_array();
 
         $result = array_map(function ($result) {
@@ -98,10 +98,10 @@ class Industri extends CI_Controller
 
     public function dataIndustriById($id)
     {
-        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id");
-        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id");
-        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id");
-        $this->db->join("marker_set", "marker_set.id_marker = industri.marker_id");
+        $this->db->join("pic_industri", "pic_industri.id_pic_industri = industri.pic_industri_id", 'left');
+        $this->db->join("sektor_industri", "sektor_industri.id_sektor_industri = industri.sektor_industri_id", 'left');
+        $this->db->join("sub_sektor_industri", "sub_sektor_industri.id_subsektor_industri  = industri.sub_sektor_industri_id", 'left');
+        $this->db->join("marker_set", "marker_set.id_marker = industri.marker_id", 'left');
         $this->db->where("industri.id_industri", $id);
         $result = $this->db->get_where("industri")->row_array();
 

@@ -73,7 +73,7 @@ class Info_grafis extends CI_Controller
         $this->db->limit($limit, $start);
         $this->db->order_by("info_grafis.id", "DESC");
         $this->db->select("*, info_grafis.id as id");
-        $this->db->join("kecamatan", "kecamatan.kode_kecamatan = info_grafis.kode_kecamatan");
+        $this->db->join("kecamatan", "kecamatan.kode_kecamatan = info_grafis.kode_kecamatan", 'left');
         $result = $this->db->get_where("info_grafis")->result_array();
         return $result;
     }

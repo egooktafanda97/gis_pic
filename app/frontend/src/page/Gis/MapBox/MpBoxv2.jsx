@@ -260,6 +260,13 @@ export default function MpBoxv2() {
 			true,
 			false,
 		]);
+		map.current.setFilter("points", [
+			"match",
+			["get", "ethnicity"],
+			val.length > 0 ? val : [""],
+			true,
+			false,
+		]);
 	};
 
 	return (

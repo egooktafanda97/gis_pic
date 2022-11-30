@@ -22,8 +22,8 @@ class Penginapan extends Model
         "alamat_penginapan",
         "no_telp",
         "alamat_web",
-        "laritude",
-        "logitude",
+        "latitude",
+        "longitude",
         "gambar"
     ];
     public function jenis_penginapan()

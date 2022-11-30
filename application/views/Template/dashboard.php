@@ -11,7 +11,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="ego oktafanda" />
     <!-- Favicon icon -->
-    <link rel="icon" href="https://bidangsampahdlhpelalawan.com/assets/img/logo/logo.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="https://bidangsampahdlhpelalawan.com/assets/img/logo/logo.ico" type="image/x-icon"> -->
 
     <!-- vendor css -->
     <link rel="stylesheet" href="<?= base_url("assets/admin/dist/") ?>assets/css/style.css">

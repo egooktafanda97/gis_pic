@@ -69,17 +69,17 @@ class Penginapan extends CI_Controller
     {
         $this->db->order_by("id_penginapan ", "DESC");
         $this->db->limit($limit, $start);
-        $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id");
-        $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id");
+        $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id", 'left');
+        $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id", 'left');
         $result = $this->db->get_where("penginapan")->result_array();
         return $result;
     }
     public function dataPenginapan()
     {
         $this->db->order_by("id_penginapan ", "DESC");
-        $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id");
-        $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id");
-        $this->db->join("marker_set", "marker_set.id_marker = penginapan.marker_id");
+        $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id", 'left');
+        $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id", 'left');
+        $this->db->join("marker_set", "marker_set.id_marker = penginapan.marker_id", 'left');
         $result = $this->db->get_where("penginapan")->result_array();
 
         $result = array_map(function ($result) {
@@ -93,9 +93,9 @@ class Penginapan extends CI_Controller
     }
     public function dataPenginapanById($id)
     {
-        $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id");
-        $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id");
-        $this->db->join("marker_set", "marker_set.id_marker = penginapan.marker_id");
+        $this->db->join("jenis_penginapan", "jenis_penginapan.id_jenis_penginapan = penginapan.jenis_penginapan_id", 'left');
+        $this->db->join("kelas_penginapan", "kelas_penginapan.id_kelas_penginapan = penginapan.kelas_inap_id", 'left');
+        $this->db->join("marker_set", "marker_set.id_marker = penginapan.marker_id", 'left');
         $this->db->where("penginapan.id_penginapan", $id);
         $result = $this->db->get_where("penginapan")->row_array();
 

@@ -67,23 +67,23 @@ class Pendidikan extends CI_Controller
     {
         $this->db->order_by("id_pendidikan", "DESC");
         $this->db->limit($limit, $start);
-        $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id  = pendidikan.jenjang_pendidikan_id ");
+        $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id  = pendidikan.jenjang_pendidikan_id", 'left');
         $result = $this->db->get_where("pendidikan")->result_array();
         return $result;
     }
     public function dataPendidikan()
     {
         $this->db->order_by("id_pendidikan", "DESC");
-        $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id  = pendidikan.jenjang_pendidikan_id ");
-        $this->db->join("marker_set", "marker_set.id_marker  = pendidikan.marker_id ");
+        $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id  = pendidikan.jenjang_pendidikan_id", 'left');
+        $this->db->join("marker_set", "marker_set.id_marker  = pendidikan.marker_id", 'left');
         $result = $this->db->get_where("pendidikan")->result_array();
         return $result;
     }
 
     public function dataPendidikanById($id)
     {
-        $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id = pendidikan.jenjang_pendidikan_id");
-        $this->db->join("marker_set", "marker_set.id_marker = pendidikan.marker_id");
+        $this->db->join("jenjang_pendidikan", "jenjang_pendidikan.jenjang_pendidikan_id = pendidikan.jenjang_pendidikan_id", 'left');
+        $this->db->join("marker_set", "marker_set.id_marker = pendidikan.marker_id", 'left');
         $this->db->where("pendidikan.id_pendidikan", $id);
         $result = $this->db->get_where("pendidikan")->row_array();
 

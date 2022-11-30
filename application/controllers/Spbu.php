@@ -63,14 +63,14 @@ class Spbu extends CI_Controller
     {
         $this->db->order_by("id_spbu", "DESC");
         $this->db->limit($limit, $start);
-        $this->db->join("jenis_spbu", "jenis_spbu.id_jenis_spbu = spbu.jenis_spbu_id");
+        $this->db->join("jenis_spbu", "jenis_spbu.id_jenis_spbu = spbu.jenis_spbu_id", 'left');
         $result = $this->db->get_where("spbu")->result_array();
         return $result;
     }
     public function dataSpbu()
     {
         $this->db->order_by("id_spbu ", "DESC");
-        $this->db->join("jenis_spbu", "jenis_spbu.id_jenis_spbu = spbu.jenis_spbu_id");
+        $this->db->join("jenis_spbu", "jenis_spbu.id_jenis_spbu = spbu.jenis_spbu_id", 'left');
         $result = $this->db->get_where("spbu")->result_array();
 
         $result = array_map(function ($result) {
@@ -84,7 +84,7 @@ class Spbu extends CI_Controller
     }
     public function dataSpbuById($id)
     {
-        $this->db->join("jenis_spbu", "jenis_spbu.id_jenis_spbu = spbu.jenis_spbu_id");
+        $this->db->join("jenis_spbu", "jenis_spbu.id_jenis_spbu = spbu.jenis_spbu_id", 'left');
         $this->db->where("spbu.id_spbu", $id);
         $result = $this->db->get_where("spbu")->row_array();
 

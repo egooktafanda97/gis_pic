@@ -16,6 +16,7 @@ class Home extends CI_Controller
             "title" => "Home",
             "page" => $this->page . "index",
             "script" => $this->page . "script",
+            "style" => $this->page . "style",
         ];
         $this->load->view('Router/route', $data);
     }

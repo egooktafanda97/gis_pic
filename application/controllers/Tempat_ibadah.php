@@ -73,7 +73,7 @@ class Tempat_ibadah extends CI_Controller
     public function dataTempatIbadahById($id)
     {
         $this->db->where("tempat_ibadah.id_tempat_ibadah", $id);
-        $this->db->join("marker_set", "marker_set.id_marker = tempat_ibadah.marker_id");
+        $this->db->join("marker_set", "marker_set.id_marker = tempat_ibadah.marker_id", 'left');
         $result = $this->db->get_where("tempat_ibadah")->row_array();
 
         return $result;
